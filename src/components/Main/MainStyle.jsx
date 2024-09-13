@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-export const MainWrapper=styled.div`
+export const MainWrapper = styled.div`
     font-size: 1.3vw;
     max-width: 80%;
     margin-left: 10%;
