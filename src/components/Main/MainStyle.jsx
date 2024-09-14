@@ -6,7 +6,7 @@ export const MainWrapper = styled.div`
     font-size: 1.3vw;
     max-width: 80%;
     margin-left: 10%;
-    margin-top: 2%;
+    margin: 2%;
     color: #000;
     line-height: 1.7;
     h1{
