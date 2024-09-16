@@ -8,6 +8,7 @@ const Footer = () => {
       <F.FooterInner>
         <F.Logo onClick={() => window.location.href = ""}>
           <F.LogoImage src={LogoImg} alt="Footer Logo" />
+          <h1>Genie</h1>
         </F.Logo>
         <F.FooterLinks>
           <F.LinkList>

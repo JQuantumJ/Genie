@@ -42,7 +42,16 @@ margin-left: 15%;
 export const Logo = styled.div`
 cursor: pointer;
 margin-bottom: 5.33333vw;
-
+display: flex;
+align-items: center;
+gap: 7%;
+flex-direction: row;
+justify-content: space-between;
+h1{
+  font-size: 1.2vw;
+  color: #fff;
+  font-weight: bold;
+}
 @media (min-width: 768px) {
   margin-bottom: 3.90625vw;
 }
@@ -77,7 +86,7 @@ color: #fff;
 
 a {
   color: #999;
-  font-size: 3.73333vw;
+  font-size: 2vw;
   line-height: 5.86667vw;
   text-decoration: none;
   white-space: nowrap;

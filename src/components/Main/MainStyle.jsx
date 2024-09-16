@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 export const MainWrapper = styled.div`
     font-size: 1.3vw;
-    max-width: 80%;
-    margin-left: 10%;
-    margin: 2%;
+    max-width: 70%;
+    margin-left: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     color: #000;
     line-height: 1.7;
     h1{
