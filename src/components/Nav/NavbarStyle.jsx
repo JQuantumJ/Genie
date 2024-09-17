@@ -21,7 +21,9 @@ export const IconStyle = styled.div`
 `;
 
 export const SearchIcon = styled(IconStyle)`
+  font-size: 1.8vw;
 `;
 
 export const MenuIcon = styled(IconStyle)`
+  font-size: 1.8vw;
 `;

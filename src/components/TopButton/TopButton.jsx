@@ -4,12 +4,13 @@ import Img from '/src/assets/icon/NavFooter/topbtn.svg';
 import styled from 'styled-components';
 
 export const Add = styled.img`
-  width: 5vw;
-  height: 5vw;
+  width: 4vw;
+  height: 4vw;
   cursor: pointer;
   position: fixed;
   right: 35px;
   bottom: 20px;
+  z-index: 100;
 `;
 
 const TopButton = () => {
