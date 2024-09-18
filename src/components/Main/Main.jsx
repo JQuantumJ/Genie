@@ -8,7 +8,7 @@ import * as M from './MainStyle';
 
 const Main = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-
+  const [isArrowHovered, setIsArrowHovered] = useState(false);
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
@@ -39,31 +39,36 @@ const Main = () => {
         src={arrowleft} 
         alt="Previous" 
         onClick={goToPrevious} 
+        onMouseEnter={() => setIsArrowHovered(true)} 
+        onMouseLeave={() => setIsArrowHovered(false)} 
         style={{ 
           cursor: 'pointer', 
           position: 'absolute', 
-          top: '50%', 
-          left: '32px', 
+          top: '50%',
+          left: '2.5vw',
           zIndex: 1000, 
-          transform: 'translateY(-50%)', 
-          opacity: showArrows ? 1 : 0, 
-          transition: 'opacity 1s ease-in-out', 
+          transform: `translateY(-50%) scale(${isArrowHovered ? 1.1 : 1})`, 
+          opacity: showArrows ? 0.4 : 0, 
+          transition: 'opacity 1s ease-in-out, transform 0.3s ease-in-out', 
           transitionDelay: showArrows ? '0.1s' : '0s' 
         }} 
       />
+
       <img 
         src={arrowright} 
         alt="Next" 
         onClick={goToNext} 
+        onMouseEnter={() => setIsArrowHovered(true)} 
+        onMouseLeave={() => setIsArrowHovered(false)}
         style={{ 
           cursor: 'pointer', 
           position: 'absolute', 
           top: '50%', 
-          right: '32px', 
+          right: '2.5vw', 
           zIndex: 1000, 
-          transform: 'translateY(-50%)', 
-          opacity: showArrows ? 1 : 0, 
-          transition: 'opacity 1s ease-in-out', 
+          transform: `translateY(-50%) scale(${isArrowHovered ? 1.1 : 1})`, 
+          opacity: showArrows ? 0.4 : 0, 
+          transition: 'opacity 1s ease-in-out, transform 0.3s ease-in-out', 
           transitionDelay: showArrows ? '0.1s' : '0s' 
         }} 
       />

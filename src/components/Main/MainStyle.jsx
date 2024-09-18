@@ -13,7 +13,7 @@ export const SliderContainer = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
-  width: ${(props) => props.count * 100}% ;  
+  width: ${(props) => props.count * 100}%;  
   transform: translateX(-${(props) => props.currentIndex * 100}%); 
   transition: transform 0.5s ease-in-out;
 `;
@@ -21,7 +21,7 @@ export const ImageContainer = styled.div`
 export const ItemImage = styled.img`
   flex-shrink: 0;  
   width: 100%;  
-  height: 80vh;
+  height: 90vh;
   object-fit: cover;
 `;
 export const CarouselWrapper = styled.div`
@@ -34,22 +34,24 @@ export const CarouselWrapper = styled.div`
 `;
 
 export const ItemTitle = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.1vw;
   font-weight: bold;
-  color: #333;
+  color: #000;
 `;
 
 export const ItemContent = styled.div`
   text-align: center;
   display: ${(props) => (props.isVisible ? 'block' : 'none')}; 
-  animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.3s ease-in-out;
+  animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
+  font-size: 0.8vw;
+  color: #222;
 `;
 
 export const CarouselItem = styled.div`
   position: absolute; 
   bottom: 0;
   width: 18%;
-  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out, z-index 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +67,10 @@ export const CarouselItem = styled.div`
   transform: ${(props) => (props.isHovered ? 'translateY(0px) scale(1.05)' : 'translateY(0px) scale(1)')};
   background: ${(props) => (props.isHovered ? '#e0d4cc' : '#f0e5de')};
   
+  &:hover{
+    transition: all 0.3s ease;
+  }
+
   &:hover ${ItemTitle} {
     margin: 2%;
   }

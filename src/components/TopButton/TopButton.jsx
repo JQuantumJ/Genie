@@ -4,12 +4,12 @@ import Img from '/src/assets/icon/NavFooter/topbtn.svg';
 import styled from 'styled-components';
 
 export const Add = styled.img`
-  width: 4vw;
-  height: 4vw;
+  width: 3.5vw;
+  height: 3.5vw;
   cursor: pointer;
   position: fixed;
-  right: 35px;
-  bottom: 20px;
+  right: 2vw;
+  bottom: 2vw;
   z-index: 100;
 `;
 
