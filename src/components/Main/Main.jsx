@@ -22,9 +22,9 @@ const disappearAnimation = keyframes`
 
 const AnimatedImage = styled.img`
   position: absolute;
-  bottom: 10%;
+  bottom: 30%;
   max-width: 30%;
-  left: 35%;
+  left: 36%;
   z-index: 10000;
   transition: opacity 0.5s ease-out;
   animation: ${(props) => props.isDisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
