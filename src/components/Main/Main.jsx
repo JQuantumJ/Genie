@@ -1,14 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import image1 from '/src/assets/image/main/image1.svg';
 import image2 from '/src/assets/image/main/image2.svg';
 import image3 from '/src/assets/image/main/image3.svg';
 import arrowleft from '/src/assets/image/main/arrowleft.svg';
 import arrowright from '/src/assets/image/main/arrowright.svg';
 import * as M from './MainStyle';
+import Genie1 from '/src/assets/image/main/Genie1.svg'; 
+import Genie2 from '/src/assets/image/main/Genie2.svg'; 
+import styled, { keyframes, css } from 'styled-components';
+const disappearAnimation = keyframes`
+  from {
+    transform: translateY(0);
+    opacity: 1;  
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+`;
+
+
+const AnimatedImage = styled.img`
+  position: absolute;
+  bottom: 10%;
+  max-width: 30%;
+  left: 35%;
+  z-index: 10000;
+  transition: opacity 0.5s ease-out;
+  animation: ${(props) => props.isDisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
+`;
 
 const Main = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showArrows, setShowArrows] = useState(false);
+  const images = [image1, image2, image3];
+  const [isImageVisible, setIsImageVisible] = useState(true);
+  const [isWaving, setIsWaving] = useState(false);  
+  const [currentImage, setCurrentImage] = useState(Genie1); 
   const [isArrowHovered, setIsArrowHovered] = useState(false);
+  const [isDisappearing, setIsDisappearing] = useState(false); 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
@@ -17,10 +48,30 @@ const Main = () => {
     setHoveredIndex(null);
   };
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [showArrows, setShowArrows] = useState(false);
-  const images = [image1, image2, image3];
 
+  useEffect(() => {
+    const startWaveTimer = setTimeout(() => {
+      setIsWaving(true); 
+    }, 1000);
+
+    const waveInterval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage === Genie1 ? Genie2 : Genie1));  
+    }, 600); 
+
+    const stopWaveTimer = setTimeout(() => {
+      setIsDisappearing(true);
+      setTimeout(() => {
+        setIsImageVisible(false);  
+      }, 1000);  
+      clearInterval(waveInterval); 
+    }, 3000);  
+
+    return () => {
+      clearTimeout(startWaveTimer);
+      clearTimeout(stopWaveTimer);
+      clearInterval(waveInterval);
+    };
+  }, []);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
@@ -34,6 +85,14 @@ const Main = () => {
   };
 
   return (
+    <>
+     {isImageVisible && (
+        <AnimatedImage 
+          src={currentImage}  
+          alt="Waving Genie" 
+          isDisappearing={isDisappearing} 
+        />
+      )}
     <M.SliderContainer onMouseEnter={() => setShowArrows(true)} onMouseLeave={() => setShowArrows(false)}>
       <img 
         src={arrowleft} 
@@ -146,6 +205,7 @@ const Main = () => {
         </div>
       </M.CarouselWrapper>
     </M.SliderContainer>
+    </>
   );
 };
 

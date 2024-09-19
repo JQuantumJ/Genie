@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Logo = styled.div`
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-weight: bold;
 `;
 

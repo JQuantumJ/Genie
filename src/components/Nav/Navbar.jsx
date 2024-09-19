@@ -39,13 +39,13 @@ export default function Navbar() {
             marginLeft: '0px',
             display: 'flex',
             flexDirection: 'row',
-            gap: '20%',
+            gap: '10%',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
         <img style={{maxWidth: '5.5vw'}} src={LogoImg} alt="Logo" />
-          <N.Logo>LOGO</N.Logo>
+          <N.Logo>Genie</N.Logo>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '60%', alignItems: 'center', justifyContent: 'space-between' }}>
         <N.SearchIcon><FaSearch /></N.SearchIcon>

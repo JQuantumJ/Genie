@@ -48,7 +48,7 @@ gap: 7%;
 flex-direction: row;
 justify-content: space-between;
 h1{
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   color: #fff;
   font-weight: bold;
 }
