@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import * as N from './NavbarStyle';
-import LogoImg from '/src/assets/icon/NavFooter/Logo.svg';
+import LogoImg from '/src/assets/icon/Genie.svg';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,8 +35,8 @@ export default function Navbar() {
           onClick={() => navigate('/')}
           style={{
             cursor: 'pointer',
-            maxWidth: '90%',
-            marginLeft: '1%',
+            maxWidth: '95%',
+            marginLeft: '0px',
             display: 'flex',
             flexDirection: 'row',
             gap: '20%',
@@ -44,7 +44,7 @@ export default function Navbar() {
             justifyContent: 'space-between',
           }}
         >
-        <img src={LogoImg} alt="Logo" />
+        <img style={{maxWidth: '5.5vw'}} src={LogoImg} alt="Logo" />
           <N.Logo>LOGO</N.Logo>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '60%', alignItems: 'center', justifyContent: 'space-between' }}>

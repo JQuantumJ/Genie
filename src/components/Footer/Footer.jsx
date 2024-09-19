@@ -1,13 +1,13 @@
 import React from 'react';
 import * as F from './FooterStyle'; 
-import LogoImg from '/src/assets/icon/NavFooter/Logo.svg';
+import LogoImg from '/src/assets/icon/Genie.svg';
 
 const Footer = () => {
   return (
     <F.FooterContainer>
       <F.FooterInner>
         <F.Logo onClick={() => window.location.href = ""}>
-          <F.LogoImage src={LogoImg} alt="Footer Logo" />
+          <F.LogoImage style={{maxWidth: '5.5vw'}} src={LogoImg} alt="Footer Logo" />
           <h1>Genie</h1>
         </F.Logo>
         <F.FooterLinks>

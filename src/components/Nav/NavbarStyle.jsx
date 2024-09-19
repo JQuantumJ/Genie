@@ -37,7 +37,7 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 0.9vw 2vw;
   background-color: ${props => props.isScrolled ? '#292f36' : 'transparent'};
   color: #fff;
   transition: background-color 0.9s ease;
