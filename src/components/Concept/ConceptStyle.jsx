@@ -1,15 +1,23 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+    height: 140vh;
+    max-height: 140vh;
+`
+
 export const ConceptWrapper = styled.div`
-  padding: 20px;
-  margin-top: 10%;
+  padding: 4%;
   max-width: 80%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   margin-left: 10%;
+  border-radius: 0.7vw;
+
 
   h1 {
     text-align: left;
     color: #000;
-    font-size: 2.2vw;
+    font-size: 2.8rem;
   }
 
   hr {
@@ -38,7 +46,7 @@ export const ConceptWrapper = styled.div`
     cursor: pointer;
     background-color: #333;
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 2rem;
     transition: background-color 0.3s ease;
     border-bottom: 1px solid #007bff;
   }
@@ -52,11 +60,11 @@ export const ConceptWrapper = styled.div`
   }
 
   .accordion-content {
-    padding: 2vw;
+    padding: 3%;
     background-color: #444;
     letter-spacing: 1.4px;
-    color: #fff;
-    font-size: 1.1vw;
+    color: #eee;
+    font-size: 1.5rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
   }

@@ -39,7 +39,7 @@ export const NavContainer = styled.nav`
   align-items: center;
   padding: 0.9vw 2vw;
   background-color: ${props => props.isScrolled ? '#292f36' : 'transparent'};
-  color: #fff;
+  color: ${props => props.isScrolled ? '#fff' : '#aaa'};
   transition: background-color 0.9s ease;
   position: fixed;
   top: 0;
@@ -58,7 +58,7 @@ export const MenuList = styled.div`
   margin-right: 1.3%;
   border-radius: 0.5vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1050;  // Ensure it's above the NavContainer
+  z-index: 1050;
 `;
 
 export const MenuIcon = styled.div`

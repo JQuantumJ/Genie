@@ -22,7 +22,7 @@ const disappearAnimation = keyframes`
 
 const AnimatedImage = styled.img`
   position: absolute;
-  bottom: 30%;
+  bottom: 25%;
   max-width: 30%;
   left: 36%;
   z-index: 10000;
@@ -104,7 +104,6 @@ const Main = () => {
           alt="Waving Genie" 
           isDisappearing={isDisappearing} 
         />
-        <AnimatedText>Genie</AnimatedText>
         </>
       )}
     <M.SliderContainer onMouseEnter={() => setShowArrows(true)} onMouseLeave={() => setShowArrows(false)}>
