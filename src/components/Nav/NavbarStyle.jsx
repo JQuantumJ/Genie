@@ -9,6 +9,14 @@ export const Logo = styled.div`
   }
 `;
 
+export const NavLogo = styled.img`
+  max-width: 40%;
+  width: 40%;
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
+`
+
 export const IconStyle = styled.div`
   font-size: 3rem;
   cursor: pointer;
@@ -16,6 +24,9 @@ export const IconStyle = styled.div`
 
 export const SearchIcon = styled(IconStyle)`
   font-size: 3rem;
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 `;
 
 
@@ -34,6 +45,17 @@ export const MenuItem = styled.div`
     background-color: #ddd;
     padding-left: 1.6vw;
     transition: all 0.5s ease;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.9rem;
+    padding: 2%;
+    margin-bottom: 1.5%;
+    
+    &:hover {
+      background-color: #ddd;
+      padding-left: 4vw;
+      transition: all 0.5s ease;
+    }
   }
 `;
 export const NavContainer = styled.nav`
@@ -55,6 +77,7 @@ export const NavContainer = styled.nav`
     img{
       max-width: 8.5rem;
     }
+    padding: 1%;
   }
 `;
 
@@ -70,9 +93,35 @@ export const MenuList = styled.div`
   border-radius: 0.5vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1050;
+  h1{
+  background: linear-gradient(to top, #D0E7FE 40%, transparent 10%)
+  //style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}
+  }
+  img{
+    width: 25%;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 5vw;
+    margin: 0;
+    border-radius: 0;
+    h1{
+      font-size: 2.3rem;
+    }
+    img{
+      width: 20%;
+    }
+  }
 `;
 
 export const MenuIcon = styled.div`
   font-size: 3.4rem;
   cursor: pointer;
+  @media (max-width: 500px) {
+    padding-right: 50px;
+    font-size: 2.5rem;
+  }
 `;

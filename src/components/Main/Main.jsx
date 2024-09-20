@@ -87,6 +87,19 @@ const Main = () => {
     setCurrentIndex(newIndex);
   };
 
+  useEffect(() => {
+    if (window.innerWidth <= 500) { 
+      const interval = setInterval(() => {
+        goToNext();
+      }, 3000);
+  
+      return () => {
+        clearInterval(interval); 
+      };
+    }
+  }, [currentIndex]);
+  
+
   return (
     <>
     <M.SliderContainer onMouseEnter={() => setShowArrows(true)} onMouseLeave={() => setShowArrows(false)}>
@@ -105,7 +118,8 @@ const Main = () => {
           transform: `translateY(-50%) scale(${isArrowHovered ? 1.1 : 1})`, 
           opacity: showArrows ? 0.4 : 0, 
           transition: 'opacity 1s ease-in-out, transform 0.3s ease-in-out', 
-          transitionDelay: showArrows ? '0.1s' : '0s' 
+          transitionDelay: showArrows ? '0.1s' : '0s',
+          display: window.innerWidth <= 500 ? 'none' : 'block'
         }} 
       />
 
@@ -124,7 +138,8 @@ const Main = () => {
           transform: `translateY(-50%) scale(${isArrowHovered ? 1.1 : 1})`, 
           opacity: showArrows ? 0.4 : 0, 
           transition: 'opacity 1s ease-in-out, transform 0.3s ease-in-out', 
-          transitionDelay: showArrows ? '0.1s' : '0s' 
+          transitionDelay: showArrows ? '0.1s' : '0s',
+          display: window.innerWidth <= 500 ? 'none' : 'block' 
         }} 
       />
       <M.ImageContainer currentIndex={currentIndex} count={images.length}>

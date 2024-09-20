@@ -44,7 +44,7 @@ export default function Navbar() {
             justifyContent: 'space-between',
           }}
         >
-        <img src={LogoImg} alt="Logo" />
+        <N.NavLogo src={LogoImg} alt="Logo" />
           <N.Logo>Genie</N.Logo>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '60%', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -62,15 +62,30 @@ export default function Navbar() {
             <div 
             style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', 
             alignItems: 'center', fontSize: '1.7rem', gap: '5%'}}>
-            <img src={LogoImg} style={{width: '25%'}}/>
-            <h1 style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}>Menu List</h1>
+            <img src={LogoImg}/>
+            <h1>Menu List</h1>
             </div>
             <N.MenuIcon onClick={toggleMenu} style={{fontSize: '3rem', marginTop: '0.5vw'}}><FaTimes /></N.MenuIcon>
           </div>
-          <N.MenuItem onClick={() => navigate('/concept')}>양자 개념</N.MenuItem>
-          <N.MenuItem onClick={() => navigate('/description')}>양자 활용</N.MenuItem>
-          <N.MenuItem onClick={() => navigate('/quiz')}>양자 퀴즈</N.MenuItem>
-          <N.MenuItem onClick={() => navigate('/character')}>캐릭터 소개</N.MenuItem>
+          <N.MenuItem onClick={() => {
+              navigate('/concept');
+              setIsMenuOpen(false); // toggleMenu 대신 직접 false로 설정
+            }}>양자 개념</N.MenuItem>
+
+            <N.MenuItem onClick={() => {
+              navigate('/description');
+              setIsMenuOpen(false);
+            }}>양자 활용</N.MenuItem>
+
+            <N.MenuItem onClick={() => {
+              navigate('/quiz');
+              setIsMenuOpen(false);
+            }}>양자 퀴즈</N.MenuItem>
+
+            <N.MenuItem onClick={() => {
+              navigate('/character');
+              setIsMenuOpen(false);
+            }}>캐릭터 소개</N.MenuItem>
         </N.MenuList>
       )}
     </>
