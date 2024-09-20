@@ -23,9 +23,18 @@ const Description = () => {
           </div>
           {activeIndex === 0 && (
             <div className="accordion-content">
-              <p>양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다.</p>
-              <p>복사 에너지에서 처음 발견하여 '에너지 양자'라고 불렀으며</p>
-              <p>그것이 빛으로서 공간을 진행할 경우 '광양자'라고 합니다.</p>
+              <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</p>
+              <p> 이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데, </p>
+              <p>이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다. </p>
+               {/* YouTube video for 양자 컴퓨터 */}
+              <iframe 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/gjp9301in0U" 
+                  title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+               ></iframe>            
             </div>
           )}
         </div>
@@ -45,6 +54,15 @@ const Description = () => {
               <p>양자역학은 원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론으로, </p>
               <p>이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다.</p>
               <p>그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다.</p>
+            {/* YouTube video for 양자 암호통신 */}
+            <iframe 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/watch?v=uWzTHaX0u9Y" 
+                  title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+               ></iframe>            
             </div>
           )}
         </div>
@@ -66,6 +84,15 @@ const Description = () => {
               <p>하이젠베르크의 불확정성은 측정 차원의 오류가 아니다.</p>
               <p>사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없다는 것이다. </p>
               <p>하나의 값을 고정하면 다른 값은 더욱 불확실해진다.</p>
+            {/* YouTube video for 양자 센서 */}
+            <iframe 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/watch?v=Xpp7yK-CHNk&list=PLt0q0rng8VjCYvz3W58fg88QJauLfBYb5&index=4" 
+                  title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+               ></iframe>            
             </div>
           )}
         </div>
