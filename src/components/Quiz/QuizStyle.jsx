@@ -7,7 +7,7 @@ export const QuizContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #eee;
   height: 100vh;
 `;
 
@@ -40,7 +40,7 @@ export const AnswerButton = styled.button`
 
 export const Popup = styled.div`
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
