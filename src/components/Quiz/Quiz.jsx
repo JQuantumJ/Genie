@@ -4,11 +4,12 @@ import * as Q from './QuizStyle'; // Import the styled components
 
 const Quiz = () => {
   const questions = [
-    { question: 'The sky is blue.', correctAnswer: 'O', explanation: 'The sky appears blue due to Rayleigh scattering.' },
-    { question: 'The Earth is flat.', correctAnswer: 'X', explanation: 'The Earth is an oblate spheroid, not flat.' },
-    { question: 'The sun rises in the west.', correctAnswer: 'X', explanation: 'The sun rises in the east.' },
-    { question: 'Humans can breathe underwater without equipment.', correctAnswer: 'X', explanation: 'Humans need equipment like scuba gear to breathe underwater.' },
-    { question: 'There are seven days in a week.', correctAnswer: 'O', explanation: 'There are seven days: Monday through Sunday.' }
+    { question: '양자 얽힘 현상은 거리에 상관없이 두 입자가 서로 연결된 상태를 유지하는 것을 의미한다.', correctAnswer: 'O', explanation: '양자 얽힘은 두 입자가 멀리 떨어져 있어도 서로의 상태가 연관된 상태를 유지하는 현상입니다. 한 입자의 상태가 변하면 즉시 다른 입자의 상태도 변합니다.' },
+    { question: '불확정성의 원리를 최초로 밝힌 사람은 하이젠베르크이다', correctAnswer: 'O', explanation: '불확정성의 원리를 최초로 밝힌 사람은 하이젠베르크이다' },
+    { question: '진인프라의 설립일은 2006년 5월 4일이다.', correctAnswer: 'O', explanation: '진인프라의 설립일은 2006년 5월 4일이다.' },
+    { question: '양자란 화학 원소로서의 특성을 잃지 않는 범위에서 도달할 수 있는 물질의 기본적인 최소입자이다.', correctAnswer: 'X', explanation: '해당 설명은 "원자"에 대한 설명으로, 양자란 더 이상 나눌 수 없는 에너지의 최소량의 단위이다' },
+    { question: '양자 컴퓨터는 모든 문제를 일반 컴퓨터보다 빠르게 해결할 수 있다.', correctAnswer: 'X', explanation: ' 양자 컴퓨터는 특정한 문제, 특히 복잡한 최적화 문제나 암호 해독 등에서 더 뛰어난 성능을 발휘합니다. ' },
+    { question: '슈뢰딩거의 고양이 실험에서 고양이는 살았다.', correctAnswer: 'X', explanation: '양자역학의 해석에 따르자면 고양이의 생사 여부를 확인해보기 전까지는 고양이의 상태를 살아있으면서도 동시에 죽어있는 상태라고 규정하기 때문에 정답은 "알 수 없다"이다.' }
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -49,7 +50,6 @@ const Quiz = () => {
         </Q.FinalScoreContainer>
       ) : (
         <>
-          <h1>OX 퀴즈</h1>
           <Q.Question>{questions[currentQuestionIndex].question}</Q.Question>
           <div>
             <Q.AnswerButton onClick={() => handleAnswer('O')}>O</Q.AnswerButton>
