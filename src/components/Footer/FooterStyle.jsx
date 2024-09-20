@@ -1,115 +1,156 @@
-// FooterStyle.jsx
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-max-width: 100%;
-position: relative;
-margin-top: auto;
-background: #292F36;
-padding: 5.33333vw 0 10.66667vw 0;
-border-radius: 8vw 0 0 0;
+  background: #292F36;
+  padding: 3% 0;
+  border-radius: 8vw 0 0 0;
+  color: #fff;
+  font-family: Arial, sans-serif;
 
-@media (min-width: 768px) {
-  padding: 3.90625vw 0 7.8125vw 0;
-  border-radius: 5.85938vw 0 0 0;
-}
-
-@media (min-width: 960px) {
-  padding: 3.64583vw 0 4.47917vw 0;
-  border-radius: 0 15.10417vw 0 0;
-}
-
-@media (min-width: 1920px) {
-  padding: 70px 0 86px 0;
-  border-radius: 0 290px 0 0;
-}
+  @media (min-width: 960px) {
+    padding: 4% 0;
+    border-radius: 0 15vw 0 0;
+  }
 `;
 
 export const FooterInner = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-max-width: 70%;
-margin-left: 15%;
-
-@media (min-width: 960px) {
-  flex-direction: row;
-  align-items: flex-start;
+  display: flex;
   justify-content: space-between;
-}
+  flex-direction: column;
+  max-width: 85%;
+  margin-left: 7.5%;
+
+  @media (min-width: 960px) {
+    flex-direction: row;
+  }
+`;
+
+export const CompanyInfo = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Logo = styled.div`
-cursor: pointer;
-margin-bottom: 5.33333vw;
-display: flex;
-align-items: center;
-gap: 7%;
-flex-direction: row;
-justify-content: space-between;
-h1{
-  font-size: 1.5vw;
-  color: #fff;
-  font-weight: bold;
-}
-@media (min-width: 768px) {
-  margin-bottom: 3.90625vw;
-}
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5%;
 
-@media (min-width: 960px) {
-  margin-bottom: 0;
-}
+  h1 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
 `;
 
 export const LogoImage = styled.img`
-height: 100%;
+  max-width: 50px;
+  margin-bottom: 5.5%;
 `;
 
-export const FooterLinks = styled.div`
-display: flex;
-flex-direction: column;
-max-width: 100%;
-gap: 10%;
-align-items: center;
-@media (min-width: 960px) {
-  flex-direction: row;
-  justify-content: space-between;
-}
-`;
+export const ContactInfo = styled.div`
+  margin-top: 4%;
 
-export const LinkList = styled.ul`
-list-style: none;
-display: flex;
-align-items: center;
-gap: 15%;
-color: #fff;
-
-a {
-  color: #999;
-  font-size: 2vw;
-  line-height: 5.86667vw;
-  text-decoration: none;
-  white-space: nowrap;
-
-  @media (min-width: 960px) {
+  a {
     color: #fff;
-    font-size: 1.14583vw;
-    line-height: 1.45833vw;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
-
-  @media (min-width: 1920px) {
-    font-size: 22px;
-    line-height: 28px;
+  p {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
   }
-}
 `;
 
-export const Address = styled.address`
-color: #fff;
-opacity: 0.4;
-align-items: center;
-a {
-  color: #fff;
-  opacity: 1;
-}
+export const ContactUs = styled.div`
+  margin-top: 1%;
+  margin-right: 7%;
+  h2 {
+    font-size: 1.4rem;
+
+  }
+  @media (min-width: 960px) { //opacity: 0;
+    h2{
+      rgba(0,0,0,1);
+    }
+  }
 `;
+
+export const ContactTitle = styled.div`
+  margin-bottom: 1%;
+  text-align: left;
+  margin-left: 0px;
+  padding: 1%;
+  h3{
+    align-items: center;
+    text-align: left;
+    margin: auto 0;
+    font-size: 1.2rem;
+  }
+    
+`;
+
+
+export const ContactPerson = styled.div`
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+  span {
+    font-size: 1.1rem;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+`;
+
+export const PersonIcon = styled.div`
+  background-color: #000;
+  border-radius: 100%;
+  align-items: center;
+  text-align: center;
+  p{
+    font-size: 2rem;
+    text-align: center;
+  }
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  gap: 4%;
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+`;
+
+export const FooterBottom = styled.div`
+  text-align: center;
+  margin-top: 2%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 3%;
+
+  p {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+`;
+
+
+export const Inline = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+`

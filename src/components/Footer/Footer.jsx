@@ -1,37 +1,60 @@
 import React from 'react';
 import * as F from './FooterStyle'; 
-import LogoImg from '/src/assets/icon/Genie.svg';
+import LogoImg from '/src/assets/icon/Genie.svg';  
+import GithubIcon from '/src/assets/icon/NavFooter/github.svg';
+import MailIcon from '/src/assets/icon/NavFooter/mail.svg'; 
 
 const Footer = () => {
   return (
     <F.FooterContainer>
       <F.FooterInner>
-        <F.Logo onClick={() => window.location.href = ""}>
-          <F.LogoImage style={{maxWidth: '5.5vw'}} src={LogoImg} alt="Footer Logo" />
-          <h1>Genie</h1>
-        </F.Logo>
-        <F.FooterLinks>
-          <F.LinkList>
-            <li><a href="/">회사소개</a></li>
-            <li><a href="/">오시는길</a></li>
-            {/* 추가 링크 */}
-          </F.LinkList>
-          <F.LinkList style={{marginLeft: '4%'}}>
-            <li><p style={{fontSize: '1.7vw', color: '#fff'}}>|</p></li>
-          </F.LinkList>
-          <F.LinkList>
-            <li><a href="/"><b>개인정보처리방침</b></a></li>
-            <li><a href="/">이용약관</a></li>
-            {/* 추가 링크 */}
-          </F.LinkList>
-        </F.FooterLinks>
-        <F.Address>
-          서울센터   |   서울시 송파구 가락로16길3-20 진인프라빌딩
-          {/* 추가 정보 */}
-        </F.Address>
+        <F.CompanyInfo>
+        <F.LogoImage onClick={() => window.location.href = ""} src={LogoImg} alt="Footer Logo" />
+          <F.Logo >
+            <h1>주식회사 진인프라</h1>
+          </F.Logo>
+          <F.ContactInfo>
+            <F.Inline style={{marginBottom: '2%'}}>
+              <p>Email</p>
+              <a href="mailto:jininfra@jininfra.com">jininfra@jininfra.com</a>
+            </F.Inline>
+            <F.Inline>
+              <p>Call</p>
+              <a href="tel:02-330-3900">02-330-3900</a>
+            </F.Inline>
+            <h3 style={{marginTop: '3%'}}>서울센터 | 서울시 송파구 가락로16길3-20 진인프라빌딩</h3>
+          </F.ContactInfo>
+        </F.CompanyInfo>
+
+        <F.ContactUs>
+          <h2>Contact Us</h2>
+          
+          <F.ContactTitle>  
+          <hr style={{borderColor: 'rgba(255, 255, 255, 0.2)'}}/>
+            <h3 style={{marginTop: '6%', marginBottom: '6%'}}>Frontend Developer</h3>
+          </F.ContactTitle>
+          <F.ContactPerson>
+            <F.PersonIcon><p>👤</p></F.PersonIcon>
+            <span>Your Name</span>
+            <F.IconContainer>
+              <a href=""><img src={GithubIcon} alt="Github" /></a>
+              <a href=""><img src={MailIcon} alt="Gmail" /></a>
+            </F.IconContainer>
+          </F.ContactPerson>
+          <F.ContactPerson>
+            <F.PersonIcon><p>👤</p></F.PersonIcon>
+            <span>Your Name</span>
+            <F.IconContainer>
+              <a href=""><img src={GithubIcon} alt="Github" /></a>
+              <a href=""><img src={MailIcon} alt="Gmail" /></a>
+            </F.IconContainer>
+          </F.ContactPerson>
+        </F.ContactUs>
       </F.FooterInner>
+      <F.FooterBottom >
+        <p style={{textAlign: 'left', marginLeft: '7.5%'}}>© 2024 Genie. All rights reserved.</p>
+      </F.FooterBottom>
     </F.FooterContainer>
   );
 };
-
 export default Footer;
