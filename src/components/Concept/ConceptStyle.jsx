@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
     height: 140vh;
     max-height: 140vh;
+    background-color: #eee;
 `
 
 export const ConceptWrapper = styled.div`

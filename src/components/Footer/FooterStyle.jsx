@@ -76,9 +76,9 @@ export const ContactUs = styled.div`
     font-size: 1.4rem;
 
   }
-  @media (min-width: 960px) { //opacity: 0;
+  @media (max-width: 960px) {
     h2{
-      rgba(0,0,0,1);
+      opacity: 0;
     }
   }
 `;

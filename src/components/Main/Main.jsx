@@ -171,7 +171,7 @@ const Main = () => {
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={handleMouseLeave}
         >
-          <M.ItemTitle>양자 활용 분야</M.ItemTitle>
+          <M.ItemTitle>활용 분야</M.ItemTitle>
           <M.ItemContent isVisible={hoveredIndex === 1}>
             양자 컴퓨터, 양자 암호 통신 등 양자 기술이 활용되고 있는 분야에 대해 알아봅시다.
           </M.ItemContent>

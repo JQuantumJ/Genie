@@ -9,6 +9,9 @@ export const SliderContainer = styled.div`
   align-items: center;
   margin-bottom: 5%;
   justify-content: center;
+  @media (max-width: 500px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -31,6 +34,21 @@ export const CarouselWrapper = styled.div`
   margin-left: 15%;
   display: flex;
   justify-content: space-around;
+  
+  @media (max-width: 960px) {
+    margin-left: 15%;
+    width: 85%;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    max-width: 80%; 
+    bottom: 10%;
+    margin-left: 0;
+    position: absolute;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 `;
 
 export const ItemTitle = styled.div`
@@ -43,10 +61,15 @@ export const ItemContent = styled.div`
   text-align: center;
   display: ${(props) => (props.isVisible ? 'block' : 'none')}; 
   animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #222;
-`;
 
+  @media (max-width: 500px) {
+    display: ${(props) => (props.isVisible ? 'block' : 'none')};
+    animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
+  }
+`;
+ 
 export const CarouselItem = styled.div`
   position: absolute; 
   bottom: 0;
@@ -77,6 +100,18 @@ export const CarouselItem = styled.div`
 
   &:hover ${ItemContent} {
     margin: 2%;
+  }
+  @media (max-width: 500px) {
+    flex-direction: row; 
+    width: ${(props) => (props.isHovered ? '95%' : '40%')}; 
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 10vh;
+    padding: 5%;
+    transform: ${(props) => (props.isHovered ? 'translateX(0px) scale(1.05)' : 'translateX(0px) scale(1)')};
+    margin-left: 0;
+    position: relative;
   }
 `;
 

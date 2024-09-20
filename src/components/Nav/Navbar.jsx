@@ -48,7 +48,7 @@ export default function Navbar() {
           <N.Logo>Genie</N.Logo>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '60%', alignItems: 'center', justifyContent: 'space-between' }}>
-        <N.SearchIcon><FaSearch /></N.SearchIcon>
+        <N.SearchIcon style={{fontSize: '3rem'}}><FaSearch /></N.SearchIcon>
         <N.MenuIcon onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </N.MenuIcon>
