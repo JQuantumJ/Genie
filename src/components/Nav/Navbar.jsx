@@ -70,6 +70,7 @@ export default function Navbar() {
           <N.MenuItem onClick={() => navigate('/concept')}>양자 개념</N.MenuItem>
           <N.MenuItem onClick={() => navigate('/description')}>양자 활용</N.MenuItem>
           <N.MenuItem onClick={() => navigate('/quiz')}>양자 퀴즈</N.MenuItem>
+          <N.MenuItem onClick={() => navigate('/character')}>캐릭터 소개</N.MenuItem>
         </N.MenuList>
       )}
     </>

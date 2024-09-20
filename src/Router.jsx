@@ -7,6 +7,7 @@ import ConceptPage from './pages/Concept';
 import QuizPage from './pages/Quiz';
 import DescriptionPage from './pages/Description';
 import TopBtn from './components/TopButton/TopButton';
+import CharacterPage from './pages/Character';
 
 export default function Router() {
   return (
@@ -17,6 +18,7 @@ export default function Router() {
         <Route path="/concept" element={<ConceptPage />} />
         <Route path="/description" element={<DescriptionPage />} />
         <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/character" element={<CharacterPage />} />
       </Routes>
       <TopBtn />
       <Footer />

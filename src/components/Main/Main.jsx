@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import image1 from '/src/assets/image/main/image1.svg';
 import image2 from '/src/assets/image/main/image2.svg';
 import image3 from '/src/assets/image/main/image3.svg';
@@ -30,16 +31,6 @@ const AnimatedImage = styled.img`
   animation: ${(props) => props.isDisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
 `;
 
-const AnimatedText = styled.h1`
-  position: absolute;
-  bottom: 25%;
-  max-width: 30%;
-  font-size: 2.5vw;
-  left: 48%;
-  z-index: 10000;
-  transition: opacity 0.3s ease-out;
-  animation: ${(props) => props.isDisappearing ? css `${disappearAnimation} 0.3s forwards` : 'none'};
-`;
 
 const Main = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -51,6 +42,7 @@ const Main = () => {
   const [currentImage, setCurrentImage] = useState(Genie1); 
   const [isArrowHovered, setIsArrowHovered] = useState(false);
   const [isDisappearing, setIsDisappearing] = useState(false); 
+  const navigate = useNavigate();
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
@@ -97,15 +89,6 @@ const Main = () => {
 
   return (
     <>
-     {isImageVisible && (
-      <>
-        <AnimatedImage 
-          src={currentImage}  
-          alt="Waving Genie" 
-          isDisappearing={isDisappearing} 
-        />
-        </>
-      )}
     <M.SliderContainer onMouseEnter={() => setShowArrows(true)} onMouseLeave={() => setShowArrows(false)}>
       <img 
         src={arrowleft} 
@@ -153,6 +136,7 @@ const Main = () => {
       <M.CarouselWrapper>
         <div style={{width: '100%'}}>
         <M.CarouselItem
+          onClick={() => navigate('/concept')}
           style={{backgroundColor: '#F1F5F9'}}
           isHovered={hoveredIndex === 0}
           onMouseEnter={() => handleMouseEnter(0)}
@@ -166,6 +150,7 @@ const Main = () => {
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
+          onClick={() => navigate('/description')}
           style={{backgroundColor: '#D0E7FE'}}
           isHovered={hoveredIndex === 1}
           onMouseEnter={() => handleMouseEnter(1)}
@@ -179,6 +164,7 @@ const Main = () => {
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
+          onClick={() => navigate('/')}
           style={{backgroundColor: '#A5D2FF'}}
           isHovered={hoveredIndex === 2}
           onMouseEnter={() => handleMouseEnter(2)}
@@ -192,6 +178,7 @@ const Main = () => {
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
+          onClick={() => navigate('/')}
           style={{backgroundColor: '#7EAFE0'}}
           isHovered={hoveredIndex === 3}
           onMouseEnter={() => handleMouseEnter(3)}
@@ -205,6 +192,7 @@ const Main = () => {
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
+          onClick={() => navigate('/quiz')}
           style={{backgroundColor: '#E2E0FF'}}
           isHovered={hoveredIndex === 4}
           onMouseEnter={() => handleMouseEnter(4)}

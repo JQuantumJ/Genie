@@ -1,15 +1,15 @@
 import React from 'react';
 import * as F from './FooterStyle'; 
-import LogoImg from '/src/assets/icon/Genie.svg';  
 import GithubIcon from '/src/assets/icon/NavFooter/github.svg';
 import MailIcon from '/src/assets/icon/NavFooter/mail.svg'; 
+import Jininfra from '/src/assets/icon/NavFooter/Jininfra.svg';
 
 const Footer = () => {
   return (
     <F.FooterContainer>
       <F.FooterInner>
         <F.CompanyInfo>
-        <F.LogoImage onClick={() => window.location.href = ""} src={LogoImg} alt="Footer Logo" />
+        <F.LogoImage onClick={() => window.location.href = "https://jininfra.com/"} src={Jininfra} alt="Footer Logo" />
           <F.Logo >
             <h1>주식회사 진인프라</h1>
           </F.Logo>

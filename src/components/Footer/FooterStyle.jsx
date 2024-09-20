@@ -33,7 +33,6 @@ export const CompanyInfo = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  cursor: pointer;
   margin-bottom: 5%;
 
   h1 {
@@ -43,8 +42,9 @@ export const Logo = styled.div`
 `;
 
 export const LogoImage = styled.img`
-  max-width: 50px;
+  max-width: 150px;
   margin-bottom: 5.5%;
+  cursor: pointer;
 `;
 
 export const ContactInfo = styled.div`
