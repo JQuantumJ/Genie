@@ -4,15 +4,18 @@ import styled from 'styled-components';
 export const Logo = styled.div`
   font-size: 3.8rem;
   font-weight: bold;
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
 `;
 
 export const IconStyle = styled.div`
-  font-size: 1.5vw;
+  font-size: 3rem;
   cursor: pointer;
 `;
 
 export const SearchIcon = styled(IconStyle)`
-  font-size: 1.8vw;
+  font-size: 3rem;
 `;
 
 
@@ -45,6 +48,14 @@ export const NavContainer = styled.nav`
   top: 0;
   width: 100%;
   z-index: 1000;
+  img{
+    max-width: 10rem;
+  }
+  @media (max-width: 500px) {
+    img{
+      max-width: 8.5rem;
+    }
+  }
 `;
 
 export const MenuList = styled.div`
