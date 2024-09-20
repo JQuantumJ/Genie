@@ -30,6 +30,17 @@ const AnimatedImage = styled.img`
   animation: ${(props) => props.isDisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
 `;
 
+const AnimatedText = styled.h1`
+  position: absolute;
+  bottom: 25%;
+  max-width: 30%;
+  font-size: 2.5vw;
+  left: 48%;
+  z-index: 10000;
+  transition: opacity 0.3s ease-out;
+  animation: ${(props) => props.isDisappearing ? css `${disappearAnimation} 0.3s forwards` : 'none'};
+`;
+
 const Main = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -87,11 +98,14 @@ const Main = () => {
   return (
     <>
      {isImageVisible && (
+      <>
         <AnimatedImage 
           src={currentImage}  
           alt="Waving Genie" 
           isDisappearing={isDisappearing} 
         />
+        <AnimatedText>Genie</AnimatedText>
+        </>
       )}
     <M.SliderContainer onMouseEnter={() => setShowArrows(true)} onMouseLeave={() => setShowArrows(false)}>
       <img 
