@@ -63,7 +63,7 @@ export default function Navbar() {
             style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', 
             alignItems: 'center', fontSize: '1.7rem', gap: '5%'}}>
             <img src={LogoImg} style={{width: '25%'}}/>
-            <h1 style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}>Menu List</h1>
+            <h1>Menu List</h1>
             </div>
             <N.MenuIcon onClick={toggleMenu} style={{fontSize: '3rem', marginTop: '0.5vw'}}><FaTimes /></N.MenuIcon>
           </div>

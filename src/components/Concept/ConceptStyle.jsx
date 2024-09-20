@@ -72,5 +72,11 @@ export const ConceptWrapper = styled.div`
     line-height: 1.8;
     border-top: 1px solid #007bff;
   }
+  @media (max-width: 900px) {
+    margin-top: 12%;
+  }
+  @media (max-width: 700px) {
+    margin-top: 16%;
+  }
 `;
 

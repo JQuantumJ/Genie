@@ -35,6 +35,17 @@ export const MenuItem = styled.div`
     padding-left: 1.6vw;
     transition: all 0.5s ease;
   }
+  @media (max-width: 500px) {
+    font-size: 1.9rem;
+    padding: 2%;
+    margin-bottom: 1.5%;
+    
+    &:hover {
+      background-color: #ddd;
+      padding-left: 4vw;
+      transition: all 0.5s ease;
+    }
+  }
 `;
 export const NavContainer = styled.nav`
   display: flex;
@@ -70,9 +81,28 @@ export const MenuList = styled.div`
   border-radius: 0.5vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1050;
+  h1{
+  background: linear-gradient(to top, #D0E7FE 40%, transparent 10%)
+  //style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 5vw;
+    margin: 0;
+    border-radius: 0;
+    h1{
+      font-size: 2.3rem;
+    }
+  }
 `;
 
 export const MenuIcon = styled.div`
   font-size: 3.4rem;
   cursor: pointer;
+  @media (max-width: 900px) {
+    padding-right: 5vw;
+  }
 `;
