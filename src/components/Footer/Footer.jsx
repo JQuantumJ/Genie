@@ -35,18 +35,18 @@ const Footer = () => {
           </F.ContactTitle>
           <F.ContactPerson>
             <F.PersonIcon><p>👤</p></F.PersonIcon>
-            <span>Your Name</span>
+            <span>옌님 작성란</span>
             <F.IconContainer>
               <a href=""><img src={GithubIcon} alt="Github" /></a>
-              <a href=""><img src={MailIcon} alt="Gmail" /></a>
+              <a href="mailto:"><img src={MailIcon} alt="Gmail" /></a>
             </F.IconContainer>
           </F.ContactPerson>
           <F.ContactPerson>
             <F.PersonIcon><p>👤</p></F.PersonIcon>
-            <span>Your Name</span>
+            <span>Yoon Soeun</span>
             <F.IconContainer>
-              <a href=""><img src={GithubIcon} alt="Github" /></a>
-              <a href=""><img src={MailIcon} alt="Gmail" /></a>
+              <a href="https://github.com/Dubabbi"><img src={GithubIcon} alt="Github" /></a>
+              <a href="mailto:thdms3160@naver.com"><img src={MailIcon} alt="Gmail" /></a>
             </F.IconContainer>
           </F.ContactPerson>
         </F.ContactUs>

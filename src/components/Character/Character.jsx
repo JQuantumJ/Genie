@@ -37,16 +37,16 @@ const AnimatedImage = styled.img`
   }
 `;
 
-const AnimatedText = styled.h1`
-  position: absolute;
-  bottom: 25%;
-  max-width: 30%;
-  font-size: 2.5vw;
-  left: 48%;
-  z-index: 10000;
-  transition: opacity 0.3s ease-out;
-  animation: ${(props) => props.isdisappearing ? css `${disappearAnimation} 0.3s forwards` : 'none'};
+const AnimatedImage2 = styled.img`
+  position: relative;
+  margin-top: 10%;
+  max-width: 20%;
+  margin-left: 10%;
+  @media (max-width: 700px) {
+    max-width: 30%;
+  }
 `;
+
 
 
 const Character = () => {
@@ -77,6 +77,23 @@ const Character = () => {
           clearInterval(waveInterval);
         };
       }, []);
+      const [currentImage2, setCurrentImage2] = useState(Genie1); 
+      const [isWaving2, setIsWaving2] = useState(false);  
+      
+      useEffect(() => {
+          const startWaveTimer = setTimeout(() => {
+            setIsWaving2(true); 
+          }, 1000);
+      
+          const waveInterval = setInterval(() => {
+            setCurrentImage2((prevImage) => (prevImage === Genie1 ? Genie2 : Genie1));  
+          }, 600); 
+      
+          return () => {
+            clearTimeout(startWaveTimer);
+            clearInterval(waveInterval); 
+          };
+        }, []);
   return (
     <>
     <C.Wrapper>
@@ -94,6 +111,10 @@ const Character = () => {
             <p>알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼</p>  
             <p>양자 정보 관련해서는 무엇이든 알려준다는 의미</p>
         </C.CharacterWrapper>
+        <AnimatedImage2
+            src={currentImage2}  
+            alt="Waving Genie" 
+            />
     </C.Wrapper>
     </>
   );

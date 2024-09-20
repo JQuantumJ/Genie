@@ -53,6 +53,7 @@ export const CarouselWrapper = styled.div`
 
 export const ItemTitle = styled.div`
   font-size: 1.5rem;
+  white-space: nowrap;
   font-weight: bold;
   color: #000;
 `;
