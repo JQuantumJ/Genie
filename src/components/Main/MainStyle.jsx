@@ -34,7 +34,7 @@ export const CarouselWrapper = styled.div`
 `;
 
 export const ItemTitle = styled.div`
-  font-size: 1.1vw;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #000;
 `;
@@ -43,7 +43,7 @@ export const ItemContent = styled.div`
   text-align: center;
   display: ${(props) => (props.isVisible ? 'block' : 'none')}; 
   animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
-  font-size: 0.8vw;
+  font-size: 1.2rem;
   color: #222;
 `;
 

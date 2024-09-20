@@ -21,8 +21,8 @@ const disappearAnimation = keyframes`
 
 
 const AnimatedImage = styled.img`
-  position: absolute;
-  bottom: 25%;
+  position: fixed;
+  top: 23%;
   max-width: 30%;
   left: 36%;
   z-index: 10000;

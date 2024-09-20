@@ -61,11 +61,11 @@ export default function Navbar() {
             style={{ marginBottom: '4%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
             <div 
             style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', 
-            alignItems: 'center', fontSize: '1.1vw', gap: '5%'}}>
+            alignItems: 'center', fontSize: '1.7rem', gap: '5%'}}>
             <img src={LogoImg} style={{width: '25%'}}/>
             <h1 style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}>Menu List</h1>
             </div>
-            <N.MenuIcon onClick={toggleMenu} style={{fontSize: '2vw', marginTop: '0.5vw'}}><FaTimes /></N.MenuIcon>
+            <N.MenuIcon onClick={toggleMenu} style={{fontSize: '3rem', marginTop: '0.5vw'}}><FaTimes /></N.MenuIcon>
           </div>
           <N.MenuItem onClick={() => navigate('/concept')}>양자 개념</N.MenuItem>
           <N.MenuItem onClick={() => navigate('/description')}>양자 활용</N.MenuItem>

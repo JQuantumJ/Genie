@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Logo = styled.div`
-  font-size: 2vw;
+  font-size: 3.8rem;
   font-weight: bold;
 `;
 
@@ -21,7 +21,7 @@ export const MenuItem = styled.div`
   padding: 0.9vw 0;
   color: #292f36;
   cursor: pointer;
-  font-size: 0.8vw;
+  font-size: 1.5rem;
   font-family: arial;
   font-weight: bold;
   text-align: left;
@@ -62,6 +62,6 @@ export const MenuList = styled.div`
 `;
 
 export const MenuIcon = styled.div`
-  font-size: 1.8vw;
+  font-size: 3.4rem;
   cursor: pointer;
 `;
