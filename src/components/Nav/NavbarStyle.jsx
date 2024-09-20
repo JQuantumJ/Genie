@@ -9,6 +9,14 @@ export const Logo = styled.div`
   }
 `;
 
+export const NavLogo = styled.img`
+  max-width: 40%;
+  width: 40%;
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
+`
+
 export const IconStyle = styled.div`
   font-size: 3rem;
   cursor: pointer;
@@ -16,6 +24,9 @@ export const IconStyle = styled.div`
 
 export const SearchIcon = styled(IconStyle)`
   font-size: 3rem;
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 `;
 
 
@@ -66,6 +77,7 @@ export const NavContainer = styled.nav`
     img{
       max-width: 8.5rem;
     }
+    padding: 1%;
   }
 `;
 
@@ -85,6 +97,9 @@ export const MenuList = styled.div`
   background: linear-gradient(to top, #D0E7FE 40%, transparent 10%)
   //style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}
   }
+  img{
+    width: 25%;
+  }
   @media (max-width: 500px) {
     width: 100%;
     height: 100%;
@@ -96,13 +111,17 @@ export const MenuList = styled.div`
     h1{
       font-size: 2.3rem;
     }
+    img{
+      width: 20%;
+    }
   }
 `;
 
 export const MenuIcon = styled.div`
   font-size: 3.4rem;
   cursor: pointer;
-  @media (max-width: 900px) {
-    padding-right: 5vw;
+  @media (max-width: 500px) {
+    padding-right: 50px;
+    font-size: 2.5rem;
   }
 `;

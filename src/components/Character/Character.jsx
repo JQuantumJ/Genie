@@ -25,12 +25,16 @@ const disappearAnimation = keyframes`
 
 const AnimatedImage = styled.img`
   position: fixed;
-  top: 23%;
+  top: 30%;
   max-width: 30%;
   left: 36%;
   z-index: 10000;
   transition: opacity 0.5s ease-out;
   animation: ${(props) => props.isdisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
+  @media (max-width: 700px) {
+    position: fixed;
+    max-width: 40%;
+  }
 `;
 
 const AnimatedText = styled.h1`
@@ -88,7 +92,7 @@ const Character = () => {
         )}
             <p>지니(진인프라의 진+  접사 ‘-이‘)</p> 
             <p>알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼</p>  
-            <p>양자 정보 관련해서는 무엇이든 알려준다는 의미의 작명</p>
+            <p>양자 정보 관련해서는 무엇이든 알려준다는 의미</p>
         </C.CharacterWrapper>
     </C.Wrapper>
     </>
