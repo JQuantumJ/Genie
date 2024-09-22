@@ -2,14 +2,13 @@
 {/* 캐릭터 소개 페이지*/}
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import image1 from '/src/assets/image/main/image1.svg';
-import image2 from '/src/assets/image/main/image2.svg';
-import image3 from '/src/assets/image/main/image3.svg';
-import arrowleft from '/src/assets/image/main/arrowleft.svg';
-import arrowright from '/src/assets/image/main/arrowright.svg';
+import message from '/src/assets/image/Character/message.svg';
+import flag from '/src/assets/image/Character/flag.svg';
+import styled, { keyframes, css } from 'styled-components';
+import grad from '/src/assets/image/Character/grad.svg';
 import Genie1 from '/src/assets/image/main/Genie1.svg'; 
 import Genie2 from '/src/assets/image/main/Genie2.svg'; 
-import styled, { keyframes, css } from 'styled-components';
+import planet from '/src/assets/image/Character/planet.svg';
 import * as C from './CharacterStyle';
 const disappearAnimation = keyframes`
   from {
@@ -47,13 +46,11 @@ const AnimatedImage2 = styled.img`
   }
 `;
 
-
-
 const Character = () => {
     const [currentImage, setCurrentImage] = useState(Genie1); 
     const [isdisappearing, setIsdisappearing] = useState(false); 
     const [isImageVisible, setIsImageVisible] = useState(true);
-    const [isWaving, setIsWaving] = useState(false);  
+    const [isWaving, setIsWaving] = useState(false); 
     useEffect(() => {
         const startWaveTimer = setTimeout(() => {
           setIsWaving(true); 
@@ -77,23 +74,23 @@ const Character = () => {
           clearInterval(waveInterval);
         };
       }, []);
-      const [currentImage2, setCurrentImage2] = useState(Genie1); 
-      const [isWaving2, setIsWaving2] = useState(false);  
-      
+      const [currentImage2, setCurrentImage2] = useState(Genie1);
+      const [isWaving2, setIsWaving2] = useState(false);   
       useEffect(() => {
-          const startWaveTimer = setTimeout(() => {
-            setIsWaving2(true); 
-          }, 1000);
+        const startWaveTimer = setTimeout(() => {
+          setIsWaving2(true); 
+        }, 1000);
+    
+        const waveInterval = setInterval(() => {
+          setCurrentImage2((prevImage) => (prevImage === Genie1 ? Genie2 : Genie1));  
+        }, 600); 
+    
+        return () => {
+          clearTimeout(startWaveTimer);
+          clearInterval(waveInterval); 
+        };
+      }, []);
       
-          const waveInterval = setInterval(() => {
-            setCurrentImage2((prevImage) => (prevImage === Genie1 ? Genie2 : Genie1));  
-          }, 600); 
-      
-          return () => {
-            clearTimeout(startWaveTimer);
-            clearInterval(waveInterval); 
-          };
-        }, []);
   return (
     <>
     <C.Wrapper>
@@ -107,14 +104,39 @@ const Character = () => {
             />
             </>
         )}
-            <p>지니(진인프라의 진+  접사 ‘-이‘)</p> 
-            <p>알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼</p>  
-            <p>양자 정보 관련해서는 무엇이든 알려준다는 의미</p>
+        <C.Grid>
+        <C.ImageContainer>
+          <img src={grad} alt="Gradient Background" />
+          <C.TextOverlay>
+            <h1>진인프라의</h1>
+            <h1>양자 캐릭터</h1>
+            <h1>‘지니’</h1>
+          </C.TextOverlay>
+        </C.ImageContainer>
+        <C.RightHalfCircle>
+          <C.FlagImage src={flag} alt="Flag"/>
+        </C.RightHalfCircle>
+        </C.Grid>
+        <C.Grid>
+        <C.LeftHalfCircle>
+          <C.FlagImage2 src={planet} alt="planet"/>
+        </C.LeftHalfCircle>
+        <C.TextWrapper>
+            <h1>지니</h1>
+            <p style={{color: '#0000ff'}}>지니(진인프라의 진+  접사 ‘-이‘)</p> 
+            <p>🧬알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼</p>  
+            <p>🔭양자 정보 관련해서는 무엇이든 알려준다는 의미</p>
+        </C.TextWrapper>
+        </C.Grid>
         </C.CharacterWrapper>
+        <div style={{maxWidth: '50%', display: 'flex', flexDirection: 'column', marginLeft: '32%', marginTop: '10%'}}>
+        <img src={message} style={{width: '35%', marginLeft: '35%'}}/>
         <AnimatedImage2
+            style={{minWidth: '55%', marginLeft: '0', marginTop: '2%', marginBottom: '10%'}}
             src={currentImage2}  
             alt="Waving Genie" 
             />
+        </div>
     </C.Wrapper>
     </>
   );

@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   border-radius: 8vw 0 0 0;
   color: #fff;
   font-family: Arial, sans-serif;
-
+  z-index: 1000;
   @media (min-width: 960px) {
     padding: 4% 0;
     border-radius: 0 15vw 0 0;
