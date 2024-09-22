@@ -39,10 +39,13 @@ const AnimatedImage = styled.img`
 const AnimatedImage2 = styled.img`
   position: relative;
   margin-top: 10%;
-  max-width: 20%;
+  min-width: 65%;
+  max-width: 65%;
   margin-left: 10%;
-  @media (max-width: 700px) {
-    max-width: 30%;
+  @media (max-width: 800px) {
+    min-width: 80%;
+    max-width: 80%;
+    margin-right: 10%;
   }
 `;
 
@@ -130,9 +133,9 @@ const Character = () => {
         </C.Grid>
         </C.CharacterWrapper>
         <div style={{maxWidth: '50%', display: 'flex', flexDirection: 'column', marginLeft: '32%', marginTop: '10%'}}>
-        <img src={message} style={{width: '35%', marginLeft: '35%'}}/>
+        <C.Message src={message} style={{width: '35%', marginLeft: '35%'}}/>
         <AnimatedImage2
-            style={{minWidth: '55%', marginLeft: '0', marginTop: '2%', marginBottom: '10%'}}
+            style={{ marginLeft: '0', marginTop: '2%', marginBottom: '15%'}}
             src={currentImage2}  
             alt="Waving Genie" 
             />

@@ -4,14 +4,19 @@ import Img from '/src/assets/icon/NavFooter/topbtn.svg';
 import styled from 'styled-components';
 
 export const Add = styled.img`
-  width: 3.5vw;
-  height: 3.5vw;
+  width: 5rem;
+  height: 5rem;
   cursor: pointer;
   position: fixed;
-  right: 2vw;
-  bottom: 2vw;
+  right: 3rem;
+  bottom: 3rem;
   z-index: 100;
+  @media(max-width: 800px){
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 `;
+
 
 const TopButton = () => {
   const scrollToTop = () => {

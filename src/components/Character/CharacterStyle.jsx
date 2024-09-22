@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     margin-top: -5%;
-    height: 300vh;
-    max-height: 300vh;
+    height: 305vh;
+    max-height: 305vh;
     margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;
@@ -33,6 +33,17 @@ export const TextWrapper = styled.div`
     font-size: 1.9rem;
     margin-bottom: 1.7%;
   }
+  @media (max-width: 800px) {
+    font-size: 3.3rem;
+      h1{
+        font-size: 3.1rem;
+        margin-bottom: 2%;
+      }
+      p{
+        font-size: 1.5rem;
+        margin-bottom: 1.7%;
+      }
+  }
 `
 
 export const RightHalfCircle = styled.div`
@@ -43,7 +54,12 @@ export const RightHalfCircle = styled.div`
   background-color: #0B212E;
   border-radius: 1000px 0 0 1000px; 
   right: 0;
-  top: 0; 
+  align-items: center;
+  top: 0;
+  @media (max-width: 800px) {
+    min-width: 100%;
+    height: 40vh;
+  } 
 `;
 
 export const FlagImage = styled.img`
@@ -52,8 +68,14 @@ export const FlagImage = styled.img`
   left: 50%;
   transform: translateX(-50%); 
   width: 58%;
+  margin: auto 0;
   height: auto;
   z-index: 11;
+  @media (max-width: 800px) {
+    width: 45%;
+    top: 5%;
+    left: 50%;
+  }
 `;
 
 export const LeftHalfCircle = styled.div`
@@ -65,6 +87,11 @@ export const LeftHalfCircle = styled.div`
   border-radius: 0 1000px 1000px 0;
   left: 0;
   top: 0; 
+  align-items: center;
+  @media (max-width: 800px) {
+    min-width: 100%;
+    height: 40vh;
+  }
 `;
 
 export const FlagImage2 = styled.img`
@@ -75,6 +102,15 @@ export const FlagImage2 = styled.img`
   width: 58%;
   height: auto;
   z-index: 11;
+  @media (max-width: 960px) {
+
+  }
+
+  @media (max-width: 800px) {
+    width: 45%;
+    top: 12%;
+    left: 50%;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -110,6 +146,9 @@ export const TextOverlay = styled.div`
     width: 90%; 
     text-align: left;
   }
+  @media (max-width: 800px) {
+    font-size: 3.3rem;
+  }
 `;
 
 export const Logo = styled.img`
@@ -128,4 +167,23 @@ export const Grid = styled.div`
   gap: 2%; 
   margin-top: 10%;
   align-items: center;
+  @media (max-width: 960px) {
+
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr); 
+    
+  }
+`
+
+
+export const Message = styled.img`
+  width: 35%;
+  margin-left: 35%;
+  @media (max-width: 800px) {
+    min-width: 45%;
+    max-width: 45%;
+    margin-left: 20%;
+  }
 `
