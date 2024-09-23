@@ -119,7 +119,7 @@ export const ConceptWrapper = styled.div`
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{
-      fontSize: 1.7rem;
+      font-size: 1.7rem;
        @media (max-width: 900px) {
           font-size: 1.2rem;
        }
@@ -127,6 +127,7 @@ export const ConceptWrapper = styled.div`
     p{
        @media (max-width: 900px) {
           font-size: 1rem;
+          margin-bottom: 1%;
        }
     }
     a{

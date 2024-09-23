@@ -45,7 +45,7 @@ const AnimatedImage2 = styled.img`
   @media (max-width: 800px) {
     min-width: 80%;
     max-width: 80%;
-    margin-right: 10%;
+    margin-right: 13%;
   }
 `;
 
@@ -120,7 +120,7 @@ const Character = () => {
           <C.FlagImage src={flag} alt="Flag"/>
         </C.RightHalfCircle>
         </C.Grid>
-        <C.Grid>
+        <C.Grid2>
         <C.LeftHalfCircle>
           <C.FlagImage2 src={planet} alt="planet"/>
         </C.LeftHalfCircle>
@@ -130,12 +130,12 @@ const Character = () => {
             <p>🧬알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼</p>  
             <p>🔭양자 정보 관련해서는 무엇이든 알려준다는 의미</p>
         </C.TextWrapper>
-        </C.Grid>
+        </C.Grid2>
         </C.CharacterWrapper>
         <div style={{maxWidth: '50%', display: 'flex', flexDirection: 'column', marginLeft: '32%', marginTop: '10%'}}>
-        <C.Message src={message} style={{width: '35%', marginLeft: '35%'}}/>
+        <C.Message src={message} style={{width: '35%', marginLeft: '40%'}}/>
         <AnimatedImage2
-            style={{ marginLeft: '0', marginTop: '2%', marginBottom: '15%'}}
+            style={{ marginLeft: '0', marginTop: '3%', marginBottom: '15%'}}
             src={currentImage2}  
             alt="Waving Genie" 
             />

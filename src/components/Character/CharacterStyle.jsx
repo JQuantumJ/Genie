@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     margin-top: -5%;
-    height: 350vh;
-    max-height: 350vh;
+    height: 330vh;
+    max-height: 330vh;
     margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;
@@ -43,6 +43,9 @@ export const TextWrapper = styled.div`
         font-size: 1.5rem;
         margin-bottom: 1.7%;
       }
+  }
+  @media (max-width: 700px) {
+    grid-area: textWrapper;
   }
 `
 
@@ -92,6 +95,9 @@ export const LeftHalfCircle = styled.div`
     min-width: 100%;
     height: 40vh;
   }
+  @media (max-width: 700px) {
+    grid-area: leftHalfCircle;
+  }
 `;
 
 export const FlagImage2 = styled.img`
@@ -124,6 +130,7 @@ export const ImageContainer = styled.div`
   text-align: left;
   img{
       max-width: 90%;
+      margin: 5%;
       height: auto;
   }
 `;
@@ -167,9 +174,6 @@ export const Grid = styled.div`
   gap: 2%; 
   margin-top: 10%;
   align-items: center;
-  @media (max-width: 960px) {
-
-  }
 
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr); 
@@ -177,6 +181,24 @@ export const Grid = styled.div`
   }
 `
 
+export const Grid2 = styled.div`
+  display: grid;
+  max-width: 100%;
+  min-width: 100%;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2%; 
+  margin-top: 10%;
+  align-items: center;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr); 
+    
+  }
+  @media (max-width: 700px) {
+    grid-template-areas: 
+      "textWrapper"  
+      "leftHalfCircle";  
+  }
+`
 
 export const Message = styled.img`
   width: 35%;
