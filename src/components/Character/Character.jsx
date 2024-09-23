@@ -39,14 +39,9 @@ const AnimatedImage = styled.img`
 const AnimatedImage2 = styled.img`
   position: relative;
   margin-top: 10%;
-  min-width: 65%;
-  max-width: 65%;
-  margin-left: 10%;
-  @media (max-width: 800px) {
-    min-width: 80%;
-    max-width: 80%;
-    margin-right: 13%;
-  }
+  min-width: 80%;
+  max-width: 80%;
+  margin-right: 15%;
 `;
 
 const Character = () => {

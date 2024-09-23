@@ -61,7 +61,7 @@ export const RightHalfCircle = styled.div`
   top: 0;
   @media (max-width: 800px) {
     min-width: 100%;
-    height: 70vh;
+    height: 50vh;
   } 
 `;
 
@@ -90,14 +90,14 @@ export const LeftHalfCircle = styled.div`
   top: 0;
   @media (max-width: 800px) {
     min-width: 90%;
-    height: 70vh;
+    height: 50vh;
   } 
 `;
 
 export const FlagImage2 = styled.img`
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 50%;
   transform: translate(-50%, -50%);
   max-width: 50%; 
   height: auto;
