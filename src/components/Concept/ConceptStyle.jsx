@@ -1,13 +1,31 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: 500vh;
-    max-height: 500vh;
+    height: 150vh;
+    max-height: 150vh;
     margin-top: -5%;
     margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;
+    @media(max-width: 600px){
+      height: 110vh;
+      max-height: 110vh; 
+    }
 `
+
+export const Wrapper2 = styled.div`
+    height: 320vh;
+    max-height: 320vh;
+    margin-top: -5%;
+    margin-bottom: -20%;
+    padding-top: 5%;
+    background-color: #eee;
+    @media(max-width: 600px){
+      height: 250vh;
+      max-height: 250vh; 
+    }
+`
+
 export const CatWrapper = styled.div`
   max-width: 100%;
   margin-top: 10%;

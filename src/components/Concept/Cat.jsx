@@ -130,7 +130,7 @@ const Cat = () => {
     };
 
     return (
-      <C.Wrapper>
+      <C.Wrapper2>
         <C.CatWrapper>
           <h1>슈뢰딩거의 고양이</h1>
           <Box>
@@ -177,7 +177,7 @@ const Cat = () => {
             </ModalOverlay>
           )}
         </C.CatWrapper>
-      </C.Wrapper>
+      </C.Wrapper2>
     );
 };
 
