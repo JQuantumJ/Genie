@@ -61,23 +61,20 @@ export const RightHalfCircle = styled.div`
   top: 0;
   @media (max-width: 800px) {
     min-width: 100%;
-    height: 40vh;
+    height: 70vh;
   } 
 `;
 
 export const FlagImage = styled.img`
   position: absolute;
-  top: 5%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%); 
-  width: 58%;
-  margin: auto 0;
+  transform: translate(-50%, -50%);
+  max-width: 50%; 
   height: auto;
   z-index: 11;
   @media (max-width: 800px) {
-    width: 45%;
-    top: 5%;
-    left: 50%;
+    max-width: 60%; 
   }
 `;
 
@@ -87,35 +84,26 @@ export const LeftHalfCircle = styled.div`
   min-width: 100%;
   height: 60vh; 
   background-color: #0B212E;
-  border-radius: 0 1000px 1000px 0;
+  border-radius:  0 1000px 1000px 0; 
   left: 0;
-  top: 0; 
   align-items: center;
+  top: 0;
   @media (max-width: 800px) {
-    min-width: 100%;
-    height: 40vh;
-  }
-  @media (max-width: 700px) {
-    grid-area: leftHalfCircle;
-  }
+    min-width: 90%;
+    height: 70vh;
+  } 
 `;
 
 export const FlagImage2 = styled.img`
   position: absolute;
-  top: 12%;
-  left: 40%;
-  transform: translateX(-50%); 
-  width: 58%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%; 
   height: auto;
   z-index: 11;
-  @media (max-width: 960px) {
-
-  }
-
   @media (max-width: 800px) {
-    width: 45%;
-    top: 12%;
-    left: 50%;
+    max-width: 60%; 
   }
 `;
 

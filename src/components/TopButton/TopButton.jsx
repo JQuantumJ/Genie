@@ -10,7 +10,7 @@ export const Add = styled.img`
   position: fixed;
   right: 3rem;
   bottom: 3rem;
-  z-index: 100;
+  z-index: 20000;
   @media(max-width: 800px){
     width: 4.5rem;
     height: 4.5rem;
