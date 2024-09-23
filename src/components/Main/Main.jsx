@@ -42,10 +42,28 @@ const Main = () => {
   const [currentImage, setCurrentImage] = useState(Genie1); 
   const [isArrowHovered, setIsArrowHovered] = useState(false);
   const [isDisappearing, setIsDisappearing] = useState(false); 
+  const [clickedIndex, setClickedIndex] = useState(null);
   const navigate = useNavigate();
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
+  const handleClick = (index, link) => {
+    if (clickedIndex === index) {
+      navigate(link);  
+    } else {
+      setClickedIndex(index);  
+    }
+  };
+  useEffect(() => {
+    // 모바일에서는 클릭 후 일정 시간 후에 클릭 상태를 초기화
+    if (clickedIndex !== null) {
+      const resetClick = setTimeout(() => {
+        setClickedIndex(null);
+      }, 4000);  // 4초 후에 클릭 상태 초기화
+
+      return () => clearTimeout(resetClick);
+    }
+  }, [clickedIndex]);
 
   const handleMouseLeave = () => {
     setHoveredIndex(null);
@@ -151,71 +169,76 @@ const Main = () => {
       <M.CarouselWrapper>
         <div style={{width: '100%'}}>
         <M.CarouselItem
-          onClick={() => navigate('/concept')}
-          style={{backgroundColor: '#F1F5F9'}}
-          isHovered={hoveredIndex === 0}
-          onMouseEnter={() => handleMouseEnter(0)}
-          onMouseLeave={handleMouseLeave}
-        >
+            onClick={() => handleClick(0, '/concept')}
+            style={{ backgroundColor: '#F1F5F9' }}
+            isHovered={hoveredIndex === 0 || clickedIndex === 0}
+            onMouseEnter={() => handleMouseEnter(0)}
+            onMouseLeave={handleMouseLeave}
+            isClicked={clickedIndex === 0} 
+          >
           <M.ItemTitle>양자 개념</M.ItemTitle>
-          <M.ItemContent isVisible={hoveredIndex === 0}>
-            양자란 무엇일까요? 쉽게 알아봅시다!!
+          <M.ItemContent onClick={e=> navigate('/concept')} isVisible={hoveredIndex === 0}>
+            양자란 무엇일까요? 쉽게 알아봅시다!!<p></p>
           </M.ItemContent>
         </M.CarouselItem>
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
-          onClick={() => navigate('/description')}
+          onClick={() => handleClick(1,'/description')}
           style={{backgroundColor: '#D0E7FE'}}
-          isHovered={hoveredIndex === 1}
+          isHovered={hoveredIndex === 1 || clickedIndex === 1}
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={handleMouseLeave}
+          isClicked={clickedIndex === 1} 
         >
           <M.ItemTitle>활용 분야</M.ItemTitle>
-          <M.ItemContent isVisible={hoveredIndex === 1}>
-            양자 컴퓨터, 양자 암호 통신 등 양자 기술이 활용되고 있는 분야에 대해 알아봅시다.
+          <M.ItemContent onClick={e=> navigate('/description')} isVisible={hoveredIndex === 1}>
+            양자 컴퓨터, 양자 암호 통신 등 양자 기술이 활용되고 있는 분야에 대해 알아봅시다.<p></p>
           </M.ItemContent>
         </M.CarouselItem>
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
-          onClick={() => navigate('/')}
+          onClick={() => handleClick(2, '/')}
           style={{backgroundColor: '#A5D2FF'}}
-          isHovered={hoveredIndex === 2}
+          isHovered={hoveredIndex === 2 || clickedIndex === 2}
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={handleMouseLeave}
+          isClicked={clickedIndex === 2} 
         >
           <M.ItemTitle>최근 동향</M.ItemTitle>
-          <M.ItemContent isVisible={hoveredIndex === 2}>
-            양자 기술의 최근 동향에 대해 알아봅시다.
+          <M.ItemContent onClick={e=> navigate('/')} isVisible={hoveredIndex === 2}>
+            양자 기술의 최근 동향에 대해 알아봅시다.<p></p>
           </M.ItemContent>
         </M.CarouselItem>
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
-          onClick={() => navigate('/')}
+          onClick={() => handleClick(3, '/')}
           style={{backgroundColor: '#7EAFE0'}}
-          isHovered={hoveredIndex === 3}
+          isHovered={hoveredIndex === 3 || clickedIndex === 3}
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={handleMouseLeave}
+          isClicked={clickedIndex === 3} 
         >
           <M.ItemTitle>주요 기업</M.ItemTitle>
-          <M.ItemContent isVisible={hoveredIndex === 3}>
-            양자 기술의 발전을 이끌고 있는 국내, 해외 주요 기업들을 모아봤어요.
+          <M.ItemContent onClick={e=> navigate('/')} isVisible={hoveredIndex === 3}>
+            양자 기술의 발전을 이끌고 있는 국내, 해외 주요 기업들을 모아봤어요.<p></p>
           </M.ItemContent>
         </M.CarouselItem>
         </div>
         <div style={{width: '100%'}}>
         <M.CarouselItem
-          onClick={() => navigate('/quiz')}
+          onClick={() => handleClick(4, '/quiz')}
           style={{backgroundColor: '#E2E0FF'}}
-          isHovered={hoveredIndex === 4}
+          isHovered={hoveredIndex === 4 || clickedIndex === 4}
           onMouseEnter={() => handleMouseEnter(4)}
           onMouseLeave={handleMouseLeave}
+          isClicked={clickedIndex === 4} 
         >
           <M.ItemTitle>양자 퀴즈</M.ItemTitle>
-          <M.ItemContent isVisible={hoveredIndex === 4}>
-            간단한 양자 개념을 확인하는 Quiz Quiz!!
+          <M.ItemContent onClick={e=> navigate('/quiz')} isVisible={hoveredIndex === 4}>
+            간단한 양자 개념을 확인하는 Quiz Quiz!!<p></p>
           </M.ItemContent>
         </M.CarouselItem>
         </div>

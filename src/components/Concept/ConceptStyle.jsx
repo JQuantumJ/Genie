@@ -76,11 +76,12 @@ export const ConceptWrapper = styled.div`
     transition: background-color 0.3s ease;
     border-bottom: 1px solid #007bff;
     @media (max-width: 900px) {
-      padding-top: 3%;
-      padding-bottom: 2%;
-      padding-left: 3%;
-      padding-right: 3%;
+      padding-top: 3.5%;
+      padding-bottom: 2.3%;
+      padding-left: 4.5%;
+      padding-right: 4.5%;
     }
+      
   }
 
   .accordion-title.active {
@@ -99,25 +100,41 @@ export const ConceptWrapper = styled.div`
     font-size: 1.5rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
+    h1{
+      fontSize: 1.7rem;
+       @media (max-width: 900px) {
+          font-size: 1.2rem;
+       }
+    }
+    p{
+       @media (max-width: 900px) {
+          font-size: 1rem;
+       }
+    }
     a{
       color: #007bff;
       font-size: 1.7rem;
-      padding-left: 43%;
+      padding-left: 5%;
     }
+      @media (max-width: 900px) {
+        padding: 5%;
+      }
   }
   @media (max-width: 900px) {
     margin-top: 12%;
-    padding: 2%;
-    font-size: 1.3rem;
+    padding: 3%;
+    font-size: 1.2rem;
     line-height: 1.7;
     a{
       color: #007bff;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       padding-left: 40%;
     }
   }
   @media (max-width: 700px) {
     margin-top: 16%;
+    padding: 4%;
+    font-size: 1rem;
   }
 `;
 
