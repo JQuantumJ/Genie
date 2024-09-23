@@ -6,10 +6,13 @@ export const QuizContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  height: 160vh;
+  max-height: 160vh;
+  margin-top: -5%;
+  margin-bottom: -10%;
   background-color: #eee;
-  height: 100vh;
-`;
+`
+  
 
 export const Question = styled.h2`
   font-size: 24px;
@@ -48,7 +51,7 @@ export const Popup = styled.div`
   color: white;
   border-radius: 10px;
   text-align: center;
-  width: 300px;
+  width: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
   p {
