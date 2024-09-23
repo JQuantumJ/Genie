@@ -133,9 +133,8 @@ const Cat = () => {
       <C.Wrapper>
         <C.CatWrapper>
           <h1>슈뢰딩거의 고양이</h1>
-
           <Box>
-            <Numbering><img src={bunker} alt="bunker" /> </Numbering>
+            <Numbering><img src={bunker} alt="bunker" style={{maxWidth: '90%'}}/> </Numbering>
             <Numbering><img src={bottle1} alt="bottle1" /> <img src={Catimg} alt="cat" /></Numbering>
             <p>고양이 한 마리와 독이 든 병을 벙커 안에 넣고 벙커를 닫습니다.</p>
           </Box>
