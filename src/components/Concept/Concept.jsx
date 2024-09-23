@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Catimg from '/src/assets/image/Concept/cat.svg';
-import Cat2img from '/src/assets/image/Concept/cat2.svg';
-import bunker from '/src/assets/image/Concept/bunker.svg';
-import bottle1 from '/src/assets/image/Concept/bottle1.svg';
-import bottle2 from '/src/assets/image/Concept/bottle2.svg';
+import Quantum from '/src/assets/image/Concept/quantum.svg';
+import Quantum2 from '/src/assets/image/Concept/quantum2.svg';
 import * as C from './ConceptStyle';
 import { FaTimes } from 'react-icons/fa'; 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+const RotatingImage = styled.img`
+  max-width: 33%;
+  animation: ${rotate} 8s linear infinite;
+`;
 const Box = styled.div`
   border: 2px solid #333;
   margin: 20px;
@@ -145,10 +155,12 @@ const Concept = () => {
         {activeIndex === 0 && (
           <div className="accordion-content">
             <p style={{marginBottom: '2%'}}>양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다.
-              복사 에너지에서 처음 발견하여 '에너지 양자'라고 불렀으며
-              그것이 빛으로서 공간을 진행할 경우 '광양자'라고 합니다.</p>
-              <p>양자는 더 이상 나눌 수 없는 에너지의 최소 단위입니다. 
-                쉽게 말해, 우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자라고 부릅니다.</p>
+              쉽게 말해, 우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자라고 부릅니다.
+              처음으로 양자는 빛에서 발견되었으며, 
+              이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.</p>
+              <div style={{textAlign: 'center', height: '50vh'}}>
+                <RotatingImage style={{maxWidth: '33%'}} src={Quantum2} />
+              </div>
           </div>
         )}
       </div>
@@ -163,9 +175,7 @@ const Concept = () => {
         {activeIndex === 1 && (
           <div className="accordion-content">
             <p>입자 및 입자 집단을 다루는 현대 물리학의 기초 이론입니다. 
-              입자가 가지는 파동과 입자의 이중성, 측정에서의 불확정 관계 따위를 설명합니다.
-              1925년 하이젠베르크의 행렬 역학과 슈뢰딩거의 파동 역학이 통합된 이론입니다.
-              양자역학은 원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론으로, 
+              양자역학은 <span style={{color: '#B0E3FF'}}>원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론</span>으로, 
               이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다.
               그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다.</p>
           </div>
@@ -184,11 +194,10 @@ const Concept = () => {
             <h1 style={{marginBottom: '1%', color: '#eee'}}>"입자의 위치나 운동량을 동시에 정확하게 알 수 없다"</h1>
             <p>하이젠베르크는 방정식들을 연구하는 동안 어떤 특성은 정확하게 측정하는 것이 불가능하다는 사실을 깨달았는데, 그 이유는 사용하는 실험 장치가 측정하는 원자에 영향을 미치기 때문이었습니다.
             입자의 위치와 운동량은 동시에 추론할 수 없으며, 주어진 순간의 에너지도 알 수 없었습니다.
-
-            어떠한 측정이든 어느 정도의 불확정성이 있지만,
-            하이젠베르크의 불확정성은 측정 차원의 오류가 아닙니다.
-            사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없다는 것입니다.
-            하나의 값을 고정하면 다른 값은 더욱 불확실해집니다.</p>
+            하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고, 반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다.
+            이는 마치 <span style={{color: '#B0E3FF'}}>우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
+            특히, 측정 차원의 오류가 아니라, 사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없습니다.
+            오히려 하나의 값을 고정하면 다른 값은 더욱 불확실해집니다.</p>
           </div>
         )}
       </div>
