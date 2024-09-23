@@ -45,7 +45,7 @@ export default function Navbar() {
           }}
         >
         <N.NavLogo src={LogoImg} alt="Logo" />
-          <N.Logo>Genie</N.Logo>
+          <N.Logo>Jenie</N.Logo>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '60%', alignItems: 'center', justifyContent: 'space-between' }}>
         <N.SearchIcon><FaSearch /></N.SearchIcon>
@@ -69,7 +69,7 @@ export default function Navbar() {
           </div>
           <N.MenuItem onClick={() => {
               navigate('/concept');
-              setIsMenuOpen(false); // toggleMenu 대신 직접 false로 설정
+              setIsMenuOpen(false); 
             }}>양자 개념</N.MenuItem>
 
             <N.MenuItem onClick={() => {

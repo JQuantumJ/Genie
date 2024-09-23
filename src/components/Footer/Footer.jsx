@@ -43,7 +43,7 @@ const Footer = () => {
           </F.ContactPerson>
           <F.ContactPerson>
             <F.PersonIcon><p>👤</p></F.PersonIcon>
-            <span>Yoon Soeun</span>
+            <span>Soeun Yoon</span>
             <F.IconContainer>
               <a href="https://github.com/Dubabbi"><img src={GithubIcon} alt="Github" /></a>
               <a href="mailto:thdms3160@naver.com"><img src={MailIcon} alt="Gmail" /></a>
