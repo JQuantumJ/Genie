@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: 140vh;
-    max-height: 140vh;
-`
+    height: 160vh;
+    max-height: 200vh;
+    margin-top: -5%;
+    margin-bottom: -20%;
+    padding-top: 5%;
+    background-color: #eee;
+`;
 
 export const ConceptWrapper = styled.div`
   padding: 4%;
@@ -12,7 +16,6 @@ export const ConceptWrapper = styled.div`
   margin-bottom: 10%;
   margin-left: 10%;
   border-radius: 0.7vw;
-
 
   h1 {
     text-align: left;
@@ -41,7 +44,7 @@ export const ConceptWrapper = styled.div`
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     cursor: pointer;
     background-color: #333;
@@ -67,6 +70,22 @@ export const ConceptWrapper = styled.div`
     font-size: 1.5rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
+    max-height: 330px;  /* Fixed height for content */
+    overflow-y: auto;  /* Scroll if content exceeds height */
+  }
+
+  /* Flexbox to center the video */
+  iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 12%;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 16%;
   }
 `;
-

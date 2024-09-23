@@ -21,6 +21,7 @@ const Quiz = () => {
 
   const handleAnswer = (answer) => {
     const currentQuestion = questions[currentQuestionIndex];
+    let popupDuration = 1500; 
     if (answer === currentQuestion.correctAnswer) {
       setScore(score + 1);
       setPopupContent('정답입니다!');
@@ -28,6 +29,7 @@ const Quiz = () => {
     } else {
       setPopupContent('오답입니다!');
       setPopupExplanation(currentQuestion.explanation);
+      popupDuration = 3000; 
     }
 
     setShowPopup(true);
@@ -38,7 +40,7 @@ const Quiz = () => {
       } else {
         setQuizComplete(true);
       }
-    }, 2000); // Popup disappears after 2 seconds
+    }, popupDuration); // Popup disappears after 2 seconds
   };
 
   return (

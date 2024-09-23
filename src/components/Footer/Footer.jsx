@@ -35,10 +35,10 @@ const Footer = () => {
           </F.ContactTitle>
           <F.ContactPerson>
             <F.PersonIcon><p>👤</p></F.PersonIcon>
-            <span>옌님 작성란</span>
+            <span>YeEun Shin</span>
             <F.IconContainer>
-              <a href=""><img src={GithubIcon} alt="Github" /></a>
-              <a href="mailto:"><img src={MailIcon} alt="Gmail" /></a>
+              <a href="https://github.com/yengeun"><img src={GithubIcon} alt="Github" /></a>
+              <a href="mailto:7613ez@gmail.com"><img src={MailIcon} alt="Gmail" /></a>
             </F.IconContainer>
           </F.ContactPerson>
           <F.ContactPerson>
