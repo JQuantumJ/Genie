@@ -42,20 +42,7 @@ const Numbering = styled.p`
   margin-top: 10px;
 `;
 
-const Button = styled.button`
-  padding: 10px 20px;
-  margin: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
+
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -138,7 +125,6 @@ const Cat = () => {
             <Numbering><img src={bottle1} alt="bottle1" /> <img src={Catimg} alt="cat" /></Numbering>
             <p>고양이 한 마리와 독이 든 병을 벙커 안에 넣고 벙커를 닫습니다.</p>
           </Box>
-
           <Box>
             <Numbering><img src={bottle1} alt="bottle1" /> <img src={bottle2} alt="bottle2" /></Numbering>
             <p>독이 든 병은 50%의 확률로 깨질 수도, 깨지지 않을 수도 있습니다.</p>
@@ -152,12 +138,14 @@ const Cat = () => {
           <Box>
             <p style={{padding: '0 2%', marginBottom: '1%'}}>슈뢰딩거의 고양이는 1935년 에르빈 슈뢰딩거가 양자역학의 이상한 특성을 설명하기 위해 제안한 사고 실험입니다.
             <br/><span>이 실험은 고양이를 상자에 넣고, 고양이의 생사 여부가 양자적 현상인 중첩에 의해 결정된다는 개념</span>을 보여줍니다.</p>
-          </Box>
-          <div style={{textAlign: 'center'}}>
-          <Button onClick={toggleModal}>
+            <div style={{textAlign: 'center', display: 'flex', marginTop: '1%'}}>
+          <C.Button style={{backgroundColor: '#007bff'}} onClick={toggleModal}>
             {showModal ? '모달 닫기' : '추가 설명 보기'}
-          </Button>
+          </C.Button>
           </div>
+          </Box>
+        
+
 
           {showModal && (
             <ModalOverlay>

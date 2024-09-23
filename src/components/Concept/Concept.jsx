@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as C from './ConceptStyle';
+import Cat from './Cat';
+import { FaTimes } from 'react-icons/fa'; 
 
 const Concept = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+    // 모달 열기 함수
+    const openModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    // 모달 닫기 함수
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
 
   return (
     <C.Wrapper>
@@ -83,11 +95,28 @@ const Concept = () => {
             <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 에르빈 슈뢰딩거가 제안한 사고 실험입니다.
             이 실험은 양자역학의 중첩(superposition) 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다.
             특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다.</p>
-            <a style={{cursor: 'pointer'}} onClick={e=> navigate('/cat')}>detail ➡️</a>
+            <a style={{cursor: 'pointer'}} onClick={openModal}>detail ➡️</a>
           </div>
         )}
       </div>
     </C.ConceptWrapper>
+    {isModalOpen && (
+          <C.Modal>
+            <C.ModalContent>
+            <FaTimes
+                onClick={closeModal} 
+                style={{
+                  position: 'absolute',
+                  top: '20px',
+                  right: '20px',
+                  fontSize: '3rem',
+                  cursor: 'pointer',
+                }}
+              />
+              <Cat />  
+            </C.ModalContent>
+            </C.Modal>
+            )}
     </C.Wrapper>
   );
 };
