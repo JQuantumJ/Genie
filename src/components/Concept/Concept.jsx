@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as C from './ConceptStyle'; // 스타일 파일 연결
+import * as C from './ConceptStyle';
 
 const Concept = () => {
   const [activeIndex, setActiveIndex] = useState(null);

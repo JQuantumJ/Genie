@@ -95,10 +95,22 @@ export const MenuList = styled.div`
   z-index: 1050;
   h1{
   background: linear-gradient(to top, #D0E7FE 40%, transparent 10%)
-  //style={{background: 'linear-gradient(to top, #D0E7FE 40%, transparent 10%)'}}
   }
   img{
-    width: 25%;
+    width: 27%;
+  }
+  @media (max-width: 1000px) {
+    position: fixed;
+    top: 1%;
+    right: 0;
+    background-color: #eee;
+    width: 35%;
+    padding: 2.3vw;
+    padding-right: 2.7vw;
+    margin-right: 1.3%;
+    img{
+      min-width: 30%;
+    }
   }
   @media (max-width: 500px) {
     width: 100%;

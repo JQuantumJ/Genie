@@ -1,12 +1,34 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: 160vh;
-    max-height: 160vh;
+    height: 500vh;
+    max-height: 500vh;
     margin-top: -5%;
     margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;
+`
+export const CatWrapper = styled.div`
+  max-width: 100%;
+  margin-top: 10%;
+  border-radius: 0.7vw;
+  position: relative;
+  margin-bottom: 30%;
+   p{
+    font-size: 2rem;
+    margin-top: 2%;
+   }
+   h1{
+    margin-left: 5%;
+    font-size: 2.2rem;
+      @media(max-width: 900px){
+        margin-top: 15%;
+        font-size: 1.9rem;
+      }
+      @media(max-width: 900px){
+        margin-top: 18%;
+      }
+   }
 `
 
 export const ConceptWrapper = styled.div`
@@ -98,4 +120,5 @@ export const ConceptWrapper = styled.div`
     margin-top: 16%;
   }
 `;
+
 
