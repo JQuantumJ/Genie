@@ -53,6 +53,12 @@ export const ConceptWrapper = styled.div`
     font-size: 2rem;
     transition: background-color 0.3s ease;
     border-bottom: 1px solid #007bff;
+    @media (max-width: 900px) {
+      padding-top: 3%;
+      padding-bottom: 2%;
+      padding-left: 3%;
+      padding-right: 3%;
+    }
   }
 
   .accordion-title.active {
@@ -71,9 +77,22 @@ export const ConceptWrapper = styled.div`
     font-size: 1.5rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
+    a{
+      color: #007bff;
+      font-size: 1.7rem;
+      padding-left: 43%;
+    }
   }
   @media (max-width: 900px) {
     margin-top: 12%;
+    padding: 2%;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    a{
+      color: #007bff;
+      font-size: 1.7rem;
+      padding-left: 40%;
+    }
   }
   @media (max-width: 700px) {
     margin-top: 16%;
