@@ -110,18 +110,19 @@ export const ConceptWrapper = styled.div`
   @media (max-width: 700px) {
     margin-top: 16%;
     padding: 4%;
+
     iframe{
     width:200px;
     height:200px;
     margin-left: 12%;}
-  }
-  .accordion-content {
-    font-size:1.3rem;
-    padding:4%;
-    }
-  a{
-    color: #007bff;
-    font-size: 1.7rem;
-    padding-left: 40%;
+  
+    .accordion-content {
+      font-size:1.3rem;
+      padding:4%;
+      }
+     a{
+      color: #007bff;
+      font-size: 1.7rem;
+      padding-left: 40%;
   }
 `;
