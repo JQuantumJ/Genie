@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { FaTimes } from 'react-icons/fa'; 
 import coinHeads from '/src/assets/image/Concept/coinf.svg';  
 import coinTails from '/src/assets/image/Concept/coinb.svg';  
@@ -7,6 +7,18 @@ import Box1 from '/src/assets/image/Concept/box1.svg';
 import Box2 from '/src/assets/image/Concept/box2.svg';  
 import * as C from './ConceptStyle';
 import Back from '/src/assets/icon/back.svg';
+
+// 동전이 올라오는 애니메이션
+const slideUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -16,8 +28,8 @@ const Wrapper = styled.div`
 
 const CoinBox = styled.div`
   border: 2px solid #333;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 2% auto;
+  padding: 2%;
   max-width: 80%;
   display: flex;
   flex-direction: column;
@@ -32,23 +44,24 @@ const CoinBox = styled.div`
   }
 `;
 
-const Button = styled.button`
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
+
 
 const BoxImage = styled.img`
-  max-width: 50%;
+  max-width: 40%;
   cursor: pointer;
+`;
+
+const AnimatedCoinContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 20px;
+  animation: ${slideUp} 0.8s ease-in-out;
+  h3{
+    font-size: 2rem;
+    color: #333;
+  }
 `;
 
 const ModalOverlay = styled.div`
@@ -112,9 +125,9 @@ const CoinEntanglement = () => {
   const [showCoinModal, setShowCoinModal] = useState(false);  // 동전 상태 모달
   const [coinA, setCoinA] = useState(null); // 동전 A의 상태
   const [coinB, setCoinB] = useState(null); // 동전 B의 상태
-  const [boxOpened, setBoxOpened] = useState(false); // 박스가 열렸는지 여부
+  const [boxOpened, setBoxOpened] = useState(false); 
 
-  // 동전 A 상태 확인 함수 (A가 결정되면 B가 자동으로 결정됨)
+
   const checkCoinState = () => {
     const resultA = Math.random() > 0.5 ? '앞면' : '뒷면';
     setCoinA(resultA);
@@ -134,34 +147,34 @@ const CoinEntanglement = () => {
         <p>두 개의 동전이 특별한 방식으로 얽혀 있습니다.</p>
         <p>한 동전의 상태가 결정되면 다른 동전의 상태도 자동으로 결정됩니다!</p>
         <p>박스를 열어서 동전 A를 확인하세요.</p>
-        
+      {boxOpened && (
+        <AnimatedCoinContainer>
+          <div style={{textAlign: 'center'}}>
+            <h3>동전 A</h3>
+            <img src={coinA === '앞면' ? coinHeads : coinTails} alt="동전 A" style={{ maxWidth: '50%' }} />
+            <p>{coinA}</p>
+          </div>
+          <div style={{textAlign: 'center'}}>
+            <h3>동전 B</h3>
+            <img src={coinB === '앞면' ? coinHeads : coinTails} alt="동전 B" style={{ maxWidth: '50%' }} />
+            <p>{coinB}</p>
+          </div>
+        </AnimatedCoinContainer>
+      )}
         {/* 닫힌 박스 또는 열린 박스 */}
         <BoxImage 
           src={boxOpened ? Box2 : Box1} 
           alt="박스"
           onClick={checkCoinState}
         />
+          <div style={{textAlign: 'center', display: 'flex', marginTop: '1%'}}>
+          <C.Button onClick={() => setShowCoinModal(true)}>
+            추가 설명 보기
+          </C.Button>
+        </div>
       </CoinBox>
 
-      {/* 박스가 열리면 동전 상태 표시 */}
-      {boxOpened && (
-        <div style={{ marginTop: '20px' }}>
-          <h2>동전 상태</h2>
-          <hr />
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <div>
-              <h3>동전 A</h3>
-              <img src={coinA === '앞면' ? coinHeads : coinTails} alt="동전 A" style={{ maxWidth: '50%' }} />
-              <p>{coinA}</p>
-            </div>
-            <div>
-              <h3>동전 B</h3>
-              <img src={coinB === '앞면' ? coinHeads : coinTails} alt="동전 B" style={{ maxWidth: '50%' }} />
-              <p>{coinB}</p>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       {/* 얽힘 상태에 대한 설명 모달 */}
       {showCoinModal && (

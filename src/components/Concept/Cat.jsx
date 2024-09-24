@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Catimg from '/src/assets/image/Concept/cat.svg';
 import Cat2img from '/src/assets/image/Concept/cat2.svg';
+import Cat3img from '/src/assets/image/Concept/cat3.svg';
 import bunker from '/src/assets/image/Concept/bunker.svg';
 import bottle1 from '/src/assets/image/Concept/bottle1.svg';
 import bottle2 from '/src/assets/image/Concept/bottle2.svg';
@@ -69,6 +70,9 @@ const Numbering = styled.p`
   justify-content: center;
   white-space: nowrap;
   gap: 2%;
+  @media(max-width: 900px){
+    gap: 1%;
+  }
 `;
 
 const ModalOverlay = styled.div`
@@ -137,6 +141,21 @@ const CloseIcon = styled(FaTimes)`
   }
 `;
 
+const CatImage = styled.img`
+  max-width: 100%;
+  @media (max-width: 700px) {
+    max-width: 50%;
+  }
+`;
+
+const Cat2Image = styled.img`
+  max-width: 210px;
+  margin-bottom: -45px;
+  @media (max-width: 700px) {
+    max-width: 50%;
+  }
+`;
+
 const Cat = () => {
   const [showCatModal, setShowCatModal] = useState(false);  // 고양이 상태 모달
   const [showInfoModal, setShowInfoModal] = useState(false);  // 추가 설명 모달
@@ -160,7 +179,7 @@ const Cat = () => {
       <hr />
       <Box>
         <Numbering><img src={bunker} alt="bunker" style={{maxWidth: '80%'}}/> </Numbering>
-        <Numbering><img src={bottle1} alt="bottle1" /> <img src={Catimg} alt="cat" /></Numbering>
+        <Numbering><img src={bottle1} alt="bottle1" /> <CatImage src={Catimg} alt="cat" /></Numbering>
         <p>고양이 한 마리와 독이 든 병을 벙커 안에 넣고 벙커를 닫습니다.</p>
       </Box>
       <Box>
@@ -168,7 +187,7 @@ const Cat = () => {
         <p>독이 든 병은 50%의 확률로 깨질 수도, 깨지지 않을 수도 있습니다.</p>
       </Box>
       <Box>
-        <Numbering><img src={Catimg} alt="cat" /> <img src={Cat2img} alt="cat2" style={{maxWidth: '200px', marginBottom: '-47px'}}/></Numbering>
+        <Numbering><CatImage src={Catimg} alt="cat" /> <Cat2Image src={Cat2img} alt="cat2"/></Numbering>
         <p style={{marginBottom: '1%'}}>이에 따라 고양이도 죽을 수도 있고 살아 있을 수도 있습니다.</p>
         <p style={{padding: '0 2%', marginTop: '0px'}}>이러한 상태를 <span style={{color: '#0000ff'}}>양자 중첩 상태</span>라고 합니다.</p>
         <C.Button onClick={checkCatState}>
@@ -203,7 +222,7 @@ const Cat = () => {
             ) : (
               <div>
                 <p>고양이는 죽었습니다....</p>
-                <img src={Cat2img} alt="죽은 고양이" style={{maxWidth: '100%'}} />
+                <img src={Cat3img} alt="죽은 고양이" style={{maxWidth: '60%', margin: '1%'}} />
               </div>
             )}
           </ModalContent>

@@ -207,13 +207,56 @@ const Concept = () => {
           </div>
         )}
       </div>
+      <div className="accordion-item">
+        <div 
+          className={`accordion-title ${activeIndex === 3 ? 'active' : ''}`} 
+          onClick={() => toggleAccordion(3)}
+        >
+          <span>양자 중첩(슈뢰딩거의 고양이)</span>
+          <span>{activeIndex === 3 ? '▲' : '▼'}</span>
+        </div>
+        {activeIndex === 3 && (
+          <div className="accordion-content">
+            <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 <span style={{color: '#B0E3FF'}}>에르빈 슈뢰딩거</span>가 제안한 사고 실험입니다.
+            이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다.
+            특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다.</p>
+            <div style={{textAlign: 'center'}}>
+              <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/cat')}> More</MoreButton>
+              </div>
+          </div>
+        )}
+      </div>
+              {/* 파동 함수 붕괴 */}
+              <div className="accordion-item">
+          <div className={`accordion-title ${activeIndex === 4 ? 'active' : ''}`} onClick={() => toggleAccordion(4)}>
+            <span>파동 함수 붕괴</span>
+            <span>{activeIndex === 4 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 4 && (
+            <div className="accordion-content">
+             <h1 style={{marginBottom: '1%', color: '#eee'}}>중첩 상태가 관측되었을 때, 그 상태가 하나로 확정되는 과정</h1>
+              <hr style={{border: 'none', borderTop: '0.5px solid #ddd'}}/>
+              <p>
+                양자 물체는 여러 상태가 동시에 존재할 수 있는데, 
+                이 상태를 기술하는 것이 <span style={{ color: '#B0E3FF' }}>파동 함수</span>입니다. 
+                여러 상태가 있더라도 외부에서 관측을 하면 파동 함수가 붕괴하면서 입자는 하나의 확정된 상태로 변화합니다.
+                파동 함수 붕괴는 양자 중첩 상태에 있는 입자가 관측되었을 때 하나의 확정된 상태로 변하는 과정입니다. 
+                양자 시스템은 여러 상태(중첩 상태)로 존재할 수 있지만, 누군가 그 시스템을 관측하는 순간, 
+                그 시스템은 중첩된 여러 상태 중 하나로 결정됩니다. 
+                이를 파동 함수가 붕괴했다고 표현합니다.
+              </p>
+              <Numbering><img src={Catimg} alt="cat" /> <img src={Cat2img} alt="cat2" style={{maxWidth: '200px', marginBottom: '-47px'}}/></Numbering>
+              <p>파동 함수 붕괴는 슈뢰딩거의 고양이에서 상자를 열고 난 후에 발생하는 과정으로 이해할 수 있습니다.</p>
+            </div>
+          )}
+        </div>
               {/* 파동-입자 이중성 */}
               <div className="accordion-item"> 
-          <div className={`accordion-title ${activeIndex === 3 ? 'active' : ''}`} onClick={() => toggleAccordion(3)}>
+          <div className={`accordion-title ${activeIndex === 5 ? 'active' : ''}`} onClick={() => toggleAccordion(5)}>
             <span>파동-입자 이중성</span>
-            <span>{activeIndex === 3 ? '▲' : '▼'}</span>
+            <span>{activeIndex === 5 ? '▲' : '▼'}</span>
           </div>
-          {activeIndex === 3 && (
+          {activeIndex === 5 && (
             <div className="accordion-content">
             <p>
                 양자역학의 중요한 개념 중 하나는 <span style={{ color: '#B0E3FF' }}>파동-입자 이중성</span>입니다. 이는 빛과 물질이 파동과 입자 두 가지 성질을 동시에 가진다는 것입니다.
@@ -239,11 +282,11 @@ const Concept = () => {
 
         {/* 양자 얽힘 */}
         <div className="accordion-item">
-          <div className={`accordion-title ${activeIndex === 4 ? 'active' : ''}`} onClick={() => toggleAccordion(4)}>
+          <div className={`accordion-title ${activeIndex === 6 ? 'active' : ''}`} onClick={() => toggleAccordion(6)}>
             <span>양자 얽힘</span>
-            <span>{activeIndex === 4 ? '▲' : '▼'}</span>
+            <span>{activeIndex === 6 ? '▲' : '▼'}</span>
           </div>
-          {activeIndex === 4 && (
+          {activeIndex === 6 && (
             <div className="accordion-content">
               <p>
                 양자 얽힘은 <span style={{ color: '#B0E3FF' }}>두 개 이상의 입자가 서로 강하게 연결되어 있는 상태</span>를 말합니다. 
@@ -258,49 +301,7 @@ const Concept = () => {
             </div>
           )}
         </div>
-      <div className="accordion-item">
-        <div 
-          className={`accordion-title ${activeIndex === 5 ? 'active' : ''}`} 
-          onClick={() => toggleAccordion(5)}
-        >
-          <span>양자 중첩(슈뢰딩거의 고양이)</span>
-          <span>{activeIndex === 5 ? '▲' : '▼'}</span>
-        </div>
-        {activeIndex === 5 && (
-          <div className="accordion-content">
-            <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 <span style={{color: '#B0E3FF'}}>에르빈 슈뢰딩거</span>가 제안한 사고 실험입니다.
-            이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다.
-            특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다.</p>
-            <div style={{textAlign: 'center'}}>
-              <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/cat')}> More</MoreButton>
-              </div>
-          </div>
-        )}
-      </div>
-              {/* 파동 함수 붕괴 */}
-              <div className="accordion-item">
-          <div className={`accordion-title ${activeIndex === 6 ? 'active' : ''}`} onClick={() => toggleAccordion(6)}>
-            <span>파동 함수 붕괴</span>
-            <span>{activeIndex === 6 ? '▲' : '▼'}</span>
-          </div>
-          {activeIndex === 6 && (
-            <div className="accordion-content">
-             <h1 style={{marginBottom: '1%', color: '#eee'}}>중첩 상태가 관측되었을 때, 그 상태가 하나로 확정되는 과정</h1>
-              <hr style={{border: 'none', borderTop: '0.5px solid #ddd'}}/>
-              <p>
-                양자 물체는 여러 상태가 동시에 존재할 수 있는데, 
-                이 상태를 기술하는 것이 <span style={{ color: '#B0E3FF' }}>파동 함수</span>입니다. 
-                여러 상태가 있더라도 외부에서 관측을 하면 파동 함수가 붕괴하면서 입자는 하나의 확정된 상태로 변화합니다.
-                파동 함수 붕괴는 양자 중첩 상태에 있는 입자가 관측되었을 때 하나의 확정된 상태로 변하는 과정입니다. 
-                양자 시스템은 여러 상태(중첩 상태)로 존재할 수 있지만, 누군가 그 시스템을 관측하는 순간, 
-                그 시스템은 중첩된 여러 상태 중 하나로 결정됩니다. 
-                이를 파동 함수가 붕괴했다고 표현합니다.
-              </p>
-              <Numbering><img src={Catimg} alt="cat" /> <img src={Cat2img} alt="cat2" style={{maxWidth: '200px', marginBottom: '-47px'}}/></Numbering>
-              <p>파동 함수 붕괴는 슈뢰딩거의 고양이에서 상자를 열고 난 후에 발생하는 과정으로 이해할 수 있습니다.</p>
-            </div>
-          )}
-        </div>
+
 
     </C.ConceptWrapper>
     </C.Wrapper>
