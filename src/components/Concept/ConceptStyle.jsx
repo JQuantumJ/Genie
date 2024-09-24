@@ -27,7 +27,8 @@ export const Wrapper2 = styled.div`
 `
 
 export const CatWrapper = styled.div`
-  max-width: 100%;
+  max-width: 90%;
+  margin-left: 5%;
   margin-top: 10%;
   border-radius: 0.7vw;
   position: relative;
@@ -37,8 +38,8 @@ export const CatWrapper = styled.div`
     margin-top: 2%;
    }
    h1{
-    margin-left: 5%;
-    font-size: 2.2rem;
+    margin-left: 2%;
+    font-size: 2.6rem;
       @media(max-width: 900px){
         margin-top: 15%;
         font-size: 1.9rem;
@@ -47,6 +48,12 @@ export const CatWrapper = styled.div`
         margin-top: 18%;
       }
    }
+  hr {
+    border: 1px solid #333;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    max-width: 97%;
+  }
 `
 
 export const ConceptWrapper = styled.div`
@@ -56,12 +63,19 @@ export const ConceptWrapper = styled.div`
   margin-bottom: 10%;
   margin-left: 10%;
   border-radius: 0.7vw;
-
+  @media (max-width: 900px) {
+      padding: 1%;
+      max-width: 95%;
+      margin-left: 2.5%;
+  }
 
   h1 {
     text-align: left;
     color: #000;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
+    @media (max-width: 900px) {
+      font-size: 2.3rem;
+    }
   }
 
   hr {
@@ -115,25 +129,24 @@ export const ConceptWrapper = styled.div`
     background-color: #444;
     letter-spacing: 1.4px;
     color: #eee;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{
       font-size: 1.7rem;
        @media (max-width: 900px) {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
        }
     }
     p{
        @media (max-width: 900px) {
-          font-size: 1rem;
+          font-size: 1.4rem;
           margin-bottom: 1%;
        }
     }
     a{
       color: #007bff;
       font-size: 1.7rem;
-      padding-left: 5%;
     }
       @media (max-width: 900px) {
         padding: 5%;
@@ -178,10 +191,10 @@ export const ModalContent = styled.div`
   border-radius: 8px;
   width: 85%;
   max-width: 85%;
-  height: 90vh;  /* 모달 자체 높이를 90vh로 설정 */
+  height: 90vh;  
   position: relative;
-  overflow-y: auto; /* 스크롤을 허용하여 내용이 다 보이도록 설정 */
-  max-height: 90vh; /* 모달의 최대 높이를 90vh로 설정 */
+  overflow-y: auto; 
+  max-height: 90vh; 
 
   button {
     position: absolute;
