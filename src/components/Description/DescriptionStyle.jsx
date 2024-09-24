@@ -16,6 +16,10 @@ export const ConceptWrapper = styled.div`
   margin-bottom: 10%;
   margin-left: 10%;
   border-radius: 0.7vw;
+  p{
+    font-size: 2rem;
+    margin-top: 2%;
+   }
 
   h1 {
     text-align: left;
@@ -66,15 +70,18 @@ export const ConceptWrapper = styled.div`
     padding: 3%;
     background-color: #444;
     letter-spacing: 1.4px;
-    font-size:2rem;
+    font-size: 1.9rem;
     color: #eee;
     line-height: 1.8;
     border-top: 1px solid #007bff;
     max-height: 330px;  /* Fixed height for content */
     overflow-y: auto;  /* Scroll if content exceeds height */
       p{
-      font-size:1.2rem;
-      }
+       @media (max-width: 900px) {
+          font-size: 1.67rem;
+          margin-bottom: 1%;
+       }
+    }
        h2{
         margin-top:10px;
         font-size:2rem;
