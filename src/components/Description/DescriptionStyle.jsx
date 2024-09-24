@@ -72,6 +72,9 @@ export const ConceptWrapper = styled.div`
     border-top: 1px solid #007bff;
     max-height: 330px;  /* Fixed height for content */
     overflow-y: auto;  /* Scroll if content exceeds height */
+      p{
+      font-size:1.6rem
+      }
 
     }
 
@@ -84,9 +87,8 @@ export const ConceptWrapper = styled.div`
   @media (max-width: 900px) {
     margin-top: 12%;
     padding: 2%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.7;
-    
   }
 
   @media (max-width: 700px) {
