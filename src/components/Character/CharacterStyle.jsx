@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     margin-top: -5%;
-    height: 330vh;
-    max-height: 330vh;
+    height: 340vh;
+    max-height: 340vh;
     margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;

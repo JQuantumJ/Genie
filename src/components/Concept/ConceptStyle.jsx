@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
     padding-top: 5%;
     background-color: #eee;
     @media(max-width: 600px){
-      height: 190vh;
-      max-height: 190vh; 
+      height: 210vh;
+      max-height: 210vh; 
       margin-bottom: -10%;
     }
 `
@@ -22,8 +22,8 @@ export const Wrapper2 = styled.div`
     padding-top: 5%;
     background-color: #eee;
     @media(max-width: 600px){
-      height: 250vh;
-      max-height: 250vh; 
+      height: 260vh;
+      max-height: 260vh; 
       margin-bottom: -10%;
     }
 `
@@ -137,12 +137,12 @@ export const ConceptWrapper = styled.div`
     h1{
       font-size: 2.2rem;
        @media (max-width: 900px) {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
        }
     }
     p{
        @media (max-width: 900px) {
-          font-size: 1.4rem;
+          font-size: 1.67rem;
           margin-bottom: 1%;
        }
     }
@@ -223,4 +223,25 @@ text-align: center;
 &:hover {
   background-color: #0056b3;
 }
+`;
+
+export const ImageWrap = styled.div`
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 2%;
+    top: 1%;
+    width: 100%;
+    padding: 20px;
+
+    img {
+        max-width: 30%;
+    }
+    a {
+        width: 20%;
+        margin-top: 4%;
+    }
+    @media (max-width: 768px) {
+        top: 5%;
+    } 
 `;

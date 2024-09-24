@@ -5,8 +5,53 @@ import Ball2 from '/src/assets/image/Concept/ball2.svg';
 import Catimg from '/src/assets/image/Concept/cat.svg';
 import Cat2img from '/src/assets/image/Concept/cat2.svg';
 import Quantum2 from '/src/assets/image/Concept/quantum2.svg';
+import Window from '/src/assets/image/Concept/window.svg';
 import * as C from './ConceptStyle';
 import styled, { keyframes } from 'styled-components';
+const ResponsiveDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+  margin-top: 3%;
+  flex-wrap: wrap;
+
+  & > div:first-child {
+    flex: 1 1 40%; /* 첫 번째 하위 요소의 크기를 40%로 설정 */
+    text-align: center;
+    img{
+      max-width: 60%;
+       @media (max-width: 700px) {
+        max-width: 30%;
+       }
+    }
+  }
+
+  & > div:last-child {
+    background-color: #D5E1DD;
+    color: #333;
+    flex: 1 1 60%; /* 두 번째 하위 요소의 크기를 60%로 설정 */
+    text-align: left;
+    padding: 3%;
+    border-radius: 12px;
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+
+    & > div {
+      max-width: 100%; 
+    }
+
+    & img {
+      max-width: 80%; 
+    }
+  }
+`;
+
 const Numbering = styled.p`
   font-weight: bold;
   text-align: center;
@@ -170,19 +215,24 @@ const Concept = () => {
           </div>
           {activeIndex === 3 && (
             <div className="accordion-content">
-              <p>
+            <p>
                 양자역학의 중요한 개념 중 하나는 <span style={{ color: '#B0E3FF' }}>파동-입자 이중성</span>입니다. 이는 빛과 물질이 파동과 입자 두 가지 성질을 동시에 가진다는 것입니다.
                 예를 들어, 전자는 파동처럼 간섭 패턴을 만들 수 있지만, 입자처럼 공간에서 특정 위치에 있을 수 있습니다.
-              </p>
-              파동-입자 이중성은 물질과 빛이 파동과 입자의 성질을 동시에 가진다는 개념입니다.
-              <p>빛과 그림자</p>
-              빛을 생각해보세요. 빛은 우리가 매일 접하는 것인데, 고전적인 관점에서 보면 빛은 파동처럼 퍼지며, 
+                파동-입자 이중성은 물질과 빛이 파동과 입자의 성질을 동시에 가진다는 개념입니다.</p>
+                <ResponsiveDiv>
+              <div style={{ flex: '1 1 40%', textAlign: 'center' }}>
+                <img src={Window} />
+              </div>
+              <div style={{ flex: '1 1 60%', textAlign: 'left' }}>
+              <p>빛을 생각해봅시다. 빛은 우리가 매일 접하는 것인데, 고전적인 관점에서 보면 빛은 파동처럼 퍼지며, 
               렌즈를 통과해 굴절되고 반사되기도 합니다. 예를 들어, 햇빛이 창문을 통해 들어올 때, 
               그 빛은 창문에서 굴절되고 반사되어 방 안에 퍼집니다. 이때 빛은 파동처럼 행동합니다.
               그러나 빛을 어두운 방에서 레이저 포인터로 쏘면 
               그 레이저 포인터는 특정한 지점에만 빛이 도달하는 것을 볼 수 있습니다. 
               이때 빛은 마치 총알처럼 특정한 점에 도달하는 "입자"처럼 행동합니다.
               이처럼, 빛은 파동처럼 창문에서 굴절되고 퍼질 수 있지만, 특정 조건에서는 입자처럼 특정한 지점에 정확히 도달하는 두 가지 성질을 동시에 가집니다.
+              </p></div>
+              </ResponsiveDiv>
             </div>
           )}
         </div>
@@ -198,12 +248,12 @@ const Concept = () => {
               <p>
                 양자 얽힘은 <span style={{ color: '#B0E3FF' }}>두 개 이상의 입자가 서로 강하게 연결되어 있는 상태</span>를 말합니다. 
                 얽힌 입자들은 멀리 떨어져 있어도 얽혀 있어, 서로의 상태에 영향을 미칠 수 있습니다.
-              </p>
-              <p>두 개의 얽힌 동전
+              두 개의 얽힌 동전
               두 개의 동전이 특별한 방법으로 얽혀 있다고 상상해봅시다. 
-              이 동전들을 각각 상자에 넣고 지구의 반대편으로 떨어뜨립니다. 그 후, 당신이 A 동전의 상자를 열어 동전을 던졌을 때, 
-              앞면이 나왔습니다. 신기하게도, 멀리 떨어진 B 동전은 즉각적으로 뒤집혀서 반드시 뒷면이 나오는 현상을 보여줍니다. 
-              그들은 어떤 방식으로든 얽혀 있어서, A 동전이 앞면이면 B 동전은 뒷면이 될 것이고, 반대로도 성립됩니다.
+              이 동전들을 각각 상자에 넣고 지구의 반대편으로 떨어뜨립니다. 그 후, A 동전의 상자를 열어 동전을 던졌을 때, 
+              앞면이 나왔습니다. 이때, 멀리 떨어진 B 동전은 즉각적으로 뒤집혀서 반드시 뒷면이 나오는 현상을 보여줍니다. 
+              그들은 어떤 방식으로든 얽혀 있어서, A 동전이 앞면이면 B 동전은 뒷면이 될 것이고, 반대로도 성립됩니다.</p>
+              <p>
               이처럼 양자 얽힘에서는 두 입자가 얽힌 상태에 있으면, 
               한 입자의 상태가 결정되는 순간 다른 입자의 상태도 그에 맞춰 즉각적으로 결정됩니다. 
               얽힘 상태에서는 물리적으로 떨어져 있어도 정보가 "순간적으로" 전해지는 것처럼 보입니다.</p>

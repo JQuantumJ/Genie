@@ -8,6 +8,29 @@ import bottle2 from '/src/assets/image/Concept/bottle2.svg';
 import * as C from './ConceptStyle';
 import { FaTimes } from 'react-icons/fa'; 
 import styled from 'styled-components';
+import Back from '/src/assets/icon/back.svg';
+const ResponsiveDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+  margin-top: 3%;
+  flex-wrap: wrap;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+
+    & > div {
+      max-width: 100%;
+    }
+
+    & img {
+      max-width: 80%;
+    }
+  }
+`;
 
 const Box = styled.div`
   border: 2px solid #333;
@@ -129,6 +152,9 @@ const Cat = () => {
 
   return (
     <C.Wrapper2>
+     <C.ImageWrap>
+        <a href="/concept"><img src={Back} alt="Back to main" /></a>
+      </C.ImageWrap>
     <C.CatWrapper>
       <h1>슈뢰딩거의 고양이</h1>
       <hr />
