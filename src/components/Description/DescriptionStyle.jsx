@@ -72,20 +72,37 @@ export const ConceptWrapper = styled.div`
     border-top: 1px solid #007bff;
     max-height: 330px;  /* Fixed height for content */
     overflow-y: auto;  /* Scroll if content exceeds height */
-  }
+
+    }
 
   /* Flexbox to center the video */
   iframe {
+    width="560" 
+    height="315" 
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
   }
 
   @media (max-width: 900px) {
     margin-top: 12%;
+    padding: 2%;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    
   }
+
+  
 
   @media (max-width: 700px) {
     margin-top: 16%;
+    iframe{
+    width:200px;
+    height:200px;
+    margin-left: 17%;}
+  }
+  a{
+    color: #007bff;
+    font-size: 1.7rem;
+    padding-left: 40%;
   }
 `;
