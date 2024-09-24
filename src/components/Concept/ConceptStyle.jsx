@@ -135,14 +135,14 @@ export const ConceptWrapper = styled.div`
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{
-      font-size: 2.2rem;
+      font-size: 2.1rem;
        @media (max-width: 900px) {
           font-size: 1.7rem;
        }
     }
     p{
        @media (max-width: 900px) {
-          font-size: 1.67rem;
+          font-size: 1.4rem;
           margin-bottom: 1%;
        }
     }

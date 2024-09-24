@@ -245,7 +245,7 @@ const Concept = () => {
                 그 시스템은 중첩된 여러 상태 중 하나로 결정됩니다. 
                 이를 파동 함수가 붕괴했다고 표현합니다.
               </p>
-              <Numbering><img src={Catimg} alt="cat" /> <img src={Cat2img} alt="cat2" style={{maxWidth: '200px', marginBottom: '-47px'}}/></Numbering>
+              <Numbering><img src={Catimg} alt="cat" style={{maxWidth: '40%'}} /> <img src={Cat2img} alt="cat2" style={{maxWidth: '40%', marginBottom: '-47px'}}/></Numbering>
               <p>파동 함수 붕괴는 슈뢰딩거의 고양이에서 상자를 열고 난 후에 발생하는 과정으로 이해할 수 있습니다.</p>
             </div>
           )}
