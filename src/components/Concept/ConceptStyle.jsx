@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     @media(max-width: 600px){
       height: 190vh;
       max-height: 190vh; 
+      margin-bottom: -10%;
     }
 `
 
@@ -23,6 +24,7 @@ export const Wrapper2 = styled.div`
     @media(max-width: 600px){
       height: 250vh;
       max-height: 250vh; 
+      margin-bottom: -10%;
     }
 `
 
