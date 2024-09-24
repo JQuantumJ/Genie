@@ -235,13 +235,13 @@ export const ImageWrap = styled.div`
     padding: 20px;
 
     img {
-        max-width: 30%;
+      max-width: 60px;
+      @media (max-width: 768px) {
+        display: none;
+      } 
     }
     a {
         width: 20%;
         margin-top: 4%;
     }
-    @media (max-width: 768px) {
-        top: 5%;
-    } 
 `;

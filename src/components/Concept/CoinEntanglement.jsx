@@ -8,7 +8,6 @@ import Box2 from '/src/assets/image/Concept/box2.svg';
 import * as C from './ConceptStyle';
 import Back from '/src/assets/icon/back.svg';
 
-// 동전이 올라오는 애니메이션
 const slideUp = keyframes`
   from {
     opacity: 0;
@@ -20,16 +19,11 @@ const slideUp = keyframes`
   }
 `;
 
-const Wrapper = styled.div`
-  max-width: 100%;
-  padding: 5%;
-  text-align: center;
-`;
 
 const CoinBox = styled.div`
   border: 2px solid #333;
   margin: 2% auto;
-  padding: 2%;
+  padding: 0px 2%;
   max-width: 80%;
   display: flex;
   flex-direction: column;
@@ -41,6 +35,10 @@ const CoinBox = styled.div`
   }
   p {
     font-size: 1.7rem;
+    @media(max-width: 900px){
+      font-size: 1.2rem;
+      text-align: center;
+    }
   }
 `;
 
@@ -90,7 +88,7 @@ const ModalContent = styled.div`
   max-height: 80vh;
   z-index: 10003;
   line-height: 1.8;
-  h2 {
+  h2{
     font-size: 1.7rem;
     margin-bottom: 2%;
   }
@@ -99,12 +97,17 @@ const ModalContent = styled.div`
     margin: 10px 0;
     font-family: arial;
   }
-  span {
+  span{
     background: linear-gradient(to top, #D0E7FE 40%, transparent 10%);
   }
-  hr {
+  hr{
     margin-bottom: 3%;
     max-width: 100%;
+  }
+  @media(max-width: 900px){
+    width: 90%;
+    max-width: 90%;
+    padding: 6%;
   }
 `;
 
