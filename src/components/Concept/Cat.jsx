@@ -166,7 +166,7 @@ const Cat = () => {
   const checkCatState = () => {
     const result = Math.random() > 0.5 ? '살아 있습니다' : '죽었습니다';
     setCatState(result);
-    setShowCatModal(true); // 모달을 열면서 고양이 상태 확인
+    setShowCatModal(true); 
   };
 
   return (
@@ -191,7 +191,7 @@ const Cat = () => {
         <p style={{marginBottom: '1%'}}>이에 따라 고양이도 죽을 수도 있고 살아 있을 수도 있습니다.</p>
         <p style={{padding: '0 2%', marginTop: '0px'}}>이러한 상태를 <span style={{color: '#0000ff'}}>양자 중첩 상태</span>라고 합니다.</p>
         <C.Button onClick={checkCatState}>
-            상자 안에 고양이가 있는지 확인하기
+            벙커 안에 고양이가 있는지 확인하기
           </C.Button>
       </Box>
       <Box>
@@ -212,7 +212,7 @@ const Cat = () => {
         <ModalOverlay>
           <ModalContent style={{backgroundColor: '#ddd'}}>
             <CloseIcon onClick={() => setShowCatModal(false)} />
-            <h2>고양이 상태</h2>
+            <h2>벙커의 문이 열렸습니다!</h2>
             <hr />
             {catState === '살아 있습니다' ? (
               <div>
