@@ -208,7 +208,7 @@ const Concept = () => {
         )}
       </div>
               {/* 파동-입자 이중성 */}
-              <div className="accordion-item">
+              <div className="accordion-item"> 
           <div className={`accordion-title ${activeIndex === 3 ? 'active' : ''}`} onClick={() => toggleAccordion(3)}>
             <span>파동-입자 이중성</span>
             <span>{activeIndex === 3 ? '▲' : '▼'}</span>
@@ -247,16 +247,14 @@ const Concept = () => {
             <div className="accordion-content">
               <p>
                 양자 얽힘은 <span style={{ color: '#B0E3FF' }}>두 개 이상의 입자가 서로 강하게 연결되어 있는 상태</span>를 말합니다. 
-                얽힌 입자들은 멀리 떨어져 있어도 얽혀 있어, 서로의 상태에 영향을 미칠 수 있습니다.
-              두 개의 얽힌 동전
-              두 개의 동전이 특별한 방법으로 얽혀 있다고 상상해봅시다. 
-              이 동전들을 각각 상자에 넣고 지구의 반대편으로 떨어뜨립니다. 그 후, A 동전의 상자를 열어 동전을 던졌을 때, 
-              앞면이 나왔습니다. 이때, 멀리 떨어진 B 동전은 즉각적으로 뒤집혀서 반드시 뒷면이 나오는 현상을 보여줍니다. 
-              그들은 어떤 방식으로든 얽혀 있어서, A 동전이 앞면이면 B 동전은 뒷면이 될 것이고, 반대로도 성립됩니다.</p>
+                얽힌 입자들은 멀리 떨어져 있어도 얽혀 있어, 서로의 상태에 영향을 미칠 수 있습니다.</p>
               <p>
-              이처럼 양자 얽힘에서는 두 입자가 얽힌 상태에 있으면, 
+              양자 얽힘에서는 두 입자가 얽힌 상태에 있으면, 
               한 입자의 상태가 결정되는 순간 다른 입자의 상태도 그에 맞춰 즉각적으로 결정됩니다. 
               얽힘 상태에서는 물리적으로 떨어져 있어도 정보가 "순간적으로" 전해지는 것처럼 보입니다.</p>
+              <div style={{textAlign: 'center'}}>
+              <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/coinentanglement')}> 예시 보기</MoreButton>
+              </div>
             </div>
           )}
         </div>
@@ -273,7 +271,9 @@ const Concept = () => {
             <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 <span style={{color: '#B0E3FF'}}>에르빈 슈뢰딩거</span>가 제안한 사고 실험입니다.
             이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다.
             특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다.</p>
-            <div style={{textAlign: 'center'}}><MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/cat')}> More</MoreButton></div>
+            <div style={{textAlign: 'center'}}>
+              <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/cat')}> More</MoreButton>
+              </div>
           </div>
         )}
       </div>

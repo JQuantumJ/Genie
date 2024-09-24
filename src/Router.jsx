@@ -9,6 +9,7 @@ import DescriptionPage from './pages/Description';
 import TopBtn from './components/TopButton/TopButton';
 import CharacterPage from './pages/Character';
 import CatPage from './pages/Cat';
+import CoinEntanglementPage from './pages/CoinEntanglement';
 
 export default function Router() {
   return (
@@ -21,6 +22,7 @@ export default function Router() {
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/character" element={<CharacterPage />} />
         <Route path="/cat" element={<CatPage />} />
+        <Route path="/coinentanglement" element={<CoinEntanglementPage />} />
       </Routes>
       <TopBtn />
       <Footer />
