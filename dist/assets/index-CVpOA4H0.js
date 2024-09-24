@@ -470,8 +470,8 @@ Error generating stack: `+o.message+`
     padding-top: 5%;
     background-color: #eee;
     @media(max-width: 600px){
-      height: 110vh;
-      max-height: 110vh; 
+      height: 190vh;
+      max-height: 190vh; 
     }
 `,Ng=P.div`
     height: 320vh;
@@ -671,22 +671,48 @@ text-align: center;
   background-color: #0056b3; !important;
 }
 `,Rg=P.div`
+  margin-left: 1%;
+  height: 30vh;
+  margin-top: 2%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10%;
+  height: 50vh;
+  @media (max-width: 700px) {
+    height: 25vh; 
+  }
+  img:nth-child(1) {
+    max-width: 20%;
+    @media (max-width: 700px) {
+      max-width: 30%;
+    }
+  }
+
+  img:nth-child(2) {
+    max-width: 15%;
+    @media (max-width: 700px) {
+      max-width: 25%;
+    }
+  }
+`,$g=P.div`
   text-align: center;
   height: 50vh;
   @media (max-width: 700px) {
     height: 20vh; 
   }
-`,$g=Vo`
+`,Og=Vo`
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-`,Og=P.img`
+`,Fg=P.img`
   max-width: 33%;
-  animation: ${$g} 8s linear infinite;
-`,Fg=P.button`
+  animation: ${Og} 8s linear infinite;
+`,Mg=P.button`
   background-color: #007bff;
   color: white;
   font-size: 1.2rem;
@@ -699,7 +725,7 @@ text-align: center;
   &:hover {
     background-color: #0056b3;
   }
-`,Mg=()=>{C.useState(!1),C.useState(!1);const[e,t]=C.useState(null),n=Fo(),r=i=>{t(e===i?null:i)};return u.jsx(zg,{children:u.jsxs(Lg,{children:[u.jsx("h1",{children:"양자 개념"}),u.jsx("hr",{}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===0?"active":""}`,onClick:()=>r(0),children:[u.jsx("span",{children:"양자란 ?"}),u.jsx("span",{children:e===0?"▲":"▼"})]}),e===0&&u.jsxs("div",{className:"accordion-content",children:[u.jsxs("p",{style:{marginBottom:"2%"},children:["양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다. 쉽게 말해, ",u.jsx("span",{style:{color:"#B0E3FF"},children:"우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자"}),"라고 부릅니다. 처음으로 양자는 빛에서 발견되었으며, 이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다."]}),u.jsx(Rg,{children:u.jsx(Og,{style:{maxWidth:"33%"},src:Pg})})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===1?"active":""}`,onClick:()=>r(1),children:[u.jsx("span",{children:"양자역학이란 ?"}),u.jsx("span",{children:e===1?"▲":"▼"})]}),e===1&&u.jsx("div",{className:"accordion-content",children:u.jsxs("p",{children:["입자 및 입자 집단을 다루는 현대 물리학의 기초 이론입니다. 양자역학은 ",u.jsx("span",{style:{color:"#B0E3FF"},children:"원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론"}),"으로, 이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다. 그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다."]})})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===2?"active":""}`,onClick:()=>r(2),children:[u.jsx("span",{children:"불확정성의 원리"}),u.jsx("span",{children:e===2?"▲":"▼"})]}),e===2&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("h1",{style:{marginBottom:"1%",color:"#eee"},children:'"입자의 위치나 운동량을 동시에 정확하게 알 수 없다"'}),u.jsx("hr",{style:{border:"none",borderTop:"0.5px solid #ddd"}}),u.jsxs("p",{children:["하이젠베르크는 방정식들을 연구하는 동안 어떤 특성은 정확하게 측정하는 것이 불가능하다는 사실을 깨달았는데, 그 이유는 사용하는 실험 장치가 측정하는 원자에 영향을 미치기 때문이었습니다. 입자의 위치와 운동량은 동시에 추론할 수 없으며, 주어진 순간의 에너지도 알 수 없었습니다. 하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고, 반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다. 이는 마치 ",u.jsx("span",{style:{color:"#B0E3FF"},children:"우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것"}),"과 비슷합니다. 특히, 측정 차원의 오류가 아니라, 사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없습니다. 오히려 하나의 값을 고정하면 다른 값은 더욱 불확실해집니다."]}),u.jsxs("div",{style:{marginLeft:"1%",height:"30vh",marginTop:"2%",alignItems:"center",display:"flex",justifyContent:"flex-start",flexDirection:"row",gap:"10%"},children:[u.jsx("img",{style:{maxWidth:"20%"},src:_g}),u.jsx("img",{style:{maxWidth:"15%"},src:jg})]})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===3?"active":""}`,onClick:()=>r(3),children:[u.jsx("span",{children:"슈뢰딩거의 고양이"}),u.jsx("span",{children:e===3?"▲":"▼"})]}),e===3&&u.jsxs("div",{className:"accordion-content",children:[u.jsxs("p",{children:["슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 ",u.jsx("span",{style:{color:"#B0E3FF"},children:"에르빈 슈뢰딩거"}),"가 제안한 사고 실험입니다. 이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다. 특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다."]}),u.jsx("div",{style:{textAlign:"center"},children:u.jsx(Fg,{style:{cursor:"pointer"},onClick:i=>n("/cat"),children:" More"})})]})]})]})})};function Dg(){return u.jsx(u.Fragment,{children:u.jsx(Mg,{})})}const Bg=P.div`
+`,Dg=()=>{C.useState(!1),C.useState(!1);const[e,t]=C.useState(null),n=Fo(),r=i=>{t(e===i?null:i)};return u.jsx(zg,{children:u.jsxs(Lg,{children:[u.jsx("h1",{children:"양자 개념"}),u.jsx("hr",{}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===0?"active":""}`,onClick:()=>r(0),children:[u.jsx("span",{children:"양자란 ?"}),u.jsx("span",{children:e===0?"▲":"▼"})]}),e===0&&u.jsxs("div",{className:"accordion-content",children:[u.jsxs("p",{style:{marginBottom:"2%"},children:["양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다. 쉽게 말해, ",u.jsx("span",{style:{color:"#B0E3FF"},children:"우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자"}),"라고 부릅니다. 처음으로 양자는 빛에서 발견되었으며, 이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다."]}),u.jsx($g,{children:u.jsx(Fg,{style:{maxWidth:"33%"},src:Pg})})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===1?"active":""}`,onClick:()=>r(1),children:[u.jsx("span",{children:"양자역학이란 ?"}),u.jsx("span",{children:e===1?"▲":"▼"})]}),e===1&&u.jsx("div",{className:"accordion-content",children:u.jsxs("p",{children:["입자 및 입자 집단을 다루는 현대 물리학의 기초 이론입니다. 양자역학은 ",u.jsx("span",{style:{color:"#B0E3FF"},children:"원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론"}),"으로, 이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다. 그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다."]})})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===2?"active":""}`,onClick:()=>r(2),children:[u.jsx("span",{children:"불확정성의 원리"}),u.jsx("span",{children:e===2?"▲":"▼"})]}),e===2&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("h1",{style:{marginBottom:"1%",color:"#eee"},children:'"입자의 위치나 운동량을 동시에 정확하게 알 수 없다"'}),u.jsx("hr",{style:{border:"none",borderTop:"0.5px solid #ddd"}}),u.jsxs("p",{children:["하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고, 반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다. 이는 마치 ",u.jsx("span",{style:{color:"#B0E3FF"},children:"우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것"}),"과 비슷합니다. 특히, 측정 차원의 오류가 아니라, 사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없습니다. 오히려 하나의 값을 고정하면 다른 값은 더욱 불확실해집니다."]}),u.jsxs(Rg,{children:[u.jsx("img",{src:_g}),u.jsx("img",{src:jg})]})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===3?"active":""}`,onClick:()=>r(3),children:[u.jsx("span",{children:"슈뢰딩거의 고양이"}),u.jsx("span",{children:e===3?"▲":"▼"})]}),e===3&&u.jsxs("div",{className:"accordion-content",children:[u.jsxs("p",{children:["슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 ",u.jsx("span",{style:{color:"#B0E3FF"},children:"에르빈 슈뢰딩거"}),"가 제안한 사고 실험입니다. 이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다. 특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다."]}),u.jsx("div",{style:{textAlign:"center"},children:u.jsx(Mg,{style:{cursor:"pointer"},onClick:i=>n("/cat"),children:" More"})})]})]})]})})};function Bg(){return u.jsx(u.Fragment,{children:u.jsx(Dg,{})})}const Ag=P.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -709,7 +735,7 @@ text-align: center;
   margin-top: -5%;
   margin-bottom: -10%;
   background-color: #eee;
-`,Ag=P.h2`
+`,Ug=P.h2`
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
@@ -732,7 +758,7 @@ text-align: center;
     outline: none;
     background-color: #bbb;
   }
-`,Ug=P.div`
+`,Wg=P.div`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -756,7 +782,7 @@ text-align: center;
     margin-top: 10px;
     color: #ddd;
   }
-`,Wg=P.div`
+`,Vg=P.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -776,14 +802,14 @@ text-align: center;
     margin-top: 10px;
     color: #666;
   }
-`,Vg=()=>{const e=[{question:"양자 얽힘 현상은 거리에 상관없이 두 입자가 서로 연결된 상태를 유지하는 것을 의미한다.",correctAnswer:"O",explanation:"양자 얽힘은 두 입자가 멀리 떨어져 있어도 서로의 상태가 연관된 상태를 유지하는 현상입니다. 한 입자의 상태가 변하면 즉시 다른 입자의 상태도 변합니다."},{question:"불확정성의 원리를 최초로 밝힌 사람은 하이젠베르크이다",correctAnswer:"O",explanation:"불확정성의 원리를 최초로 밝힌 사람은 하이젠베르크이다"},{question:"진인프라의 설립일은 2006년 5월 4일이다.",correctAnswer:"O",explanation:"진인프라의 설립일은 2006년 5월 4일이다."},{question:"양자란 화학 원소로서의 특성을 잃지 않는 범위에서 도달할 수 있는 물질의 기본적인 최소입자이다.",correctAnswer:"X",explanation:'해당 설명은 "원자"에 대한 설명으로, 양자란 더 이상 나눌 수 없는 에너지의 최소량의 단위이다'},{question:"양자 컴퓨터는 모든 문제를 일반 컴퓨터보다 빠르게 해결할 수 있다.",correctAnswer:"X",explanation:" 양자 컴퓨터는 특정한 문제, 특히 복잡한 최적화 문제나 암호 해독 등에서 더 뛰어난 성능을 발휘합니다. "},{question:"슈뢰딩거의 고양이 실험에서 고양이는 살았다.",correctAnswer:"X",explanation:'양자역학의 해석에 따르자면 고양이의 생사 여부를 확인해보기 전까지는 고양이의 상태를 살아있으면서도 동시에 죽어있는 상태라고 규정하기 때문에 정답은 "알 수 없다"이다.'}],[t,n]=C.useState(0),[r,i]=C.useState(0),[o,l]=C.useState(!1),[s,a]=C.useState(""),[c,m]=C.useState(""),[h,g]=C.useState(!1),v=x=>{const w=e[t];let _=1500;x===w.correctAnswer?(i(r+1),a("정답입니다!"),m("")):(a("오답입니다!"),m(w.explanation),_=3e3),l(!0),setTimeout(()=>{l(!1),t<e.length-1?n(t+1):g(!0)},_)};return u.jsx(Bg,{children:h?u.jsxs(Wg,{children:[u.jsx("h2",{children:"퀴즈 완료!"}),u.jsxs("p",{children:["총 ",e.length,"문제 중 ",r,"문제 맞추셨습니다."]})]}):u.jsxs(u.Fragment,{children:[u.jsx(Ag,{children:e[t].question}),u.jsxs("div",{children:[u.jsx(vc,{onClick:()=>v("O"),children:"O"}),u.jsx(vc,{onClick:()=>v("X"),children:"X"})]}),o&&u.jsxs(Ug,{children:[u.jsx("p",{children:s}),c&&u.jsx("small",{children:c})]})]})})};function Hg(){return u.jsx(u.Fragment,{children:u.jsx(Vg,{})})}const Qg=P.div`
+`,Hg=()=>{const e=[{question:"양자 얽힘 현상은 거리에 상관없이 두 입자가 서로 연결된 상태를 유지하는 것을 의미한다.",correctAnswer:"O",explanation:"양자 얽힘은 두 입자가 멀리 떨어져 있어도 서로의 상태가 연관된 상태를 유지하는 현상입니다. 한 입자의 상태가 변하면 즉시 다른 입자의 상태도 변합니다."},{question:"불확정성의 원리를 최초로 밝힌 사람은 하이젠베르크이다",correctAnswer:"O",explanation:"불확정성의 원리를 최초로 밝힌 사람은 하이젠베르크이다"},{question:"진인프라의 설립일은 2006년 5월 4일이다.",correctAnswer:"O",explanation:"진인프라의 설립일은 2006년 5월 4일이다."},{question:"양자란 화학 원소로서의 특성을 잃지 않는 범위에서 도달할 수 있는 물질의 기본적인 최소입자이다.",correctAnswer:"X",explanation:'해당 설명은 "원자"에 대한 설명으로, 양자란 더 이상 나눌 수 없는 에너지의 최소량의 단위이다'},{question:"양자 컴퓨터는 모든 문제를 일반 컴퓨터보다 빠르게 해결할 수 있다.",correctAnswer:"X",explanation:" 양자 컴퓨터는 특정한 문제, 특히 복잡한 최적화 문제나 암호 해독 등에서 더 뛰어난 성능을 발휘합니다. "},{question:"슈뢰딩거의 고양이 실험에서 고양이는 살았다.",correctAnswer:"X",explanation:'양자역학의 해석에 따르자면 고양이의 생사 여부를 확인해보기 전까지는 고양이의 상태를 살아있으면서도 동시에 죽어있는 상태라고 규정하기 때문에 정답은 "알 수 없다"이다.'}],[t,n]=C.useState(0),[r,i]=C.useState(0),[o,l]=C.useState(!1),[s,a]=C.useState(""),[c,m]=C.useState(""),[h,g]=C.useState(!1),v=x=>{const w=e[t];let _=1500;x===w.correctAnswer?(i(r+1),a("정답입니다!"),m("")):(a("오답입니다!"),m(w.explanation),_=3e3),l(!0),setTimeout(()=>{l(!1),t<e.length-1?n(t+1):g(!0)},_)};return u.jsx(Ag,{children:h?u.jsxs(Vg,{children:[u.jsx("h2",{children:"퀴즈 완료!"}),u.jsxs("p",{children:["총 ",e.length,"문제 중 ",r,"문제 맞추셨습니다."]})]}):u.jsxs(u.Fragment,{children:[u.jsx(Ug,{children:e[t].question}),u.jsxs("div",{children:[u.jsx(vc,{onClick:()=>v("O"),children:"O"}),u.jsx(vc,{onClick:()=>v("X"),children:"X"})]}),o&&u.jsxs(Wg,{children:[u.jsx("p",{children:s}),c&&u.jsx("small",{children:c})]})]})})};function Qg(){return u.jsx(u.Fragment,{children:u.jsx(Hg,{})})}const Gg=P.div`
     height: 160vh;
     max-height: 200vh;
     margin-top: -5%;
     margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;
-`,Gg=P.div`
+`,Yg=P.div`
   padding: 4%;
   max-width: 80%;
   margin-top: 5%;
@@ -862,7 +888,7 @@ text-align: center;
   @media (max-width: 700px) {
     margin-top: 16%;
   }
-`,Yg=()=>{const[e,t]=C.useState(null),n=r=>{t(e===r?null:r)};return u.jsx(Qg,{children:u.jsxs(Gg,{children:[u.jsx("h1",{children:"양자 활용"}),u.jsx("hr",{}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===0?"active":""}`,onClick:()=>n(0),children:[u.jsx("span",{children:"양자 컴퓨터"}),u.jsx("span",{children:e===0?"▲":"▼"})]}),e===0&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("p",{children:"기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다."}),u.jsx("p",{children:" 이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데, "}),u.jsx("p",{children:"이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다. "}),u.jsx("hr",{}),u.jsx("iframe",{width:"560",height:"315",src:"https://www.youtube.com/embed/gjp9301in0U",title:"YouTube video player",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",allowFullScreen:!0})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===1?"active":""}`,onClick:()=>n(1),children:[u.jsx("span",{children:"양자 암호통신"}),u.jsx("span",{children:e===1?"▲":"▼"})]}),e===1&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("p",{children:"양자암호통신 기술은 통신상의 보안을 자연의 기본원리인 양자역학의 법칙에 의해서 보장하므로"}),u.jsx("p",{children:"도청이나 감청이 절대적으로 불가능한 차세대 통신보안 기술로서 최근 크게 주목받고 있다."}),u.jsx("p",{children:"즉, 양자암호통신 기술은 “양자 복제불가능성”과 같은 양자물리학의 법칙에 기초해서 송신자와 수신자 사이에 암호 키(일회용 난수표)를"}),u.jsx("p",{children:"절대적으로 안전하게 실시간으로 분배하는 기술로서 “양자 키 분배 기술”로도 알려져 있다."}),u.jsx("hr",{}),u.jsx("iframe",{width:"560",height:"315",src:"https://www.youtube.com/embed/fF1cJ5F7ArI?si=9nIUWin5E9jQ6qRT",title:"YouTube video player",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",allowFullScreen:!0})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===2?"active":""}`,onClick:()=>n(2),children:[u.jsx("span",{children:"양자 센서"}),u.jsx("span",{children:e===2?"▲":"▼"})]}),e===2&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("p",{children:"양자 센서의 기본 원리는 센서와 탐지 대상 물체 사이의 상호작용을 통해 발생하는 미세한 양자 위상변화(Quantum Phase Accumulation)를 측정하는 것이다."}),u.jsx("p",{children:"이때 중첩, 이중성, 얽힘과 같은 미시 세계의 양자역학적 특성들이 측정 기술로 활용된다."}),u.jsx("p",{children:"양자 센싱은 측정 대상과 센서의 종류에 따라 다양하게 분류되며, 일반적으로 큐비트와 같은 양자 시스템을 사용해 시간, 자기장 등의 물리량을 정밀하게 측정한다."}),u.jsx("hr",{}),u.jsx("iframe",{width:"560",height:"315",src:"https://www.youtube.com/embed/jS6fiujLTzo?si=JBji-IeWWDn1tFDX",title:"YouTube video player",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",allowFullScreen:!0})]})]})]})})};function Kg(){return u.jsx(u.Fragment,{children:u.jsx(Yg,{})})}const Zg="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='50'%20cy='50'%20r='50'%20fill='%23F1F5F9'/%3e%3cpath%20d='M48.25%2070C48.25%2070.9665%2049.0335%2071.75%2050%2071.75C50.9665%2071.75%2051.75%2070.9665%2051.75%2070H48.25ZM51.2374%2034.7626C50.554%2034.0791%2049.446%2034.0791%2048.7626%2034.7626L37.6256%2045.8995C36.9422%2046.5829%2036.9422%2047.691%2037.6256%2048.3744C38.309%2049.0578%2039.4171%2049.0578%2040.1005%2048.3744L50%2038.4749L59.8995%2048.3744C60.5829%2049.0578%2061.691%2049.0578%2062.3744%2048.3744C63.0578%2047.691%2063.0578%2046.5829%2062.3744%2045.8995L51.2374%2034.7626ZM51.75%2070L51.75%2036H48.25L48.25%2070H51.75Z'%20fill='%2336597D'/%3e%3c/svg%3e",Xg=P.img`
+`,Kg=()=>{const[e,t]=C.useState(null),n=r=>{t(e===r?null:r)};return u.jsx(Gg,{children:u.jsxs(Yg,{children:[u.jsx("h1",{children:"양자 활용"}),u.jsx("hr",{}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===0?"active":""}`,onClick:()=>n(0),children:[u.jsx("span",{children:"양자 컴퓨터"}),u.jsx("span",{children:e===0?"▲":"▼"})]}),e===0&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("p",{children:"기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다."}),u.jsx("p",{children:" 이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데, "}),u.jsx("p",{children:"이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다. "}),u.jsx("hr",{}),u.jsx("iframe",{width:"560",height:"315",src:"https://www.youtube.com/embed/gjp9301in0U",title:"YouTube video player",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",allowFullScreen:!0})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===1?"active":""}`,onClick:()=>n(1),children:[u.jsx("span",{children:"양자 암호통신"}),u.jsx("span",{children:e===1?"▲":"▼"})]}),e===1&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("p",{children:"양자암호통신 기술은 통신상의 보안을 자연의 기본원리인 양자역학의 법칙에 의해서 보장하므로"}),u.jsx("p",{children:"도청이나 감청이 절대적으로 불가능한 차세대 통신보안 기술로서 최근 크게 주목받고 있다."}),u.jsx("p",{children:"즉, 양자암호통신 기술은 “양자 복제불가능성”과 같은 양자물리학의 법칙에 기초해서 송신자와 수신자 사이에 암호 키(일회용 난수표)를"}),u.jsx("p",{children:"절대적으로 안전하게 실시간으로 분배하는 기술로서 “양자 키 분배 기술”로도 알려져 있다."}),u.jsx("hr",{}),u.jsx("iframe",{width:"560",height:"315",src:"https://www.youtube.com/embed/fF1cJ5F7ArI?si=9nIUWin5E9jQ6qRT",title:"YouTube video player",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",allowFullScreen:!0})]})]}),u.jsxs("div",{className:"accordion-item",children:[u.jsxs("div",{className:`accordion-title ${e===2?"active":""}`,onClick:()=>n(2),children:[u.jsx("span",{children:"양자 센서"}),u.jsx("span",{children:e===2?"▲":"▼"})]}),e===2&&u.jsxs("div",{className:"accordion-content",children:[u.jsx("p",{children:"양자 센서의 기본 원리는 센서와 탐지 대상 물체 사이의 상호작용을 통해 발생하는 미세한 양자 위상변화(Quantum Phase Accumulation)를 측정하는 것이다."}),u.jsx("p",{children:"이때 중첩, 이중성, 얽힘과 같은 미시 세계의 양자역학적 특성들이 측정 기술로 활용된다."}),u.jsx("p",{children:"양자 센싱은 측정 대상과 센서의 종류에 따라 다양하게 분류되며, 일반적으로 큐비트와 같은 양자 시스템을 사용해 시간, 자기장 등의 물리량을 정밀하게 측정한다."}),u.jsx("hr",{}),u.jsx("iframe",{width:"560",height:"315",src:"https://www.youtube.com/embed/jS6fiujLTzo?si=JBji-IeWWDn1tFDX",title:"YouTube video player",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",allowFullScreen:!0})]})]})]})})};function Zg(){return u.jsx(u.Fragment,{children:u.jsx(Kg,{})})}const Xg="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='50'%20cy='50'%20r='50'%20fill='%23F1F5F9'/%3e%3cpath%20d='M48.25%2070C48.25%2070.9665%2049.0335%2071.75%2050%2071.75C50.9665%2071.75%2051.75%2070.9665%2051.75%2070H48.25ZM51.2374%2034.7626C50.554%2034.0791%2049.446%2034.0791%2048.7626%2034.7626L37.6256%2045.8995C36.9422%2046.5829%2036.9422%2047.691%2037.6256%2048.3744C38.309%2049.0578%2039.4171%2049.0578%2040.1005%2048.3744L50%2038.4749L59.8995%2048.3744C60.5829%2049.0578%2061.691%2049.0578%2062.3744%2048.3744C63.0578%2047.691%2063.0578%2046.5829%2062.3744%2045.8995L51.2374%2034.7626ZM51.75%2070L51.75%2036H48.25L48.25%2070H51.75Z'%20fill='%2336597D'/%3e%3c/svg%3e",Jg=P.img`
   width: 5rem;
   height: 5rem;
   cursor: pointer;
@@ -874,7 +900,7 @@ text-align: center;
     width: 4.5rem;
     height: 4.5rem;
   }
-`,Jg=()=>{const e=()=>{window.scrollTo({top:0,behavior:"smooth"})};return u.jsx(u.Fragment,{children:u.jsx(Xg,{onClick:e,src:Zg,alt:"Scroll to top"})})},qg="/assets/message-D6wtI_nO.svg",bg="/assets/flag-DnSs5bf4.svg",e2="data:image/svg+xml,%3csvg%20width='744'%20height='619'%20viewBox='0%200%20744%20619'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_f_0_1)'%3e%3cellipse%20cx='352.58'%20cy='364.807'%20rx='208.58'%20ry='110.044'%20fill='%23FDE598'%20fill-opacity='0.7'/%3e%3c/g%3e%3cg%20filter='url(%23filter1_f_0_1)'%3e%3cellipse%20cx='395.735'%20cy='254.044'%20rx='204.265'%20ry='110.044'%20fill='%236955FF'%20fill-opacity='0.5'/%3e%3c/g%3e%3cdefs%3e%3cfilter%20id='filter0_f_0_1'%20x='0.151413'%20y='110.915'%20width='704.858'%20height='507.786'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='BackgroundImageFix'%20result='shape'/%3e%3cfeGaussianBlur%20stdDeviation='71.9243'%20result='effect1_foregroundBlur_0_1'/%3e%3c/filter%3e%3cfilter%20id='filter1_f_0_1'%20x='47.6214'%20y='0.151413'%20width='696.227'%20height='507.786'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='BackgroundImageFix'%20result='shape'/%3e%3cfeGaussianBlur%20stdDeviation='71.9243'%20result='effect1_foregroundBlur_0_1'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e",t2="/assets/planet-B734ADp0.svg",n2=P.div`
+`,qg=()=>{const e=()=>{window.scrollTo({top:0,behavior:"smooth"})};return u.jsx(u.Fragment,{children:u.jsx(Jg,{onClick:e,src:Xg,alt:"Scroll to top"})})},bg="/assets/message-D6wtI_nO.svg",e2="/assets/flag-DnSs5bf4.svg",t2="data:image/svg+xml,%3csvg%20width='744'%20height='619'%20viewBox='0%200%20744%20619'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_f_0_1)'%3e%3cellipse%20cx='352.58'%20cy='364.807'%20rx='208.58'%20ry='110.044'%20fill='%23FDE598'%20fill-opacity='0.7'/%3e%3c/g%3e%3cg%20filter='url(%23filter1_f_0_1)'%3e%3cellipse%20cx='395.735'%20cy='254.044'%20rx='204.265'%20ry='110.044'%20fill='%236955FF'%20fill-opacity='0.5'/%3e%3c/g%3e%3cdefs%3e%3cfilter%20id='filter0_f_0_1'%20x='0.151413'%20y='110.915'%20width='704.858'%20height='507.786'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='BackgroundImageFix'%20result='shape'/%3e%3cfeGaussianBlur%20stdDeviation='71.9243'%20result='effect1_foregroundBlur_0_1'/%3e%3c/filter%3e%3cfilter%20id='filter1_f_0_1'%20x='47.6214'%20y='0.151413'%20width='696.227'%20height='507.786'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='BackgroundImageFix'%20result='shape'/%3e%3cfeGaussianBlur%20stdDeviation='71.9243'%20result='effect1_foregroundBlur_0_1'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e",n2="/assets/planet-B734ADp0.svg",r2=P.div`
     margin-top: -5%;
     height: 330vh;
     max-height: 330vh;
@@ -882,12 +908,12 @@ text-align: center;
     padding-top: 5%;
     background-color: #eee;
 
-`,r2=P.div`
+`,i2=P.div`
   max-width: 100%;
   margin-top: 5%;
   border-radius: 0.7vw;
   position: relative;
-`,i2=P.div`
+`,o2=P.div`
   padding: 4%;
   max-width: 80%;
   margin-top: 15%;
@@ -916,7 +942,7 @@ text-align: center;
   @media (max-width: 700px) {
     grid-area: textWrapper;
   }
-`,o2=P.div`
+`,l2=P.div`
   position: relative;
   max-width: 100%;
   min-width: 100%;
@@ -930,7 +956,7 @@ text-align: center;
     min-width: 100%;
     height: 35vh;
   } 
-`,l2=P.img`
+`,s2=P.img`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -941,7 +967,7 @@ text-align: center;
   @media (max-width: 800px) {
     max-width: 60%; 
   }
-`,s2=P.div`
+`,a2=P.div`
   position: relative;
   max-width: 100%;
   min-width: 100%;
@@ -955,7 +981,7 @@ text-align: center;
     min-width: 90%;
     height: 35vh;
   } 
-`,a2=P.img`
+`,u2=P.img`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -966,7 +992,7 @@ text-align: center;
   @media (max-width: 800px) {
     max-width: 60%; 
   }
-`,u2=P.div`
+`,c2=P.div`
   position: relative;
   margin-top: 0px;
   margin-left: -10px;
@@ -980,7 +1006,7 @@ text-align: center;
       margin: 5%;
       height: auto;
   }
-`,c2=P.div`
+`,d2=P.div`
   position: absolute;
   top: 22%;
   margin-left: 30%;
@@ -1007,7 +1033,7 @@ text-align: center;
   right: 0;
   width: 40%; 
   display: flex;
-`;const d2=P.div`
+`;const f2=P.div`
   display: grid;
   max-width: 100%;
   min-width: 100%;
@@ -1020,7 +1046,7 @@ text-align: center;
     grid-template-columns: repeat(1, 1fr); 
     
   }
-`,f2=P.div`
+`,p2=P.div`
   display: grid;
   max-width: 100%;
   min-width: 100%;
@@ -1037,7 +1063,7 @@ text-align: center;
       "textWrapper"  
       "leftHalfCircle";  
   }
-`,p2=P.img`
+`,h2=P.img`
   width: 35%;
   margin-left: 35%;
   @media (max-width: 800px) {
@@ -1045,7 +1071,7 @@ text-align: center;
     max-width: 45%;
     margin-left: 20%;
   }
-`,h2=Vo`
+`,m2=Vo`
   from {
     transform: translateY(0);
     opacity: 1;  
@@ -1054,25 +1080,25 @@ text-align: center;
     transform: translateY(-100px);
     opacity: 0;
   }
-`,m2=P.img`
+`,g2=P.img`
   position: fixed;
   top: 30%;
   max-width: 30%;
   left: 36%;
   z-index: 10000;
   transition: opacity 0.5s ease-out;
-  animation: ${e=>e.isdisappearing?un`${h2} 0.5s forwards`:"none"};
+  animation: ${e=>e.isdisappearing?un`${m2} 0.5s forwards`:"none"};
   @media (max-width: 700px) {
     position: fixed;
     max-width: 40%;
   }
-`,g2=P.img`
+`,v2=P.img`
   position: relative;
   margin-top: 10%;
   min-width: 80%;
   max-width: 80%;
   margin-right: 15%;
-`,v2=()=>{const[e,t]=C.useState(lt),[n,r]=C.useState(!1),[i,o]=C.useState(!0),[l,s]=C.useState(!1);C.useEffect(()=>{const g=setTimeout(()=>{s(!0)},1e3),v=setInterval(()=>{t(w=>w===lt?_s:lt)},600),x=setTimeout(()=>{r(!0),setTimeout(()=>{o(!1)},1e3),clearInterval(v)},3e3);return()=>{clearTimeout(g),clearTimeout(x),clearInterval(v)}},[]);const[a,c]=C.useState(lt),[m,h]=C.useState(!1);return C.useEffect(()=>{const g=setTimeout(()=>{h(!0)},1e3),v=setInterval(()=>{c(x=>x===lt?_s:lt)},600);return()=>{clearTimeout(g),clearInterval(v)}},[]),u.jsx(u.Fragment,{children:u.jsxs(n2,{children:[u.jsxs(r2,{children:[i&&u.jsx(u.Fragment,{children:u.jsx(m2,{src:e,alt:"Waving Genie",isdisappearing:n})}),u.jsxs(d2,{children:[u.jsxs(u2,{children:[u.jsx("img",{src:e2,alt:"Gradient Background"}),u.jsxs(c2,{children:[u.jsx("h1",{children:"진인프라의"}),u.jsx("h1",{children:"양자 캐릭터"}),u.jsx("h1",{children:"‘지니’"})]})]}),u.jsx(o2,{children:u.jsx(l2,{src:bg,alt:"Flag"})})]}),u.jsxs(f2,{children:[u.jsx(s2,{children:u.jsx(a2,{src:t2,alt:"planet"})}),u.jsxs(i2,{children:[u.jsx("h1",{children:"지니"}),u.jsx("p",{style:{color:"#0000ff"},children:"지니(진인프라의 진+  접사 ‘-이‘)"}),u.jsx("p",{children:"🧬알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼"}),u.jsx("p",{children:"🔭양자 정보 관련해서는 무엇이든 알려준다는 의미"})]})]})]}),u.jsxs("div",{style:{maxWidth:"50%",display:"flex",flexDirection:"column",marginLeft:"32%",marginTop:"10%"},children:[u.jsx(p2,{src:qg,style:{width:"35%",marginLeft:"40%"}}),u.jsx(g2,{style:{marginLeft:"0",marginTop:"3%",marginBottom:"15%"},src:a,alt:"Waving Genie"})]})]})})};function y2(){return u.jsx(u.Fragment,{children:u.jsx(v2,{})})}const yc="/assets/cat-B7n9BXOC.svg",x2="data:image/svg+xml,%3csvg%20width='108'%20height='125'%20viewBox='0%200%20108%20125'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M108%2025V37.5C101.382%2037.5%2096%2043.1063%2096%2050V100C96%20113.788%2085.236%20125%2072%20125H18V50V43.75H6L0%2031.25L10.044%2017.475L10.056%2017.5063C12.144%2015.1688%2014.88%2013.475%2018%2012.8125V0C18%200%2042%206.25%2042%2025C42%2029.25%2042.054%2042.1688%2042.09%2050H48C61.254%2050%2072%2061.1938%2072%2075V112.5C78.618%20112.5%2084%20106.894%2084%20100V50C84%2036.2125%2094.764%2025%20108%2025Z'%20fill='%23BDBDBD'/%3e%3c/svg%3e",w2="/assets/bunker-cRaJc6Me.svg",xc="/assets/bottle1-BxjrYTB1.svg",S2="/assets/bottle2-BVqZZ2-9.svg",xi=P.div`
+`,y2=()=>{const[e,t]=C.useState(lt),[n,r]=C.useState(!1),[i,o]=C.useState(!0),[l,s]=C.useState(!1);C.useEffect(()=>{const g=setTimeout(()=>{s(!0)},1e3),v=setInterval(()=>{t(w=>w===lt?_s:lt)},600),x=setTimeout(()=>{r(!0),setTimeout(()=>{o(!1)},1e3),clearInterval(v)},3e3);return()=>{clearTimeout(g),clearTimeout(x),clearInterval(v)}},[]);const[a,c]=C.useState(lt),[m,h]=C.useState(!1);return C.useEffect(()=>{const g=setTimeout(()=>{h(!0)},1e3),v=setInterval(()=>{c(x=>x===lt?_s:lt)},600);return()=>{clearTimeout(g),clearInterval(v)}},[]),u.jsx(u.Fragment,{children:u.jsxs(r2,{children:[u.jsxs(i2,{children:[i&&u.jsx(u.Fragment,{children:u.jsx(g2,{src:e,alt:"Waving Genie",isdisappearing:n})}),u.jsxs(f2,{children:[u.jsxs(c2,{children:[u.jsx("img",{src:t2,alt:"Gradient Background"}),u.jsxs(d2,{children:[u.jsx("h1",{children:"진인프라의"}),u.jsx("h1",{children:"양자 캐릭터"}),u.jsx("h1",{children:"‘지니’"})]})]}),u.jsx(l2,{children:u.jsx(s2,{src:e2,alt:"Flag"})})]}),u.jsxs(p2,{children:[u.jsx(a2,{children:u.jsx(u2,{src:n2,alt:"planet"})}),u.jsxs(o2,{children:[u.jsx("h1",{children:"지니"}),u.jsx("p",{style:{color:"#0000ff"},children:"지니(진인프라의 진+  접사 ‘-이‘)"}),u.jsx("p",{children:"🧬알라딘에 나오는 무엇이든 할 수 있는 캐릭터 지니처럼"}),u.jsx("p",{children:"🔭양자 정보 관련해서는 무엇이든 알려준다는 의미"})]})]})]}),u.jsxs("div",{style:{maxWidth:"50%",display:"flex",flexDirection:"column",marginLeft:"32%",marginTop:"10%"},children:[u.jsx(h2,{src:bg,style:{width:"35%",marginLeft:"40%"}}),u.jsx(v2,{style:{marginLeft:"0",marginTop:"3%",marginBottom:"15%"},src:a,alt:"Waving Genie"})]})]})})};function x2(){return u.jsx(u.Fragment,{children:u.jsx(y2,{})})}const yc="/assets/cat-B7n9BXOC.svg",w2="data:image/svg+xml,%3csvg%20width='108'%20height='125'%20viewBox='0%200%20108%20125'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M108%2025V37.5C101.382%2037.5%2096%2043.1063%2096%2050V100C96%20113.788%2085.236%20125%2072%20125H18V50V43.75H6L0%2031.25L10.044%2017.475L10.056%2017.5063C12.144%2015.1688%2014.88%2013.475%2018%2012.8125V0C18%200%2042%206.25%2042%2025C42%2029.25%2042.054%2042.1688%2042.09%2050H48C61.254%2050%2072%2061.1938%2072%2075V112.5C78.618%20112.5%2084%20106.894%2084%20100V50C84%2036.2125%2094.764%2025%20108%2025Z'%20fill='%23BDBDBD'/%3e%3c/svg%3e",S2="/assets/bunker-cRaJc6Me.svg",xc="/assets/bottle1-BxjrYTB1.svg",k2="/assets/bottle2-BVqZZ2-9.svg",xi=P.div`
   border: 2px solid #333;
   margin: 20px;
   padding: 20px;
@@ -1105,7 +1131,7 @@ text-align: center;
   flex-direction: row;
   justify-content: center;
   white-space: nowrap;
-`,k2=P.div`
+`,C2=P.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -1116,10 +1142,10 @@ text-align: center;
   justify-content: center;
   align-items: center;
   z-index: 10003;
-`,C2=P.div`
+`,E2=P.div`
   position: relative;
   background: white;
-  padding: 5%;
+  padding: 3%;
   border-radius: 10px;
   width: 60%;
   max-width: 800px;
@@ -1148,6 +1174,7 @@ text-align: center;
   @media(max-width: 900px){
     width: 90%;
     max-width: 90%;
+    padding: 6%;
     h2 {
       font-size: 1.7rem;
     }
@@ -1155,7 +1182,7 @@ text-align: center;
       font-size: 1.4rem;
     }
   }
-`,E2=P(Ps)`
+`,j2=P(Ps)`
   position: absolute;
   top: 30px;
   right: 33px;
@@ -1170,7 +1197,7 @@ text-align: center;
     top: 15px;
     right: 15px;
   }
-`,j2=()=>{const[e,t]=C.useState(!1),n=()=>{t(!e)};return C.useState(!1),C.useState(null),Fo(),u.jsx(Ng,{children:u.jsxs(Ig,{children:[u.jsx("h1",{children:"슈뢰딩거의 고양이"}),u.jsx("hr",{}),u.jsxs(xi,{children:[u.jsxs(wi,{children:[u.jsx("img",{src:w2,alt:"bunker",style:{maxWidth:"80%"}})," "]}),u.jsxs(wi,{children:[u.jsx("img",{src:xc,alt:"bottle1"})," ",u.jsx("img",{src:yc,alt:"cat"})]}),u.jsx("p",{children:"고양이 한 마리와 독이 든 병을 벙커 안에 넣고 벙커를 닫습니다."})]}),u.jsxs(xi,{children:[u.jsxs(wi,{children:[u.jsx("img",{src:xc,alt:"bottle1"})," ",u.jsx("img",{src:S2,alt:"bottle2"})]}),u.jsx("p",{children:"독이 든 병은 50%의 확률로 깨질 수도, 깨지지 않을 수도 있습니다."})]}),u.jsxs(xi,{children:[u.jsxs(wi,{children:[u.jsx("img",{src:yc,alt:"cat"})," ",u.jsx("img",{src:x2,alt:"cat2"})]}),u.jsx("p",{style:{marginBottom:"1%"},children:"이에 따라 고양이도 죽을 수도 있고 살아 있을 수도 있습니다."}),u.jsxs("p",{style:{padding:"0 2%",marginTop:"0px"},children:["이러한 상태를 ",u.jsx("span",{style:{color:"#0000ff"},children:"양자 중첩 상태"}),"라고 합니다."]})]}),u.jsxs(xi,{children:[u.jsx("p",{style:{padding:"0 2%",marginBottom:"1%"},children:"슈뢰딩거의 고양이는 1935년 에르빈 슈뢰딩거가 양자역학의 이상한 특성을 설명하기 위해 제안한 사고 실험입니다."}),u.jsxs("p",{style:{padding:"0 2%",marginTop:"0px"},children:[u.jsx("span",{children:"이 실험은 고양이를 상자에 넣고, 고양이의 생사 여부가 양자적 현상인 중첩에 의해 결정된다는 개념"}),"을 보여줍니다."]}),u.jsx("div",{style:{textAlign:"center",display:"flex",marginTop:"1%"},children:u.jsx(Tg,{style:{backgroundColor:"#007bff"},onClick:n,children:e?"모달 닫기":"추가 설명 보기"})})]}),e&&u.jsx(k2,{children:u.jsxs(C2,{children:[u.jsx(E2,{onClick:n}),u.jsx("h2",{children:"추가 설명"}),u.jsx("hr",{}),u.jsxs("p",{children:["이 사고 실험은 양자역학의 중요한 해석 중 하나인 ",u.jsx("span",{style:{fontWeight:"bold"},children:"코펜하겐 해석"}),"을 설명하기 위한 것이었습니다."]}),u.jsx("p",{children:"양자적 입자들은 측정되기 전까지 여러 상태가 동시에 존재하는데, 이 중첩 상태가 외부 관찰에 의해 무너지면서 하나의 확정된 상태가 된다는 것입니다."}),u.jsx("p",{children:u.jsx("span",{children:"고양이 역시 상자를 열어 관찰하기 전까지는 살아있으면서 동시에 죽어있는 상태로 존재합니다."})}),u.jsx("p",{children:"이 실험은 양자역학의 관측 문제와 파동 함수의 붕괴라는 개념을 설명하는 데 중요한 역할을 합니다."}),u.jsxs("p",{children:["슈뢰딩거는 이 실험을 통해 양자역학의 코펜하겐 해석이 현실에 적용될 때 얼마나 비현실적일 수 있는지를 비판했습니다. 실제로 고양이가 ",u.jsx("span",{style:{fontWeight:"bold"},children:'"살아 있으면서 죽어있다"'}),"는 개념은 우리의 일상적인 직관과는 맞지 않기 때문에, 이 실험은 양자역학의 해석에 대한 논쟁을 불러일으켰습니다."]})]})})]})})};function _2(){return u.jsx(u.Fragment,{children:u.jsx(j2,{})})}function P2(){return u.jsxs(Dm,{children:[u.jsx(pg,{}),u.jsxs(Om,{children:[u.jsx(Gt,{path:"/",element:u.jsx(J1,{})}),u.jsx(Gt,{path:"/concept",element:u.jsx(Dg,{})}),u.jsx(Gt,{path:"/description",element:u.jsx(Kg,{})}),u.jsx(Gt,{path:"/quiz",element:u.jsx(Hg,{})}),u.jsx(Gt,{path:"/character",element:u.jsx(y2,{})}),u.jsx(Gt,{path:"/cat",element:u.jsx(_2,{})})]}),u.jsx(Jg,{}),u.jsx(Eg,{})]})}const z2=H1`
+`,_2=()=>{const[e,t]=C.useState(!1),n=()=>{t(!e)};return C.useState(!1),C.useState(null),Fo(),u.jsx(Ng,{children:u.jsxs(Ig,{children:[u.jsx("h1",{children:"슈뢰딩거의 고양이"}),u.jsx("hr",{}),u.jsxs(xi,{children:[u.jsxs(wi,{children:[u.jsx("img",{src:S2,alt:"bunker",style:{maxWidth:"80%"}})," "]}),u.jsxs(wi,{children:[u.jsx("img",{src:xc,alt:"bottle1"})," ",u.jsx("img",{src:yc,alt:"cat"})]}),u.jsx("p",{children:"고양이 한 마리와 독이 든 병을 벙커 안에 넣고 벙커를 닫습니다."})]}),u.jsxs(xi,{children:[u.jsxs(wi,{children:[u.jsx("img",{src:xc,alt:"bottle1"})," ",u.jsx("img",{src:k2,alt:"bottle2"})]}),u.jsx("p",{children:"독이 든 병은 50%의 확률로 깨질 수도, 깨지지 않을 수도 있습니다."})]}),u.jsxs(xi,{children:[u.jsxs(wi,{children:[u.jsx("img",{src:yc,alt:"cat"})," ",u.jsx("img",{src:w2,alt:"cat2"})]}),u.jsx("p",{style:{marginBottom:"1%"},children:"이에 따라 고양이도 죽을 수도 있고 살아 있을 수도 있습니다."}),u.jsxs("p",{style:{padding:"0 2%",marginTop:"0px"},children:["이러한 상태를 ",u.jsx("span",{style:{color:"#0000ff"},children:"양자 중첩 상태"}),"라고 합니다."]})]}),u.jsxs(xi,{children:[u.jsx("p",{style:{padding:"0 2%",marginBottom:"1%"},children:"슈뢰딩거의 고양이는 1935년 에르빈 슈뢰딩거가 양자역학의 이상한 특성을 설명하기 위해 제안한 사고 실험입니다."}),u.jsxs("p",{style:{padding:"0 2%",marginTop:"0px"},children:[u.jsx("span",{children:"이 실험은 고양이를 상자에 넣고, 고양이의 생사 여부가 양자적 현상인 중첩에 의해 결정된다는 개념"}),"을 보여줍니다."]}),u.jsx("div",{style:{textAlign:"center",display:"flex",marginTop:"1%"},children:u.jsx(Tg,{style:{backgroundColor:"#007bff"},onClick:n,children:e?"모달 닫기":"추가 설명 보기"})})]}),e&&u.jsx(C2,{children:u.jsxs(E2,{children:[u.jsx(j2,{onClick:n}),u.jsx("h2",{children:"추가 설명"}),u.jsx("hr",{}),u.jsxs("p",{children:["이 사고 실험은 양자역학의 중요한 해석 중 하나인 ",u.jsx("span",{style:{fontWeight:"bold"},children:"코펜하겐 해석"}),"을 설명하기 위한 것이었습니다."]}),u.jsx("p",{children:"양자적 입자들은 측정되기 전까지 여러 상태가 동시에 존재하는데, 이 중첩 상태가 외부 관찰에 의해 무너지면서 하나의 확정된 상태가 된다는 것입니다."}),u.jsx("p",{children:u.jsx("span",{children:"고양이 역시 상자를 열어 관찰하기 전까지는 살아있으면서 동시에 죽어있는 상태로 존재합니다."})}),u.jsx("p",{children:"이 실험은 양자역학의 관측 문제와 파동 함수의 붕괴라는 개념을 설명하는 데 중요한 역할을 합니다."}),u.jsxs("p",{children:["슈뢰딩거는 이 실험을 통해 양자역학의 코펜하겐 해석이 현실에 적용될 때 얼마나 비현실적일 수 있는지를 비판했습니다. 실제로 고양이가 ",u.jsx("span",{style:{fontWeight:"bold"},children:'"살아 있으면서 죽어있다"'}),"는 개념은 우리의 일상적인 직관과는 맞지 않기 때문에, 이 실험은 양자역학의 해석에 대한 논쟁을 불러일으켰습니다."]})]})})]})})};function P2(){return u.jsx(u.Fragment,{children:u.jsx(_2,{})})}function z2(){return u.jsxs(Dm,{children:[u.jsx(pg,{}),u.jsxs(Om,{children:[u.jsx(Gt,{path:"/",element:u.jsx(J1,{})}),u.jsx(Gt,{path:"/concept",element:u.jsx(Bg,{})}),u.jsx(Gt,{path:"/description",element:u.jsx(Zg,{})}),u.jsx(Gt,{path:"/quiz",element:u.jsx(Qg,{})}),u.jsx(Gt,{path:"/character",element:u.jsx(x2,{})}),u.jsx(Gt,{path:"/cat",element:u.jsx(P2,{})})]}),u.jsx(qg,{}),u.jsx(Eg,{})]})}const N2=H1`
   :root {
     --vh: 100%;
     background-color: #FFFFFF;
@@ -1260,7 +1287,7 @@ text-align: center;
   font-weight: 700;
   font-style: normal;
 }
-`,N2={title:un`
+`,I2={title:un`
       font-family: 'Pretendard';
       font-style: normal;
       font-weight: 800;
@@ -1272,4 +1299,4 @@ text-align: center;
       font-weight: 500;
       font-size: 1.5rem;
       letter-spacing: 0.07em;
-    `},I2={fonts:N2};function L2(){return u.jsx(u.Fragment,{children:u.jsxs(U1,{theme:I2,children:[u.jsx(z2,{}),u.jsx(P2,{})]})})}Cl.createRoot(document.getElementById("root")).render(u.jsx(ee.StrictMode,{children:u.jsx(L2,{})}));
+    `},L2={fonts:I2};function T2(){return u.jsx(u.Fragment,{children:u.jsxs(U1,{theme:L2,children:[u.jsx(N2,{}),u.jsx(z2,{})]})})}Cl.createRoot(document.getElementById("root")).render(u.jsx(ee.StrictMode,{children:u.jsx(T2,{})}));

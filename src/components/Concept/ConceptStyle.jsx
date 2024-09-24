@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
     padding-top: 5%;
     background-color: #eee;
     @media(max-width: 600px){
-      height: 110vh;
-      max-height: 110vh; 
+      height: 190vh;
+      max-height: 190vh; 
     }
 `
 

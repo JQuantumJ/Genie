@@ -63,7 +63,7 @@ const ModalOverlay = styled.div`
 const ModalContent = styled.div`
   position: relative;
   background: white;
-  padding: 5%;
+  padding: 3%;
   border-radius: 10px;
   width: 60%;
   max-width: 800px;
@@ -92,6 +92,7 @@ const ModalContent = styled.div`
   @media(max-width: 900px){
     width: 90%;
     max-width: 90%;
+    padding: 6%;
     h2 {
       font-size: 1.7rem;
     }

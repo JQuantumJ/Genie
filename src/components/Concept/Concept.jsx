@@ -5,6 +5,35 @@ import Ball2 from '/src/assets/image/Concept/ball2.svg';
 import Quantum2 from '/src/assets/image/Concept/quantum2.svg';
 import * as C from './ConceptStyle';
 import styled, { keyframes } from 'styled-components';
+
+const BallBox = styled.div`
+  margin-left: 1%;
+  height: 30vh;
+  margin-top: 2%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10%;
+  height: 50vh;
+  @media (max-width: 700px) {
+    height: 25vh; 
+  }
+  img:nth-child(1) {
+    max-width: 20%;
+    @media (max-width: 700px) {
+      max-width: 30%;
+    }
+  }
+
+  img:nth-child(2) {
+    max-width: 15%;
+    @media (max-width: 700px) {
+      max-width: 25%;
+    }
+  }
+`;
+
 const CenteredDiv = styled.div`
   text-align: center;
   height: 50vh;
@@ -108,16 +137,15 @@ const Concept = () => {
           <div className="accordion-content">
             <h1 style={{marginBottom: '1%', color: '#eee'}}>"입자의 위치나 운동량을 동시에 정확하게 알 수 없다"</h1>
             <hr style={{border: 'none', borderTop: '0.5px solid #ddd'}}/>
-            <p>하이젠베르크는 방정식들을 연구하는 동안 어떤 특성은 정확하게 측정하는 것이 불가능하다는 사실을 깨달았는데, 그 이유는 사용하는 실험 장치가 측정하는 원자에 영향을 미치기 때문이었습니다.
-            입자의 위치와 운동량은 동시에 추론할 수 없으며, 주어진 순간의 에너지도 알 수 없었습니다.
+            <p>
             하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고, 반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다.
             이는 마치 <span style={{color: '#B0E3FF'}}>우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
             특히, 측정 차원의 오류가 아니라, 사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없습니다.
             오히려 하나의 값을 고정하면 다른 값은 더욱 불확실해집니다.</p>
-            <div style={{marginLeft: '1%', height: '30vh', marginTop: '2%', alignItems: 'center', display: 'flex', justifyContent: 'flex-start', flexDirection: 'row', gap: '10%'}}>
-              <img style={{maxWidth: '20%'}} src={Ball2} />
-                <img style={{maxWidth: '15%'}} src={Ball} />
-              </div>
+            <BallBox>
+              <img src={Ball2} />
+                <img src={Ball} />
+              </BallBox>
           </div>
         )}
       </div>
