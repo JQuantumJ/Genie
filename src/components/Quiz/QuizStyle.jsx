@@ -102,10 +102,9 @@ export const FinalScoreContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #eee;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
   
   h2 {
     font-size: 24px;
@@ -115,6 +114,7 @@ export const FinalScoreContainer = styled.div`
   p {
     font-size: 20px;
     margin-top: 10px;
+    margin-bottom: 50px;
     color: #666;
   }
      @media (max-width: 700px) {

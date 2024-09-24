@@ -93,13 +93,15 @@ export const ConceptWrapper = styled.div`
 
   @media (max-width: 700px) {
     margin-top: 16%;
+    padding: 4%;
     iframe{
     width:200px;
     height:200px;
-    margin-left: 17%;}
+    margin-left: 12%;}
   }
   .accordion-content {
-    font-size:1.3rem;
+    font-size:1.2rem;
+    padding:4%;
     }
   a{
     color: #007bff;
