@@ -67,7 +67,7 @@ export const ConceptWrapper = styled.div`
     background-color: #444;
     letter-spacing: 1.4px;
     color: #eee;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
     max-height: 330px;  /* Fixed height for content */
@@ -77,8 +77,6 @@ export const ConceptWrapper = styled.div`
 
   /* Flexbox to center the video */
   iframe {
-    width="560" 
-    height="315" 
     display: block;
     margin-left: 30%;
   }
@@ -91,8 +89,6 @@ export const ConceptWrapper = styled.div`
     
   }
 
-  
-
   @media (max-width: 700px) {
     margin-top: 16%;
     iframe{
@@ -100,6 +96,9 @@ export const ConceptWrapper = styled.div`
     height:200px;
     margin-left: 17%;}
   }
+  .accordion-content {
+    font-size:1.3rem;
+    }
   a{
     color: #007bff;
     font-size: 1.7rem;
