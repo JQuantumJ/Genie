@@ -35,8 +35,8 @@ export default function Navbar() {
           onClick={() => navigate('/')}
           style={{
             cursor: 'pointer',
-            maxWidth: '95%',
-            marginLeft: '0px',
+            maxWidth: '100%',
+            marginRight: '0px',
             display: 'flex',
             flexDirection: 'row',
             gap: '10%',
@@ -47,7 +47,7 @@ export default function Navbar() {
         <N.NavLogo src={LogoImg} alt="Logo" />
           <N.Logo>Jenie</N.Logo>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '60%', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '25px', alignItems: 'center', justifyContent: 'flex-end' }}>
         <N.SearchIcon><FaSearch /></N.SearchIcon>
         <N.MenuIcon onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}

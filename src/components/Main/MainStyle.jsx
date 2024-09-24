@@ -69,6 +69,20 @@ export const ItemContent = styled.div`
     display: ${(props) => (props.isVisible ? 'block' : 'none')};
     animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
   }
+  @media (min-width: 501px) {
+    &::after {
+      content: "→";
+      margin-top: 3px;
+      font-size: 1.1rem;
+      color: #0000ff;
+      margin-left: 5px;
+    }
+    &::before {
+      content: " "; 
+      display: block; 
+      margin-bottom: 10px; 
+    }
+  }
 `;
  
 export const CarouselItem = styled.div`

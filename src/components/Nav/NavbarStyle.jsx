@@ -62,7 +62,7 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.9vw 2vw;
+  padding: 0.9vw 1vw;
   background-color: ${props => props.isScrolled ? '#292f36' : 'transparent'};
   color: ${props => props.isScrolled ? '#fff' : '#aaa'};
   transition: background-color 0.9s ease;
@@ -132,8 +132,8 @@ export const MenuList = styled.div`
 export const MenuIcon = styled.div`
   font-size: 3.4rem;
   cursor: pointer;
-  @media (max-width: 500px) {
-    padding-right: 50px;
+  @media (max-width: 700px) {
+    padding-right: -10px;
     font-size: 2.5rem;
   }
 `;
