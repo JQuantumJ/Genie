@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <N.NavContainer isScrolled={isScrolled} style={{ paddingLeft: '5%', paddingRight: '6%' }}>
+      <N.NavContainer isScrolled={isScrolled} style={{ paddingLeft: '5%', paddingRight: '3%' }}>
         <div
           onClick={() => navigate('/')}
           style={{
@@ -48,7 +48,7 @@ export default function Navbar() {
           <N.Logo>Jenie</N.Logo>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '25px', alignItems: 'center', justifyContent: 'flex-end' }}>
-        <N.SearchIcon><FaSearch /></N.SearchIcon>
+        {/*<N.SearchIcon><FaSearch /></N.SearchIcon>*/}
         <N.MenuIcon onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </N.MenuIcon>

@@ -62,12 +62,13 @@ export const ItemContent = styled.div`
   text-align: center;
   display: ${(props) => (props.isVisible ? 'block' : 'none')}; 
   animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #222;
 
   @media (max-width: 500px) {
     display: ${(props) => (props.isVisible ? 'block' : 'none')};
     animation: ${(props) => (props.isVisible ? fadeIn : 'none')} 0.4s ease-in-out;
+    font-size: 1rem;
   }
   @media (min-width: 501px) {
     &::after {

@@ -36,7 +36,7 @@ const BallBox = styled.div`
 
 const CenteredDiv = styled.div`
   text-align: center;
-  height: 50vh;
+  height: 48vh;
   @media (max-width: 700px) {
     height: 20vh; 
   }
@@ -103,7 +103,7 @@ const Concept = () => {
               처음으로 양자는 빛에서 발견되었으며, 
               이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.</p>
               <CenteredDiv>
-                <RotatingImage style={{maxWidth: '33%'}} src={Quantum2} />
+                <RotatingImage style={{maxWidth: '30%'}} src={Quantum2} />
               </CenteredDiv>
           </div>
         )}

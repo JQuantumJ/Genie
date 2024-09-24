@@ -131,7 +131,7 @@ export const ConceptWrapper = styled.div`
     background-color: #444;
     letter-spacing: 1.4px;
     color: #eee;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{

@@ -21,7 +21,7 @@ const Box = styled.div`
     background: linear-gradient(to top, #D0E7FE 40%, transparent 10%);
   }
   p {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
   }
   @media(max-width: 900px){
     h2{
@@ -74,11 +74,11 @@ const ModalContent = styled.div`
   z-index: 10003;
   line-height: 1.8;
   h2{
-    font-size: 1.5rem;
-    margin-bottom:2%;
+    font-size: 1.7rem;
+    margin-bottom: 2%;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 10px 0;
     font-family: arial;
   }
@@ -93,12 +93,6 @@ const ModalContent = styled.div`
     width: 90%;
     max-width: 90%;
     padding: 6%;
-    h2 {
-      font-size: 1.7rem;
-    }
-    p {
-      font-size: 1.4rem;
-    }
   }
 `;
 
