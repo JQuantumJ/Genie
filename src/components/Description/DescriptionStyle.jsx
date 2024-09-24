@@ -67,25 +67,43 @@ export const ConceptWrapper = styled.div`
     background-color: #444;
     letter-spacing: 1.4px;
     color: #eee;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
     max-height: 330px;  /* Fixed height for content */
     overflow-y: auto;  /* Scroll if content exceeds height */
-  }
+      p{
+      font-size:1.6rem
+      }
+
+    }
 
   /* Flexbox to center the video */
   iframe {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
   }
 
   @media (max-width: 900px) {
     margin-top: 12%;
+    padding: 2%;
+    font-size: 1.2rem;
+    line-height: 1.7;
   }
 
   @media (max-width: 700px) {
     margin-top: 16%;
+    iframe{
+    width:200px;
+    height:200px;
+    margin-left: 17%;}
+  }
+  .accordion-content {
+    font-size:1.3rem;
+    }
+  a{
+    color: #007bff;
+    font-size: 1.7rem;
+    padding-left: 40%;
   }
 `;
