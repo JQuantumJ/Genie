@@ -50,9 +50,19 @@ const Description = () => {
           {activeIndex === 1 && (
             <div className="accordion-content">
               <p>양자암호통신 기술은 통신상의 보안을 자연의 기본원리인 양자역학의 법칙에 의해서 보장하므로 
-                도청이나 감청이 절대적으로 불가능한 차세대 통신보안 기술로서 최근 크게 주목받고 있다.</p><br></br> 
+                도청이나 감청이 절대적으로 불가능한 차세대 통신보안 기술로서 최근 크게 주목받고 있다.</p><br />
               <p>즉, 양자암호통신 기술은 <span style={{color: '#B0E3FF'}}>“양자 복제불가능성”</span>과 같은 양자물리학의 법칙에 기초해서 송신자와 수신자 사이에 암호 키(일회용 난수표)를
               절대적으로 안전하게 실시간으로 분배하는 기술로서 <span style={{color: '#B0E3FF'}}>“양자 키 분배 기술”</span>로도 알려져 있다.</p>
+              <br />
+              <hr/>
+              <h1>양자 암호화의 유형</h1>
+              <h2><span style={{ boxShadow: 'inset 0 -20px 0 rgba(90, 158, 207, 0.5)' }}>양자 키 분배(QKD)</span></h2>
+              <p>양자 키 분배(Quantum Key Distribution; QKD) 시스템은 보안 데이터를  <span style={{color: '#B0E3FF'}}>직접 암호화하는 것이 아니라, 두 사람이 함께 사용할 비밀 키를 안전하게 공유하는 방법이다.</span></p>
+              <br /><p>미세한 자극에도 상태가 변하는 양자의 물리적 특성을 활용해 대칭 암호키를 분배하는 기술이다. 제3자가 해킹할 수 없는 암호화된 비밀키를 만들어 보안이 필요한 송신자와 수신자에게 안전하게 공유한다.</p>
+             
+              <br></br><h2><span style={{ boxShadow: 'inset 0 -20px 0 rgba(90, 158, 207, 0.5)' }}>양자내성암호(PQC)</span></h2>
+              <p>양자내성암호(Post Quantum Cryptography; PQC)는 양자컴퓨터로도 풀어내는 데 수십억 년이 걸리는 <span style={{color: '#B0E3FF'}}>복잡한 수학 알고리즘을 사용하는 암호화 방식이다.</span></p>
+              <br />
               <hr/>
               {/* YouTube video for 양자 암호통신 */}
               <iframe

@@ -66,17 +66,26 @@ export const ConceptWrapper = styled.div`
     padding: 3%;
     background-color: #444;
     letter-spacing: 1.4px;
+    font-size:2rem;
     color: #eee;
-    font-size: 2rem;
     line-height: 1.8;
     border-top: 1px solid #007bff;
     max-height: 330px;  /* Fixed height for content */
     overflow-y: auto;  /* Scroll if content exceeds height */
       p{
-      font-size:1.6rem
+      font-size:1.2rem;
       }
-
+       h2{
+        margin-top:10px;
+        font-size:2rem;
+        }
+      h1{
+        color:#eee;
+        }
+    
     }
+
+  
 
   /* Flexbox to center the video */
   iframe {
@@ -100,7 +109,7 @@ export const ConceptWrapper = styled.div`
     margin-left: 12%;}
   }
   .accordion-content {
-    font-size:1.2rem;
+    font-size:1.3rem;
     padding:4%;
     }
   a{
