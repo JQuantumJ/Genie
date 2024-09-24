@@ -3,9 +3,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     margin-top: -5%;
-    height: 340vh;
-    max-height: 340vh;
-    margin-bottom: -20%;
+    margin-bottom: 10%;
     padding-top: 5%;
     background-color: #eee;
 
@@ -61,7 +59,7 @@ export const RightHalfCircle = styled.div`
   top: 0;
   @media (max-width: 800px) {
     min-width: 100%;
-    height: 35vh;
+    padding: 5%;
   } 
 `;
 
@@ -89,8 +87,8 @@ export const LeftHalfCircle = styled.div`
   align-items: center;
   top: 0;
   @media (max-width: 800px) {
-    min-width: 90%;
-    height: 35vh;
+    min-width: 100%;
+    padding: 5%;
   } 
 `;
 

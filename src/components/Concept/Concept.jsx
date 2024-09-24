@@ -127,95 +127,108 @@ const MoreButton = styled.button`
   }
 `;
 
-
 const Concept = () => {
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-  const [isModalOpen, setIsModalOpen] = useState(false); 
-  const [activeIndex, setActiveIndex] = useState(null);
-  const navigate = useNavigate();
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
 
+  const navigate = useNavigate();
+
+  const [activeIndexes, setActiveIndexes] = useState([]);
+
+  const toggleAccordion = (index) => {
+    if (activeIndexes.includes(index)) {
+      // 이미 열려있다면 배열에서 제거
+      setActiveIndexes(activeIndexes.filter(i => i !== index));
+    } else {
+      // 새로 열기 위해 배열에 추가
+      setActiveIndexes([...activeIndexes, index]);
+    }
+  };
   return (
     <C.Wrapper>
-    <C.ConceptWrapper>
-      <h1>양자 개념</h1>
-      <hr/>
-      <div className="accordion-item">
-        <div 
-          className={`accordion-title ${activeIndex === 0 ? 'active' : ''}`} 
-          onClick={() => toggleAccordion(0)}
-        >
-          <span>양자란 ?</span>
-          <span>{activeIndex === 0 ? '▲' : '▼'}</span>
-        </div>
-        {activeIndex === 0 && (
-          <div className="accordion-content">
-            <p style={{marginBottom: '2%'}}>양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다.
-              쉽게 말해, <span style={{color: '#B0E3FF'}}>우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자</span>라고 부릅니다.
-              처음으로 양자는 빛에서 발견되었으며, 
-              이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.</p>
-              <CenteredDiv>
-                <RotatingImage style={{maxWidth: '30%'}} src={Quantum2} />
-              </CenteredDiv>
+      <C.ConceptWrapper>
+        <h1>양자 개념</h1>
+        <hr />
+
+        <div className="accordion-item">
+          <div
+            className={`accordion-title ${activeIndexes.includes(0) ? 'active' : ''}`}
+            onClick={() => toggleAccordion(0)}
+          >
+            <span>양자란 ?</span>
+            <span>{activeIndexes.includes(0) ? '▲' : '▼'}</span>
           </div>
-        )}
-      </div>
-      <div className="accordion-item">
-        <div 
-          className={`accordion-title ${activeIndex === 1 ? 'active' : ''}`} 
-          onClick={() => toggleAccordion(1)}
-        >
-          <span>양자역학이란 ?</span>
-          <span>{activeIndex === 1 ? '▲' : '▼'}</span>
+          {activeIndexes.includes(0) && (
+            <div className="accordion-content">
+              <p>
+                양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다.
+                쉽게 말해, <span style={{ color: '#B0E3FF' }}>우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자</span>라고 부릅니다.
+                처음으로 양자는 빛에서 발견되었으며, 
+                이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.
+              </p>
+              <div style={{ textAlign: 'center', height: '40vh' }}>
+                <img style={{ margin: '1%' ,maxWidth: '190px', minWidth: '30%', animation: 'rotate 8s linear infinite' }} src={Quantum2} alt="Quantum" />
+              </div>
+            </div>
+          )}
         </div>
-        {activeIndex === 1 && (
-          <div className="accordion-content">
-            <p>입자 및 입자 집단을 다루는 현대 물리학의 기초 이론입니다. 
-              양자역학은 <span style={{color: '#B0E3FF'}}>원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론</span>으로, 
-              이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다.
-              그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다.</p>
+
+        <div className="accordion-item">
+          <div
+            className={`accordion-title ${activeIndexes.includes(1) ? 'active' : ''}`}
+            onClick={() => toggleAccordion(1)}
+          >
+            <span>양자역학이란 ?</span>
+            <span>{activeIndexes.includes(1) ? '▲' : '▼'}</span>
           </div>
-        )}
-      </div>
-      <div className="accordion-item">
-        <div 
-          className={`accordion-title ${activeIndex === 2 ? 'active' : ''}`} 
-          onClick={() => toggleAccordion(2)}
-        >
-          <span>불확정성의 원리</span>
-          <span>{activeIndex === 2 ? '▲' : '▼'}</span>
+          {activeIndexes.includes(1) && (
+            <div className="accordion-content">
+              <p>
+                입자 및 입자 집단을 다루는 현대 물리학의 기초 이론입니다.
+                양자역학은 <span style={{ color: '#B0E3FF' }}>원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론</span>으로, 
+                이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다.
+                그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다.
+              </p>
+            </div>
+          )}
         </div>
-        {activeIndex === 2 && (
-          <div className="accordion-content">
-            <h1 style={{marginBottom: '1%', color: '#eee'}}>"입자의 위치나 운동량을 동시에 정확하게 알 수 없다"</h1>
-            <hr style={{border: 'none', borderTop: '0.5px solid #ddd'}}/>
-            <p>
-            하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고, 반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다.
-            이는 마치 <span style={{color: '#B0E3FF'}}>우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
-            특히, 측정 차원의 오류가 아니라, 사용하는 장비가 아무리 정확해도 운동량과 위치를 동시에 정확히 알 수 없습니다.
-            오히려 하나의 값을 고정하면 다른 값은 더욱 불확실해집니다.</p>
-            <BallBox>
-              <img src={Ball2} />
-                <img src={Ball} />
-              </BallBox>
+
+        <div className="accordion-item">
+          <div
+            className={`accordion-title ${activeIndexes.includes(2) ? 'active' : ''}`}
+            onClick={() => toggleAccordion(2)}
+          >
+            <span>불확정성의 원리</span>
+            <span>{activeIndexes.includes(2) ? '▲' : '▼'}</span>
           </div>
-        )}
-      </div>
+          {activeIndexes.includes(2) && (
+            <div className="accordion-content">
+              <h1 style={{ marginBottom: '1%', color: '#eee' }}>"입자의 위치나 운동량을 동시에 정확하게 알 수 없다"</h1>
+              <hr style={{ border: 'none', borderTop: '0.5px solid #ddd' }} />
+              <p>
+                하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고,
+                반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다. 이는 마치
+                <span style={{ color: '#B0E3FF' }}>우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '10%', height: '40vh' }}>
+                <img src={Ball2} style={{ width: '100px', minWidth: '20%' }} alt="Ball" />
+                <img src={Ball} style={{ width: '100px', minWidth: '15%' }} alt="Ball" />
+              </div>
+            </div>
+          )}
+        </div>
       <div className="accordion-item">
         <div 
-          className={`accordion-title ${activeIndex === 3 ? 'active' : ''}`} 
+          className={`accordion-title ${activeIndexes.includes(3) ? 'active' : ''}`}
           onClick={() => toggleAccordion(3)}
         >
           <span>양자 중첩(슈뢰딩거의 고양이)</span>
-          <span>{activeIndex === 3 ? '▲' : '▼'}</span>
+          <span>{activeIndexes.includes(3) ? '▲' : '▼'}</span>
         </div>
-        {activeIndex === 3 && (
+        {activeIndexes.includes(3) && (
           <div className="accordion-content">
             <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 <span style={{color: '#B0E3FF'}}>에르빈 슈뢰딩거</span>가 제안한 사고 실험입니다.
             이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다.
@@ -228,11 +241,11 @@ const Concept = () => {
       </div>
               {/* 파동 함수 붕괴 */}
               <div className="accordion-item">
-          <div className={`accordion-title ${activeIndex === 4 ? 'active' : ''}`} onClick={() => toggleAccordion(4)}>
+          <div className={`accordion-title ${activeIndexes.includes(4)  ? 'active' : ''}`} onClick={() => toggleAccordion(4)}>
             <span>파동 함수 붕괴</span>
-            <span>{activeIndex === 4 ? '▲' : '▼'}</span>
+            <span>{activeIndexes.includes(4) ? '▲' : '▼'}</span>
           </div>
-          {activeIndex === 4 && (
+          {activeIndexes.includes(4) && (
             <div className="accordion-content">
              <h1 style={{marginBottom: '1%', color: '#eee'}}>중첩 상태가 관측되었을 때, 그 상태가 하나로 확정되는 과정</h1>
               <hr style={{border: 'none', borderTop: '0.5px solid #ddd'}}/>
@@ -245,18 +258,18 @@ const Concept = () => {
                 그 시스템은 중첩된 여러 상태 중 하나로 결정됩니다. 
                 이를 파동 함수가 붕괴했다고 표현합니다.
               </p>
-              <Numbering><img src={Catimg} alt="cat" style={{maxWidth: '40%'}} /> <img src={Cat2img} alt="cat2" style={{minWidth: '19%', width: '177px', marginBottom: '-30px'}}/></Numbering>
+              <Numbering><img src={Catimg} alt="cat" style={{maxWidth: '40%'}} /> <img src={Cat2img} alt="cat2" style={{minWidth: '19%', width: '177px', marginBottom: '0px'}}/></Numbering>
               <p style={{marginTop: '5%'}}>파동 함수 붕괴는 슈뢰딩거의 고양이에서 상자를 열고 난 후에 발생하는 과정으로 이해할 수 있습니다.</p>
             </div>
           )}
         </div>
               {/* 파동-입자 이중성 */}
               <div className="accordion-item"> 
-          <div className={`accordion-title ${activeIndex === 5 ? 'active' : ''}`} onClick={() => toggleAccordion(5)}>
+          <div className={`accordion-title ${activeIndexes.includes(5)  ? 'active' : ''}`} onClick={() => toggleAccordion(5)}>
             <span>파동-입자 이중성</span>
-            <span>{activeIndex === 5 ? '▲' : '▼'}</span>
+            <span>{activeIndexes.includes(5)  ? '▲' : '▼'}</span>
           </div>
-          {activeIndex === 5 && (
+          {activeIndexes.includes(5) && (
             <div className="accordion-content">
             <p>
                 양자역학의 중요한 개념 중 하나는 <span style={{ color: '#B0E3FF' }}>파동-입자 이중성</span>입니다. 이는 빛과 물질이 파동과 입자 두 가지 성질을 동시에 가진다는 것입니다.
@@ -282,11 +295,11 @@ const Concept = () => {
 
         {/* 양자 얽힘 */}
         <div className="accordion-item">
-          <div className={`accordion-title ${activeIndex === 6 ? 'active' : ''}`} onClick={() => toggleAccordion(6)}>
+          <div className={`accordion-title ${activeIndexes.includes(6)  ? 'active' : ''}`} onClick={() => toggleAccordion(6)}>
             <span>양자 얽힘</span>
-            <span>{activeIndex === 6 ? '▲' : '▼'}</span>
+            <span>{activeIndexes.includes(6)  ? '▲' : '▼'}</span>
           </div>
-          {activeIndex === 6 && (
+          {activeIndexes.includes(6) && (
             <div className="accordion-content">
               <p>
                 양자 얽힘은 <span style={{ color: '#B0E3FF' }}>두 개 이상의 입자가 서로 강하게 연결되어 있는 상태</span>를 말합니다. 
