@@ -18,6 +18,12 @@ export const Question = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
+    @media (max-width: 700px) {
+    margin-left:3%;
+    font-size:20px;
+    margin-top:-100%;
+    padding:10px;
+    }
 `;
 
 export const AnswerButton = styled.button`
@@ -65,8 +71,32 @@ export const Popup = styled.div`
     margin-top: 10px;
     color: #ddd;
   }
+     @media (max-width: 700px) {
+      width:60%;
+      small{
+        display:absolute;
+        margin-top:20px;
+        }
+    }
 `;
-
+export const Grid2 = styled.div`
+  display: grid;
+  max-width: 100%;
+  min-width: 100%;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2%; 
+  margin-top: 10%;
+  align-items: center;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr); 
+    
+  }
+  @media (max-width: 700px) {
+    grid-template-areas: 
+      "textWrapper"  
+      "leftHalfCircle";  
+  }
+`
 export const FinalScoreContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -87,4 +117,7 @@ export const FinalScoreContainer = styled.div`
     margin-top: 10px;
     color: #666;
   }
+     @media (max-width: 700px) {
+      margin-top:-100%;
+    }
 `;
