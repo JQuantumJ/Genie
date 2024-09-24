@@ -25,14 +25,15 @@ const disappearAnimation = keyframes`
 const AnimatedImage = styled.img`
   position: fixed;
   top: 30%;
-  max-width: 30%;
+  max-width: 
   left: 36%;
   z-index: 10000;
   transition: opacity 0.5s ease-out;
   animation: ${(props) => props.isdisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     position: fixed;
-    max-width: 40%;
+    max-width: 56%;
+    left: 22%;
   }
 `;
 
