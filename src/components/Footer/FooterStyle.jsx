@@ -41,12 +41,18 @@ export const Logo = styled.div`
     font-size: 1.5rem;
     color: #fff;
   }
+  @media (max-width: 960px) {
+    margin-bottom: 0px;
+  }
 `;
 
 export const LogoImage = styled.img`
   max-width: 150px;
   margin-bottom: 5.5%;
   cursor: pointer;
+  @media (max-width: 960px) {
+    margin-bottom: 3.5%;
+  }
 `;
 
 export const ContactInfo = styled.div`
@@ -96,6 +102,9 @@ export const ContactTitle = styled.div`
     margin: auto 0;
     font-size: 1.2rem;
   }
+  @media (max-width: 960px) {
+    margin-bottom: 0px;
+  }
     
 `;
 
@@ -103,7 +112,6 @@ export const ContactTitle = styled.div`
 export const ContactPerson = styled.div`
   display: flex;
   align-items: center;
-
   white-space: nowrap;
   span {
     font-size: 1.1rem;
@@ -155,4 +163,7 @@ export const Inline = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 5%;
+  @media (max-width: 960px) {
+      display: none;
+  }
 `
