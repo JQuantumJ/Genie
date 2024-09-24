@@ -40,10 +40,12 @@ const Numbering = styled.p`
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   white-space: nowrap;
+  gap: 2%;
 `;
 
 const ModalOverlay = styled.div`
@@ -77,7 +79,7 @@ const ModalContent = styled.div`
     margin-bottom: 2%;
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: 10px 0;
     font-family: arial;
   }
@@ -140,10 +142,10 @@ const Cat = () => {
         <p>독이 든 병은 50%의 확률로 깨질 수도, 깨지지 않을 수도 있습니다.</p>
       </Box>
       <Box>
-        <Numbering><img src={Catimg} alt="cat" /> <img src={Cat2img} alt="cat2" /></Numbering>
+        <Numbering><img src={Catimg} alt="cat" /> <img src={Cat2img} alt="cat2" style={{maxWidth: '200px', marginBottom: '-47px'}}/></Numbering>
         <p style={{marginBottom: '1%'}}>이에 따라 고양이도 죽을 수도 있고 살아 있을 수도 있습니다.</p>
         <p style={{padding: '0 2%', marginTop: '0px'}}>이러한 상태를 <span style={{color: '#0000ff'}}>양자 중첩 상태</span>라고 합니다.</p>
-        <C.Button style={{backgroundColor: '#007bff'}} onClick={checkCatState}>
+        <C.Button onClick={checkCatState}>
             상자 안에 고양이가 있는지 확인하기
           </C.Button>
       </Box>
@@ -154,7 +156,7 @@ const Cat = () => {
         <div style={{textAlign: 'center', display: 'flex', marginTop: '1%'}}>
         </div>
         <div style={{textAlign: 'center', display: 'flex', marginTop: '1%'}}>
-          <C.Button style={{backgroundColor: '#007bff'}} onClick={() => setShowInfoModal(true)}>
+          <C.Button onClick={() => setShowInfoModal(true)}>
             추가 설명 보기
           </C.Button>
         </div>
@@ -174,7 +176,7 @@ const Cat = () => {
               </div>
             ) : (
               <div>
-                <p>고양이는 죽었습니다...</p>
+                <p>고양이는 죽었습니다....</p>
                 <img src={Cat2img} alt="죽은 고양이" style={{maxWidth: '100%'}} />
               </div>
             )}

@@ -135,7 +135,7 @@ export const ConceptWrapper = styled.div`
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{
-      font-size: 1.7rem;
+      font-size: 2.2rem;
        @media (max-width: 900px) {
           font-size: 1.5rem;
        }
@@ -212,16 +212,15 @@ export const ModalContent = styled.div`
 export const Button = styled.button`
 padding: 10px 20px;
 margin: 20px auto; 
-font-size: 1rem;
+font-size: 1.3rem;
 display: block; 
 cursor: pointer;
-background-color: #007bff; !important;
+background-color: #007bff; 
 color: white;
 border: none;
 border-radius: 5px;
 text-align: center;
-
 &:hover {
-  background-color: #0056b3; !important;
+  background-color: #0056b3;
 }
 `;

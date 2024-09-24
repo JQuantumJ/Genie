@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import image1 from '/src/assets/image/main/image1.svg';
+import image1 from '/src/assets/image/main/image4.svg';
 import image2 from '/src/assets/image/main/image2.svg';
 import image3 from '/src/assets/image/main/image3.svg';
 import arrowleft from '/src/assets/image/main/arrowleft.svg';
