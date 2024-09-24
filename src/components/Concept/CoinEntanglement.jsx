@@ -47,6 +47,7 @@ const CoinBox = styled.div`
 const BoxImage = styled.img`
   max-width: 40%;
   cursor: pointer;
+  margin: 2%;
 `;
 
 const AnimatedCoinContainer = styled.div`
@@ -150,16 +151,18 @@ const CoinEntanglement = () => {
         <p>두 개의 동전이 특별한 방식으로 얽혀 있습니다.</p>
         <p>한 동전의 상태가 결정되면 다른 동전의 상태도 자동으로 결정됩니다!</p>
         <p>박스를 열어서 동전 A를 확인하세요.</p>
+        <h1 style={{color: '#0183ff', margin: '5%'}}>박스 클릭하기</h1>
       {boxOpened && (
         <AnimatedCoinContainer>
+          
           <div style={{textAlign: 'center'}}>
             <h3>동전 A</h3>
-            <img src={coinA === '앞면' ? coinHeads : coinTails} alt="동전 A" style={{ maxWidth: '50%' }} />
+            <img src={coinA === '앞면' ? coinHeads : coinTails} alt="동전 A" style={{ maxWidth: '160px' }} />
             <p>{coinA}</p>
           </div>
           <div style={{textAlign: 'center'}}>
             <h3>동전 B</h3>
-            <img src={coinB === '앞면' ? coinHeads : coinTails} alt="동전 B" style={{ maxWidth: '50%' }} />
+            <img src={coinB === '앞면' ? coinHeads : coinTails} alt="동전 B" style={{  maxWidth: '160px' }} />
             <p>{coinB}</p>
           </div>
         </AnimatedCoinContainer>

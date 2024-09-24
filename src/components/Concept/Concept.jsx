@@ -110,6 +110,9 @@ const rotate = keyframes`
 const RotatingImage = styled.img`
   max-width: 33%;
   animation: ${rotate} 8s linear infinite;
+  @media(max-width: 800px){
+    max-width: 60%;
+  }
 `;
 
 const MoreButton = styled.button`
@@ -170,7 +173,7 @@ const Concept = () => {
                 이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.
               </p>
               <div style={{ textAlign: 'center', height: '40vh' }}>
-              <RotatingImage style={{maxWidth: '30%'}} src={Quantum2} />
+              <RotatingImage src={Quantum2} />
               </div>
             </div>
           )}
@@ -187,10 +190,11 @@ const Concept = () => {
           {activeIndexes.includes(1) && (
             <div className="accordion-content">
               <p>
-                입자 및 입자 집단을 다루는 현대 물리학의 기초 이론입니다.
                 양자역학은 <span style={{ color: '#B0E3FF' }}>원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론</span>으로, 
-                이 입자들은 고전 물리학과는 다르게 파동과 입자 모두의 성질을 가집니다.
-                그로 인해 입자의 위치나 운동량을 동시에 정확하게 알 수 없다는 불확정성 원리가 등장합니다.
+                양자역학은 양자라는 에너지의 최소 단위를 포함한 아주 작은 입자들(전자, 광자 등)의 행동과 상호작용을 연구하는 
+                물리학의 한 분야입니다. 
+                이는 입자들이 고전 물리학의 법칙을 따르지 않고, 파동과 입자 성질을 동시에 가지며, 
+                불확정성과 중첩 등의 독특한 성질을 나타내는 현상들을 설명합니다.
               </p>
             </div>
           )}
@@ -213,7 +217,7 @@ const Concept = () => {
                 반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다. 이는 마치
                 <span style={{ color: '#B0E3FF' }}>우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
               </p>
-              <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '10%', height: '40vh' }}>
+              <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '10%', height: '170px' }}>
                 <img src={Ball2} style={{ width: '100px', minWidth: '20%' }} alt="Ball" />
                 <img src={Ball} style={{ width: '100px', minWidth: '15%' }} alt="Ball" />
               </div>
