@@ -52,7 +52,7 @@ const Footer = () => {
         </F.ContactUs>
       </F.FooterInner>
       <F.FooterBottom >
-        <p style={{textAlign: 'left', marginLeft: '7.5%'}}>© 2024 Genie. All rights reserved.</p>
+        <p style={{textAlign: 'left', marginLeft: '7.5%'}}>© 2024 Jenie. All rights reserved.</p>
       </F.FooterBottom>
     </F.FooterContainer>
   );
