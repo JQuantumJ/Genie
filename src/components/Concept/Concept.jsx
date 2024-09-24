@@ -170,7 +170,7 @@ const Concept = () => {
                 이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.
               </p>
               <div style={{ textAlign: 'center', height: '40vh' }}>
-                <img style={{ margin: '1%' ,maxWidth: '190px', minWidth: '30%', animation: 'rotate 8s linear infinite' }} src={Quantum2} alt="Quantum" />
+              <RotatingImage style={{maxWidth: '30%'}} src={Quantum2} />
               </div>
             </div>
           )}
