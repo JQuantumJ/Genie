@@ -1215,8 +1215,8 @@ text-align: center;
 `,Ev=P.img`
   position: fixed;
   top: 30%;
-  max-width: 
-  left: 36%;
+  max-width: 50%;
+  left: 33%;
   z-index: 10000;
   transition: opacity 0.5s ease-out;
   animation: ${e=>e.isdisappearing?un`${jv} 0.5s forwards`:"none"};
