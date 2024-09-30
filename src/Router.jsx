@@ -7,7 +7,6 @@ import ConceptPage from './pages/Concept';
 import QuizPage from './pages/Quiz';
 import CompanyPage from './pages/Company';
 import RecentPage from './pages/Recent';
-import QuizPage from './pages/Quiz';
 import DescriptionPage from './pages/Description';
 import TopBtn from './components/TopButton/TopButton';
 import CharacterPage from './pages/Character';
