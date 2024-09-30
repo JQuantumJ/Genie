@@ -78,6 +78,16 @@ export default function Navbar() {
             }}>양자 활용</N.MenuItem>
 
             <N.MenuItem onClick={() => {
+              navigate('/recent');
+              setIsMenuOpen(false);
+            }}>최근 동향</N.MenuItem>
+
+            <N.MenuItem onClick={() => {
+              navigate('/company');
+              setIsMenuOpen(false);
+            }}>주요 기업</N.MenuItem>
+
+            <N.MenuItem onClick={() => {
               navigate('/quiz');
               setIsMenuOpen(false);
             }}>양자 퀴즈</N.MenuItem>
