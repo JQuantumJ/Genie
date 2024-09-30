@@ -207,7 +207,7 @@ const Main = () => {
           isClicked={clickedIndex === 2} 
         >
           <M.ItemTitle>최근 동향</M.ItemTitle>
-          <M.ItemContent onClick={e=> navigate('/')} isVisible={hoveredIndex === 2}>
+          <M.ItemContent onClick={e=> navigate('/recent')} isVisible={hoveredIndex === 2}>
             양자 기술의 최근 동향에 대해 알아봅시다.<p></p>
           </M.ItemContent>
         </M.CarouselItem>
@@ -222,7 +222,7 @@ const Main = () => {
           isClicked={clickedIndex === 3} 
         >
           <M.ItemTitle>주요 기업</M.ItemTitle>
-          <M.ItemContent onClick={e=> navigate('/')} isVisible={hoveredIndex === 3}>
+          <M.ItemContent onClick={e=> navigate('/company')} isVisible={hoveredIndex === 3}>
             양자 기술의 발전을 이끌고 있는 국내, 해외 주요 기업들을 모아봤어요.<p></p>
           </M.ItemContent>
         </M.CarouselItem>

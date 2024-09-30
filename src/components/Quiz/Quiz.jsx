@@ -42,7 +42,7 @@ const Quiz = () => {
       } else {
         setQuizComplete(true);
       }
-    }, popupDuration); // Popup disappears after 2 seconds
+    }, popupDuration); 
   };
 
   return (

@@ -21,6 +21,8 @@ export default function Router() {
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/character" element={<CharacterPage />} />
         <Route path="/cat" element={<CatPage />} />
+        <Route path="/company" element={<CompanyPage />} />
+        <Route path="/Recent" element={<RecentPage />} />
       </Routes>
       <TopBtn />
       <Footer />
