@@ -27,7 +27,7 @@ export default function Router() {
         <Route path="/character" element={<CharacterPage />} />
         <Route path="/cat" element={<CatPage />} />
         <Route path="/company" element={<CompanyPage />} />
-        <Route path="/Recent" element={<RecentPage />} />
+        <Route path="/recent" element={<RecentPage />} />
         <Route path="/coinentanglement" element={<CoinEntanglementPage />} />
       </Routes>
       <TopBtn />
