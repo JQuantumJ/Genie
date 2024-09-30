@@ -1,31 +1,19 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: 250vh;
-    max-height: 250vh;
     margin-top: -5%;
-    margin-bottom: -20%;
     padding-top: 5%;
     background-color: #eee;
-    @media(max-width: 600px){
-      height: 210vh;
-      max-height: 210vh; 
-      margin-bottom: -10%;
-    }
 `
 
 export const Wrapper2 = styled.div`
     height: 320vh;
     max-height: 320vh;
     margin-top: -5%;
-    margin-bottom: -20%;
+    margin-bottom: 20%;
     padding-top: 5%;
     background-color: #eee;
-    @media(max-width: 600px){
-      height: 260vh;
-      max-height: 260vh; 
-      margin-bottom: -10%;
-    }
+
 `
 
 export const CatWrapper = styled.div`
@@ -135,14 +123,14 @@ export const ConceptWrapper = styled.div`
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{
-      font-size: 2.2rem;
+      font-size: 2.1rem;
        @media (max-width: 900px) {
           font-size: 1.7rem;
        }
     }
     p{
        @media (max-width: 900px) {
-          font-size: 1.67rem;
+          font-size: 1.4rem;
           margin-bottom: 1%;
        }
     }
@@ -235,13 +223,13 @@ export const ImageWrap = styled.div`
     padding: 20px;
 
     img {
-        max-width: 30%;
+      max-width: 60px;
+      @media (max-width: 768px) {
+        display: none;
+      } 
     }
     a {
         width: 20%;
         margin-top: 4%;
     }
-    @media (max-width: 768px) {
-        top: 5%;
-    } 
 `;

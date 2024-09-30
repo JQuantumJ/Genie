@@ -5,15 +5,21 @@ import Navbar from './components/Nav/Navbar';
 import Footer from './components/Footer/Footer';
 import ConceptPage from './pages/Concept';
 import QuizPage from './pages/Quiz';
+import CompanyPage from './pages/Company';
+import RecentPage from './pages/Recent';
+import QuizPage from './pages/Quiz';
 import DescriptionPage from './pages/Description';
 import TopBtn from './components/TopButton/TopButton';
 import CharacterPage from './pages/Character';
 import CatPage from './pages/Cat';
+import CoinEntanglementPage from './pages/CoinEntanglement';
+import ScrollToTop from './ScrollToTop';
 
 export default function Router() {
   return (
     <BrowserRouter>
     <Navbar />
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/concept" element={<ConceptPage />} />
@@ -23,6 +29,7 @@ export default function Router() {
         <Route path="/cat" element={<CatPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/Recent" element={<RecentPage />} />
+        <Route path="/coinentanglement" element={<CoinEntanglementPage />} />
       </Routes>
       <TopBtn />
       <Footer />
