@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Slider from "react-slick";
 import { FaSearch } from 'react-icons/fa'; 
+import { useNavigate, Link } from 'react-router-dom';
 import bg from '/src/assets/image/Company/background.svg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,17 +18,18 @@ import jininfra from '/src/assets/image/Company/jininfra.svg';
 import intel from '/src/assets/image/Company/intel.svg';
 import alibaba from '/src/assets/image/Company/alibaba.svg';
 const Company = () => {
+  const navigate=useNavigate();
   const storyData = [
-    { title: 'IBM', subtitle: '주요 사업 간단 설명', imgSrc: ibm },
-    { title: 'D-Wave', subtitle: '주요 사업 간단 설명', imgSrc: dwave },
-    { title: 'Rigetti Computing', subtitle: '주요 사업 간단 설명', imgSrc: rigetti },
-    { title: 'Honeywell', subtitle: '주요 사업 간단 설명', imgSrc: honeywell },
-    { title: 'Google', subtitle: '주요 사업 간단 설명', imgSrc: google },
-    { title: 'Microsoft', subtitle: '주요 사업 간단 설명', imgSrc: microsoft },
-    { title: 'Intel', subtitle: '주요 사업 간단 설명', imgSrc: intel },
-    { title: 'Alibaba', subtitle: '주요 사업 간단 설명', imgSrc: alibaba },
-    { title: 'JinInfra', subtitle: '주요 사업 간단 설명', imgSrc: jininfra },
-    { title: 'IDQ', subtitle: '주요 사업 간단 설명', imgSrc: idq },
+    { title: 'IBM', subtitle: 'IBM Quantum은 클라우드 기반 양자 컴퓨팅 서비스로, 개발자와 연구자들에게 실용적인 양자 컴퓨팅을 제공합니다.', imgSrc: ibm, route: 'ibm' },
+    { title: 'D-Wave', subtitle: 'D-Wave는 양자 어닐링(annealing) 기반 시스템을 제공하며, 최적화 문제 해결에 특화된 양자 컴퓨터를 개발합니다.', imgSrc: dwave, route: 'dwave' },
+    { title: 'Rigetti Computing', subtitle: 'Rigetti Computing은 양자 회로 기반 시스템을 개발하며, 하이브리드 양자-클래식 컴퓨팅을 통해 양자 컴퓨팅을 상용화하려고 합니다.', imgSrc: rigetti, route: 'rigetti' },
+    { title: 'Honeywell', subtitle: 'Honeywell Quantum Solutions는 이온 트랩 기술을 사용한 양자 컴퓨터를 개발하여 정밀한 양자 계산을 제공합니다.', imgSrc: honeywell, route: 'honeywell' },
+    { title: 'Google', subtitle: 'Google Quantum AI는 시너지 효과를 노리며, 인공지능과 양자 컴퓨팅의 결합을 통해 양자 우월성을 목표로 연구 중입니다.', imgSrc: google, route: 'google' },
+    { title: 'Microsoft', subtitle: 'Microsoft는 Azure Quantum 플랫폼을 통해 클라우드 기반 양자 컴퓨팅 서비스와 도구를 제공하며, 트래픽슘 기반의 양자 컴퓨터를 개발 중입니다.', imgSrc: microsoft, route: 'microsoft' },
+    { title: 'Intel', subtitle: 'Intel은 양자 컴퓨팅 하드웨어와 소프트웨어 생태계를 구축하고 있으며, 상용화 가능한 양자 프로세서를 개발 중입니다.', imgSrc: intel, route: 'intel' },
+    { title: 'Alibaba', subtitle: 'Alibaba는 클라우드 기반의 양자 컴퓨팅 서비스를 제공하며, 양자 암호화 및 인공지능 연구에 집중하고 있습니다.', imgSrc: alibaba, route: 'alibaba' },
+    { title: 'JinInfra', subtitle: 'JinInfra는 양자 네트워크 인프라와 보안 솔루션을 개발하여 양자 통신 기술 상용화에 주력하고 있습니다.', imgSrc: jininfra, route: 'jininfra' },
+    { title: 'IDQ', subtitle: 'IDQ는 양자 키 분배(QKD) 기반 보안 솔루션을 제공하며, 양자 암호화 및 통신 보안 기술을 연구하고 있습니다.', imgSrc: idq, route: 'idq' },
   ];
 
   const sliderRef = useRef(null);
@@ -54,7 +56,9 @@ const Company = () => {
       sliderRef.current.slickPlay();
     }
   };
-
+  const handleCardClick = (route) => {
+    navigate(`/company/${route}`); 
+  };
   return (
     <C.Container>
       <C.Header>
@@ -73,7 +77,7 @@ const Company = () => {
           onMouseLeave={playSlider} 
         >
           {storyData.map((story, index) => (
-            <C.StoryCard key={index}>
+            <C.StoryCard key={index} onClick={() => handleCardClick(story.route)}>
               <C.CardImage src={story.imgSrc} alt={story.title} />
               <C.StoryCardText>
                 <p className="title">{story.title}</p>

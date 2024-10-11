@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import Slider from "react-slick";
 import { FaSearch } from 'react-icons/fa'; 
-import banner from '/src/assets/image/Company/banner.svg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -12,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  background-image: url(${banner});
+  background-image: url('/src/assets/image/Company/banner.svg');
   background-size: cover;
   background-position: center;
   height: 250px;
@@ -138,17 +137,19 @@ export const CardImage = styled.img`
 
 export const StoryCardText = styled.div`
   padding: 20px 0 10px;
-  
+  line-height: 1.7;
   .title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #0B212E;
     margin: 10px 0 5px 0;
   }
 
   .subtitle {
-    font-size: 1rem;
-    color: #0B212E;
+    font-size: 1.2rem;
+    color: #000;
+    max-width: 93%;
+    margin: 0 auto;
   }
 `;
 
