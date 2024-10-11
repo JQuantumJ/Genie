@@ -73,6 +73,7 @@ export const PopularStoryWrapper = styled.div`
   margin-bottom: 3%;
   @media(max-width: 780px){
     margin-top: 12%;
+    padding: 0 30px;
   }
 `;
 
@@ -114,7 +115,7 @@ export const StoryCard = styled.div`
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top:6%;
+  margin-top: 3%;
   padding-top: 120px;
   padding-bottom: 12px;
   position: relative;
@@ -125,6 +126,8 @@ export const StoryCard = styled.div`
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   @media(max-width: 780px){
     width: 50%;
+    padding-top: 80px;
+    padding-bottom: 1px;
   }
   &:hover {
     transform: scale(1.06); 
@@ -136,10 +139,13 @@ export const CardImage = styled.img`
   height: 180px;
   object-fit: cover;
   position: absolute; 
-  top: -60px; 
+  top: -50px; 
   left: 10%;
   border-radius: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @media(max-width: 780px){
+    max-height: 150px;
+  }
 `;
 
 export const StoryCardText = styled.div`
@@ -158,6 +164,15 @@ export const StoryCardText = styled.div`
     max-width: 93%;
     margin: 0 auto;
   }
+  @media(max-width: 780px){
+    line-height: 1.6;
+    .title {
+      font-size: 1.3rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+    }
+}
 `;
 
 export const ArticleCard = styled.div`

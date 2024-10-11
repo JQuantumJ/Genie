@@ -24,16 +24,19 @@ const disappearAnimation = keyframes`
 
 const AnimatedImage = styled.img`
   position: fixed;
-  top: 30%;
-  max-width: 50%;
-  left: 33%;
+  margin: 0 auto;
+  max-width: 45%;
+  display: block; 
   z-index: 10000;
+  left: 50%;
+  transform: translateX(-50%);
   transition: opacity 0.5s ease-out;
   animation: ${(props) => props.isdisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
   @media (max-width: 800px) {
     position: fixed;
     max-width: 56%;
-    left: 22%;
+    transform: translateX(-50%);
+    top: 20%;
   }
 `;
 
