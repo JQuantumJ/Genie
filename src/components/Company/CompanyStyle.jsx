@@ -11,9 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  background-image: url('/src/assets/image/Company/banner.svg');
-  background-size: cover;
-  background-position: center;
+  position: relative;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -21,7 +19,16 @@ export const Header = styled.header`
   align-items: center;
   text-align: center;
   color: white;
-  position: relative;
+`;
+
+export const BackgroundImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
 `;
 
 export const SearchIcon = styled.div`
