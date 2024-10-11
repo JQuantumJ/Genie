@@ -72,6 +72,7 @@ const CompanyDetail = () => {
   return (
     <C.Container>
       <C.Header>
+      <C.BackgroundImage src={banner} alt="banner image" />
         <C.Title>{company.title}</C.Title>
       </C.Header>
       <C.ArticleCard>
