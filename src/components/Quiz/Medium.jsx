@@ -1,6 +1,7 @@
 // Quiz.jsx
 import React, { useState } from 'react';
-import * as Q from './QuizStyle'; // Import the styled components
+import * as Q from './QuizStyle'; 
+import { useNavigate } from 'react-router-dom'; 
 import Genie1 from '/src/assets/image/Character/sad.svg'; // Genie1 이미지 import
 import Genie2 from '/src/assets/image/main/Genie2.svg'; // Genie2 이미지 import
 
@@ -45,6 +46,7 @@ const Medium = () => {
     }, popupDuration); 
   };
 
+  const navigate = useNavigate();
   return (
     <Q.QuizContainer>
       {quizComplete ? (
@@ -57,6 +59,7 @@ const Medium = () => {
           ) : (
             <img src={Genie2} alt="Genie2" />
           )}
+          <Q.Button onClick={() => navigate('/quizmain')}> 처음으로 </Q.Button>
         </Q.FinalScoreContainer>
       ) : (
         <>

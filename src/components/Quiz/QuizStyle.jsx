@@ -105,7 +105,6 @@ export const FinalScoreContainer = styled.div`
   background-color: #eee;
   padding: 20px;
   
-  
   h2 {
     font-size: 24px;
     color: #333;
@@ -121,15 +120,16 @@ export const FinalScoreContainer = styled.div`
       margin-top:-100%;
     }
 `;
-export const Button = styled.h2`
+export const Button = styled.button`
   background-color: #ccc; /* Gray background */
   border: none;
   border-radius: 20px; /* Rounded corners */
-  padding: 30px 10%;
+  padding: 20px 10%;
   margin: 20px;
   font-size: 16px;
   color: #333; /* Text color */
   cursor: pointer;
+  font-family: 'LINESeedKR-Bd';
   
   &:hover {
     background-color: #bbb; /* Darker gray on hover */
