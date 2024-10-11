@@ -1,5 +1,5 @@
 import Medium from '../components/Quiz/Medium';
 
-export default function Quizmedium() {
+export default function QuizMedium() {
     return <><Medium/></>;
 }
