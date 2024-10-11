@@ -121,3 +121,18 @@ export const FinalScoreContainer = styled.div`
       margin-top:-100%;
     }
 `;
+export const Button = styled.h2`
+  background-color: #ccc; /* Gray background */
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  padding: 30px 10%;
+  margin: 20px;
+  font-size: 16px;
+  color: #333; /* Text color */
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #bbb; /* Darker gray on hover */
+  }
+
+`;

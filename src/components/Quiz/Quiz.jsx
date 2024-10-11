@@ -52,7 +52,7 @@ const Quiz = () => {
           <h2>퀴즈 완료!</h2>
           <p>총 <span style={{color: '#0015ff'}}>{questions.length}문제</span> 중 <span style={{color: '#0015ff'}}>{score}문제</span> 맞추셨습니다.</p>
           {/* 점수에 따라 이미지를 조건부로 렌더링 */}
-          {score < 5 ? (
+          {score < 4 ? (
             <img src={Genie1} alt="Genie1" />
           ) : (
             <img src={Genie2} alt="Genie2" />

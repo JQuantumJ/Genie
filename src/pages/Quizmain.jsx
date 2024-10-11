@@ -1,5 +1,5 @@
-import Quizmain from '../components/Quiz/Quizmain';
+import QuizMain from '../components/Quiz/Quizmain';
 
-export default function QuizMain() {
-    return <><Quizmain/></>;
+export default function Quizmain() {
+    return <><QuizMain/></>;
 }
