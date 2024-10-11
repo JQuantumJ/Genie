@@ -5,6 +5,9 @@ import Navbar from './components/Nav/Navbar';
 import Footer from './components/Footer/Footer';
 import ConceptPage from './pages/Concept';
 import QuizPage from './pages/Quiz';
+import Quizmain from './pages/Quizmain';
+import QuizMedium from './pages/Medium';
+import QuizAdvanced from './pages/Advanced';
 import CompanyPage from './pages/Company';
 import RecentPage from './pages/Recent';
 import DescriptionPage from './pages/Description';
@@ -24,6 +27,9 @@ export default function Router() {
         <Route path="/concept" element={<ConceptPage />} />
         <Route path="/description" element={<DescriptionPage />} />
         <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/medium" element={<QuizMedium />} />
+        <Route path="/advanced" element={<QuizAdvanced />} />
+        <Route path="/quizmain" element={<Quizmain />} />
         <Route path="/character" element={<CharacterPage />} />
         <Route path="/cat" element={<CatPage />} />
         <Route path="/company" element={<CompanyPage />} />

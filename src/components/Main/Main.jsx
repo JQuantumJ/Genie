@@ -237,7 +237,7 @@ const Main = () => {
           isClicked={clickedIndex === 4} 
         >
           <M.ItemTitle>양자 퀴즈</M.ItemTitle>
-          <M.ItemContent onClick={e=> navigate('/quiz')} isVisible={hoveredIndex === 4}>
+          <M.ItemContent onClick={e=> navigate('/quizmain')} isVisible={hoveredIndex === 4}>
             간단한 양자 개념을 확인하는 Quiz Quiz!!<p></p>
           </M.ItemContent>
         </M.CarouselItem>

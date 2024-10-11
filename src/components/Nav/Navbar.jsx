@@ -88,7 +88,7 @@ export default function Navbar() {
             }}>주요 기업</N.MenuItem>
 
             <N.MenuItem onClick={() => {
-              navigate('/quiz');
+              navigate('/quizmain');
               setIsMenuOpen(false);
             }}>양자 퀴즈</N.MenuItem>
 
