@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import styled, { keyframes } from 'styled-components';
 import Slider from "react-slick";
 import { FaSearch } from 'react-icons/fa'; 
 import { useNavigate, Link } from 'react-router-dom';
@@ -17,6 +18,19 @@ import microsoft from '/src/assets/image/Company/microsoft.svg';
 import jininfra from '/src/assets/image/Company/jininfra.svg';
 import intel from '/src/assets/image/Company/intel.svg';
 import alibaba from '/src/assets/image/Company/alibaba.svg';
+export const Header = styled.header`
+  background-image: url(${banner});
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+`;
 const Company = () => {
   const navigate=useNavigate();
   const storyData = [
@@ -61,12 +75,12 @@ const Company = () => {
   };
   return (
     <C.Container>
-      <C.Header>
+      <Header>
         <C.Title>양자 관련 주요 기업들</C.Title>
         <C.SearchIcon>
           <FaSearch style={{margin: '0 auto'}} size={24} /> 
         </C.SearchIcon>
-      </C.Header>
+      </Header>
 
 
       <C.SectionTitle style={{marginTop: '5%'}}>주요 기업들</C.SectionTitle>
