@@ -1,6 +1,22 @@
 // Description.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as D from './DescriptionStyle';
+
+const MoreButton = styled.button`
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
 
 const Description = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -8,6 +24,7 @@ const Description = () => {
     const toggleAccordion = (index) => {
       setActiveIndex(activeIndex === index ? null : index);
     };
+    const navigate = useNavigate();
     return (
       <D.Wrapper>
       <D.ConceptWrapper>
@@ -26,6 +43,9 @@ const Description = () => {
               <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 <span style={{color: '#B0E3FF'}}>큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</span></p>
               <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
               이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>
+              <div style={{textAlign: 'center'}}>
+                <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/computing')}> More</MoreButton>
+              </div>
               <hr/>
               {/* YouTube video for 양자 컴퓨터 */}
               <iframe 

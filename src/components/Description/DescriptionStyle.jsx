@@ -125,3 +125,42 @@ export const ConceptWrapper = styled.div`
       padding-left: 40%;
   }
 `;
+export const Wrapper2 = styled.div`
+    height: 320vh;
+    max-height: 320vh;
+    margin-top: -5%;
+    margin-bottom: 20%;
+    padding-top: 5%;
+    background-color: #eee;
+
+`
+
+export const ComputeWrapper = styled.div`
+  max-width: 90%;
+  margin-left: 5%;
+  margin-top: 10%;
+  border-radius: 0.7vw;
+  position: relative;
+  margin-bottom: 30%;
+   p{
+    font-size: 2rem;
+    margin-top: 2%;
+   }
+   h1{
+    margin-left: 2%;
+    font-size: 2.6rem;
+      @media(max-width: 900px){
+        margin-top: 15%;
+        font-size: 1.9rem;
+      }
+      @media(max-width: 900px){
+        margin-top: 18%;
+      }
+   }
+  hr {
+    border: 1px solid #333;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    max-width: 97%;
+  }
+`
