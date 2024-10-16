@@ -41,10 +41,6 @@ export const AnswerButton = styled.button`
     background-color: #ddd;
   }
 
-  &:focus {
-    outline: none;
-    background-color: #bbb;
-  }
 `;
 
 export const Popup = styled.div`

@@ -24,15 +24,16 @@ const Quiz = () => {
 
   const handleAnswer = (answer) => {
     const currentQuestion = questions[currentQuestionIndex];
-    let popupDuration = 1500; 
+    let popupDuration;
     if (answer === currentQuestion.correctAnswer) {
       setScore(score + 1);
       setPopupContent('정답입니다!');
+      popupDuration = 1000; 
       setPopupExplanation('');
     } else {
       setPopupContent('오답입니다!');
       setPopupExplanation(currentQuestion.explanation);
-      popupDuration = 3000; 
+      popupDuration = 4000; 
     }
 
     setShowPopup(true);
