@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as D from './DescriptionStyle';
+import styled from 'styled-components';
 
 const MoreButton = styled.button`
   background-color: #007bff;

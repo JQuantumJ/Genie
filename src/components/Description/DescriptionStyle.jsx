@@ -148,9 +148,10 @@ export const ComputeWrapper = styled.div`
    }
    h1{
     margin-left: 2%;
+    margin-top:13%;
     font-size: 2.6rem;
       @media(max-width: 900px){
-        margin-top: 15%;
+        margin-top: 20%;
         font-size: 1.9rem;
       }
       @media(max-width: 900px){
@@ -164,3 +165,23 @@ export const ComputeWrapper = styled.div`
     max-width: 97%;
   }
 `
+export const ImageWrap = styled.div`
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 2%;
+    top: 3%;
+    width: 100%;
+    padding: 20px;
+
+    img {
+      max-width: 60px;
+      @media (max-width: 768px) {
+        display: none;
+      } 
+    }
+    a {
+        width: 20%;
+        margin-top: 4%;
+    }
+`;
