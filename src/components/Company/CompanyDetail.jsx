@@ -164,6 +164,8 @@ const CompanyDetail = () => {
           <C.SpeechContent>{company.content}</C.SpeechContent>
         </C.SpeechBubble>
       </C.CharacterContainer>
+      <C.Div>
+        <h1 style={{margin: '3% 0', fontSize: '2rem'}}>Q. 양자와 관련된 어떤 사업을 하고 어떤 성과를 냈나요?</h1> </C.Div>
       <C.Bubble style={{marginBottom: '15px'}}>
         <h1>{company.businessTitle}</h1>
         <p>{company.business}</p>
