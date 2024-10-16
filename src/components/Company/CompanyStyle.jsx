@@ -80,6 +80,9 @@ export const PopularStoryWrapper = styled.div`
 export const SlideWrapper = styled.div`
   padding-left: 5%;
   margin-bottom: 6%;
+  p{
+    font-size: 1.6rem;
+  }
   .slick-prev, .slick-next {
     z-index: 1;
   }
@@ -100,6 +103,7 @@ export const scroll = keyframes`
 
 export const SlideImage = styled.img`
   height: 25vh;
+  cursor: pointer;
   width: 97%;
   object-fit: cover;
   margin-bottom: 1%;
@@ -263,7 +267,7 @@ export const SpeechContent = styled.p`
 `;
 
 export const Bubble = styled.div`
-  background-color: rgba(256, 256, 256, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   padding: 3%;
   margin: 0 auto;
@@ -271,7 +275,11 @@ export const Bubble = styled.div`
   max-width: 700px;
   font-size: 13px;
   line-height: 1.7;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+   transition: transform 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.06);
+  }
   h1{
     color: #170F49;
     font-size: 1.7rem;
@@ -313,4 +321,29 @@ export const LinkButton = styled.a`
 export const Div = styled.div`
   max-width: 700px;
   margin: 0 auto;
+`;
+
+
+export const Intro = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+  text-align: center;
+`;
+
+export const Section = styled.div`
+  margin-bottom: 20px;
+`;
+
+export const Subtitle = styled.h3`
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+`;
+
+export const Text = styled.p`
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
 `;

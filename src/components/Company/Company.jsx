@@ -34,13 +34,14 @@ const Company = () => {
   ];
 
   const sliderRef = useRef(null);
-
+  const handleSlideClick = (businessName) => {
+    navigate(`/business/${businessName.toLowerCase()}`);
+  };
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
     centerMode: true, 
     centerPadding: '30px',
   };
@@ -115,22 +116,22 @@ const Company = () => {
       </div>
       <C.SectionTitle>사업 소개</C.SectionTitle>
       <C.SlideWrapper>
-        <Slider ref={sliderRef} {...settings}>
-          <div>
-            <C.SlideImage src={bg} alt="slide 1" />
-            <p>Story of 3</p>
-          </div>
-          <div>
-            <C.SlideImage src={bg} alt="slide 2" />
-            <p>Story of 3</p>
-          </div>
-          <div>
-            <C.SlideImage src={bg} alt="slide 3" />
-            <p>Story of 3</p>
-          </div>
-        </Slider>
-      </C.SlideWrapper>
-    </C.Container>
+      <Slider ref={sliderRef} {...settings}>
+        <div onClick={() => handleSlideClick('Finance')}>
+          <C.SlideImage src={bg} alt="Finance" />
+          <p>금융</p>
+        </div>
+        <div onClick={() => handleSlideClick('Chemistry')}>
+          <C.SlideImage src={bg} alt="Chemistry" />
+          <p>화학 및 기타 과학</p>
+        </div>
+        <div onClick={() => handleSlideClick('Logistics')}>
+          <C.SlideImage src={bg} alt="Logistics" />
+          <p>물류 및 최적화</p>
+        </div>
+      </Slider>
+    </C.SlideWrapper>
+        </C.Container>
   );
 };
 

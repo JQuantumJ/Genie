@@ -17,6 +17,7 @@ import CatPage from './pages/Cat';
 import CoinEntanglementPage from './pages/CoinEntanglement';
 import ScrollToTop from './ScrollToTop';
 import CompanyDetail from './components/Company/CompanyDetail';
+import BusinessDetail from './components/Company/BusinessDetail';
 import ComputingPage from './pages/Computing';
 
 export default function Router() {
@@ -36,6 +37,7 @@ export default function Router() {
         <Route path="/cat" element={<CatPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/company/:companyName" element={<CompanyDetail />} />
+        <Route path="/business/:businessName" element={<BusinessDetail />} />
         <Route path="/recent" element={<RecentPage />} />
         <Route path="/coinentanglement" element={<CoinEntanglementPage />} />
         <Route path="/computing" element={<ComputingPage />} />
