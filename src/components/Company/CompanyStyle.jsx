@@ -273,7 +273,7 @@ export const Bubble = styled.div`
   line-height: 1.7;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   h1{
-    color: #292f36;
+    color: #170F49;
     font-size: 1.7rem;
     line-height: 1.8;
     margin-bottom: 2px;
@@ -283,4 +283,34 @@ export const Bubble = styled.div`
     color: #666;
      font-size: 1.3rem;
   }
+`;
+
+export const LinkButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &::before {
+    content: '↗';
+    margin-right: 8px;
+  }
+`;
+
+
+export const Div = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
 `;

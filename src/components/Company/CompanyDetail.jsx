@@ -25,16 +25,18 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'IBM은 세계 최초로 양자 컴퓨터를 클라우드에 공개했으며, 127 큐비트 시스템(IBM Eagle)을 발표했습니다. IBM의 로드맵에 따르면, 2029년까지 1,000 큐비트 이상의 양자 컴퓨터를 구축할 예정입니다. 이들은 **화학 시뮬레이션, 공급망 최적화, 금융 리스크 관리**와 같은 문제에 양자 컴퓨팅을 적용하고 있으며, 주요 고객으로는 금융 기관과 제약 회사가 있습니다.',
     imgSrc: ibm,
+    link: 'https://www.ibm.com/quantum'
   },
   idq: {
     title: 'IDQ',
     description: 'IDQ는 양자 키 분배(QKD) 기술을 통해 통신 보안을 강화하는 양자 암호화 솔루션을 제공합니다.',
     content: 'IDQ는 양자 기술을 활용한 보안 솔루션을 선도하는 기업으로, 금융 및 국방과 같은 민감한 산업에서 안전한 통신을 보장하는 기술을 제공합니다. 특히 양자 키 분배(QKD) 시스템은 도청을 탐지할 수 있는 능력을 갖추고 있어 최고 수준의 보안을 제공합니다. 유럽연합(EU)의 양자 통신 인프라 구축 프로젝트에 참여하고 있으며, 글로벌 표준을 수립하는 데 기여하고 있습니다.',
     businessTitle: '양자 암호화 및 통신 보안 사업',
-    business: 'IDQ는 **양자 키 분배(QKD)** 기술을 개발해 보안 통신 솔루션을 제공하는 선도 기업입니다. QKD는 도청을 감지하고 공격으로부터 네트워크를 보호하는 데 사용됩니다. 금융 기관, 국방, 통신 등 민감한 분야에서 양자 보안을 제공합니다.',
+    business: 'IDQ는 양자 키 분배(QKD) 기술을 개발해 보안 통신 솔루션을 제공하는 선도 기업입니다. QKD는 도청을 감지하고 공격으로부터 네트워크를 보호하는 데 사용됩니다. 금융 기관, 국방, 통신 등 민감한 분야에서 양자 보안을 제공합니다.',
     businessTitle2: '성과 및 연구 방향',
     business2: 'IDQ는 유럽 연합의 양자 통신 인프라 구축 프로젝트에 적극 참여하고 있으며, 다양한 파트너와 협력해 양자 암호화 표준을 개발하고 있습니다. 스위스와 싱가포르 등 여러 국가의 정부와 협력해 양자 통신망 구축에 기여하고 있습니다.',
     imgSrc: idq,
+    link: 'https://idquantique.co.kr/'
   },
   dwave: {
     title: 'D-Wave',
@@ -45,6 +47,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'D-Wave는 최초의 상용 양자 컴퓨터를 도입한 기업으로, 고객에게 클라우드를 통한 원격 접근 서비스를 제공합니다. 양자 어닐링을 통한 **최적화 솔루션**은 특히 물류와 인공지능 분야에서 강력한 성과를 내고 있습니다.',
     imgSrc: dwave,
+    link: 'https://www.dwavesys.com/'
   },
   rigetti: {
     title: 'Rigetti Computing',
@@ -55,6 +58,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'Rigetti는 신약 개발, 금융 모델링, 기후 변화 연구 등 다양한 응용 분야에 양자 컴퓨팅을 도입하고 있습니다. 이 회사는 양자 컴퓨터와 기존 서버 간의 원활한 통합을 목표로 연구를 진행하고 있으며, 빠른 계산이 요구되는 환경에서 강점을 발휘하고 있습니다.',
     imgSrc: rigetti,
+    link: 'https://www.rigetti.com/'
   },
   honeywell: {
     title: 'Honeywell',
@@ -65,9 +69,10 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'Honeywell은 2021년 Cambridge Quantum과 합병하여 양자 컴퓨팅 소프트웨어 개발을 강화했습니다. 이 회사의 양자 컴퓨터는 **화학 시뮬레이션, 최적화 문제 해결**에 특화되어 있으며, 특히 화학 반응 시뮬레이션에서 탁월한 성능을 보여주고 있습니다.',
     imgSrc: honeywell,
+    link: 'https://www.honeywell.com/us/en/company/quantum'
   },
   google: {
-    title: 'Google',
+    title: 'Google Quantum AI',
     description: 'Google Quantum AI는 인공지능과 양자 컴퓨팅의 결합을 통해 양자 우월성을 목표로 합니다.',
     content: 'Google은 2019년에 양자 우월성(Quantum Supremacy)을 발표하며 양자 컴퓨팅이 기존 컴퓨터보다 더 복잡한 문제를 해결할 수 있음을 증명했습니다. Google의 연구는 주로 인공지능(AI), 화학 및 물리학 분야에 중점을 두고 있으며, 양자 알고리즘을 통해 새로운 연구 방향을 제시하고 있습니다.',
     businessTitle: '양자 우월성 달성 및 인공지능 연구',
@@ -75,6 +80,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'Google은 화학, 물리학 분야에 양자 컴퓨팅을 활용하며, 머신러닝 모델의 훈련 속도를 가속화하기 위해 연구를 진행 중입니다. 또한, Google은 양자 컴퓨팅과 인공지능의 결합을 통해 새로운 데이터 분석 기술을 개발하고 있습니다.',
     imgSrc: google,
+    link: 'https://quantumai.google/'
   },
   microsoft: {
     title: 'Microsoft',
@@ -85,6 +91,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'Microsoft는 암호화 및 최적화 문제 해결에 양자 컴퓨팅을 활용하며, 물리학 및 재료 과학 연구를 지원하기 위한 도구도 개발 중입니다. 주요 고객들은 클라우드를 통해 양자 컴퓨터에 접근해 다양한 연구를 수행하고 있습니다.',
     imgSrc: microsoft,
+    link: 'https://quantum.microsoft.com/'
   },
   intel: {
     title: 'Intel',
@@ -95,6 +102,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'Intel은 다양한 산업에서 상용화 가능한 양자 컴퓨터를 구축하는 데 중점을 두고 있으며, 반도체 기술과 양자 프로세서를 결합해 성능을 극대화하고 있습니다.',
     imgSrc: intel,
+    link: 'https://www.intel.co.kr/content/www/kr/ko/research/quantum-computing.html'
   },
   alibaba: {
     title: 'Alibaba',
@@ -105,6 +113,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'Alibaba는 데이터 센터와 클라우드 서비스에 양자 컴퓨팅을 도입하며, 양자 암호화 솔루션을 개발해 보안을 강화하고 있습니다.',
     imgSrc: alibaba,
+    link: 'https://www.alibabacloud.com/en/press-room/alibaba-cloud-and-cas-launch-one-of-the-worlds-most?_p_lc=1'
   },
   jininfra: {
     title: 'JinInfra',
@@ -115,6 +124,7 @@ const companyDetails = {
     businessTitle2: '성과 및 연구 방향',
     business2: 'JinInfra는 양자 통신망 구축 프로젝트를 주도하며, 보안이 중요한 분야에 최적화된 양자 솔루션을 제공합니다. 이 회사는 양자 암호화 기술을 통해 네트워크 보안을 강화하는 데 중점을 두고 있습니다.',
     imgSrc: jininfra,
+    link: 'https://jininfra.com/'
   },
 };
 
@@ -162,7 +172,13 @@ const CompanyDetail = () => {
         <h1>{company.businessTitle2}</h1>
         <p>{company.business2}</p>
       </C.Bubble>
-      <div style={{height: '70px'}}></div>
+      <div style={{margin: '5% 0'}}>
+        <C.Div>
+       <C.LinkButton href={company.link} target="_blank" rel="noopener noreferrer">
+        홈페이지로 이동
+      </C.LinkButton>
+      </C.Div>
+      </div>
     </C.Container>
   );
 };
