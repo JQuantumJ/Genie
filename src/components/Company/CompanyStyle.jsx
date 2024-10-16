@@ -213,3 +213,74 @@ export const ArticleDescription = styled.p`
   line-height: 1.5;
   color: #4a4a4a;
 `;
+
+
+
+export const CharacterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 10% 0;
+`;
+
+export const CharacterImage = styled.img`
+  width: 250px;
+  height: auto;
+`;
+
+export const SpeechBubble = styled.div`
+  background-color: white;
+  border-radius: 15px;
+  padding: 3%;
+  margin-left: 20px;
+  position: relative;
+  max-width: 450px;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+`;
+
+export const SpeechText = styled.p`
+  line-height: 1.7;
+`;
+
+export const SpeechContent = styled.p`
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #444;
+`;
+
+export const Bubble = styled.div`
+  background-color: rgba(256, 256, 256, 0.5);
+  border-radius: 5px;
+  padding: 3%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 700px;
+  font-size: 13px;
+  line-height: 1.7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  h1{
+    color: #292f36;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin-bottom: 2px;
+  }
+
+  p{
+    color: #666;
+     font-size: 1.3rem;
+  }
+`;
