@@ -133,6 +133,12 @@ export const Wrapper2 = styled.div`
     padding-top: 5%;
     background-color: #eee;
 
+    h2{
+        margin-top:10px;
+        font-size:2rem;
+        margin-left:3%;
+    }
+
 `
 
 export const ComputeWrapper = styled.div`
