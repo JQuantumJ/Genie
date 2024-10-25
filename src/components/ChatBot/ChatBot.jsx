@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,6 @@ const ChatBot = () => {
 
   return (
     <div>
-      {/* 챗봇 아이콘 버튼 */}
       <div style={{ zIndex: '20000', position: 'fixed', bottom: '9rem', right: '3rem' }}>
         <button
           onClick={toggleChatbot}
@@ -29,14 +29,25 @@ const ChatBot = () => {
         </button>
       </div>
 
-      {/* iframe 챗봇 표시 */}
       {isOpen && (
-    <div style={{ zIndex: '20000', position: 'fixed', bottom: '9rem', right: '10rem' }}>
-        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/87fdfc94-6875-4699-a61e-ee1c7fcc7ab2"></iframe>
-    </div>
+        <ChatWrapper>
+            <iframe width="400" height="500" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/87fdfc94-6875-4699-a61e-ee1c7fcc7ab2"></iframe>
+        </ChatWrapper>
       )}
     </div>
   );
 };
 
 export default ChatBot;
+const ChatWrapper=styled.div`
+  z-index: 10000;
+  position: fixed;
+  bottom: 9rem;
+  right: 10rem;
+  @media(max-width: 780px){
+    margin: 0 auto;
+    bottom: 2rem;
+    right: 3rem;
+  }
+;
+`
