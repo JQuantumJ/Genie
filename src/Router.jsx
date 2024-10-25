@@ -19,7 +19,7 @@ import ScrollToTop from './ScrollToTop';
 import CompanyDetail from './components/Company/CompanyDetail';
 import BusinessDetail from './components/Company/BusinessDetail';
 import ComputingPage from './pages/Computing';
-
+import ChatBot from './components/ChatBot/ChatBot';
 export default function Router() {
   return (
     <BrowserRouter>
@@ -43,6 +43,7 @@ export default function Router() {
         <Route path="/computing" element={<ComputingPage />} />
       </Routes>
       <TopBtn />
+      <ChatBot />
       <Footer />
     </BrowserRouter>
   );
