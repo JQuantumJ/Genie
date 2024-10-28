@@ -8,6 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 export const Container = styled.div`
   max-width: 100%;
   overflow: hidden;
+  @media(max-width: 780px){
+    max-width: 93%;
+    margin: 0 auto;
+  }
 `;
 
 export const Header = styled.header`
@@ -226,11 +230,19 @@ export const CharacterContainer = styled.div`
   margin: 0 auto;
   justify-content: center;
   padding: 10% 0;
+  @media (max-width: 780px) {
+    flex-direction: column-reverse; 
+  }
 `;
 
 export const CharacterImage = styled.img`
   width: 250px;
   height: auto;
+  @media (max-width: 780px) {
+    margin-right:40%;
+    width: 200px;
+    margin-top: 5%;
+  }
 `;
 
 export const SpeechBubble = styled.div`
@@ -252,6 +264,18 @@ export const SpeechBubble = styled.div`
     border-width: 10px;
     border-style: solid;
     border-color: transparent white transparent transparent;
+  }
+  @media (max-width: 780px) {
+    margin-left: 0;
+    margin-top: 20px;
+
+    &::before {
+      top: auto;
+      bottom: -20px; 
+      left: 10%; /* 화살표를 말풍선 중앙으로 이동 */
+      margin-left: -10px; /* 화살표의 중앙 정렬을 위한 조정 */
+      border-color: white transparent transparent transparent; /* 화살표의 색상과 방향 조정 */
+    }
   }
 `;
 
@@ -278,7 +302,7 @@ export const Bubble = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
    transition: transform 0.3s ease-in-out;
   &:hover{
-    transform: scale(1.06);
+    transform: scale(1.04);
   }
   h1{
     color: #170F49;
@@ -286,10 +310,21 @@ export const Bubble = styled.div`
     line-height: 1.8;
     margin-bottom: 2px;
   }
-
   p{
     color: #666;
      font-size: 1.3rem;
+  }
+  @media(max-width: 780px){
+    margin: 0 2%;
+    h1{
+      font-size: 1.4rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+    &:hover{
+      transform: scale(1.02);
+    }
   }
 `;
 
@@ -321,8 +356,18 @@ export const LinkButton = styled.a`
 export const Div = styled.div`
   max-width: 700px;
   margin: 0 auto;
+  h1{
+    margin: 3% 0;
+    font-size: 2rem;
+  }
+  @media(max-width: 780px){
+    max-width: 93%;
+    margin: 0 auto;
+    h1{
+      font-size: 1.7rem;
+    }
+  }
 `;
-
 
 export const Intro = styled.p`
   font-size: 18px;

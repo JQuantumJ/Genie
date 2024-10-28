@@ -21,7 +21,7 @@ const ChatBot = () => {
             width: '5rem',
             height: '5rem',
             fontSize: '24px',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
           title="챗봇 열기"
         >
@@ -31,7 +31,10 @@ const ChatBot = () => {
 
       {isOpen && (
         <ChatWrapper>
-            <iframe width="400" height="500" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/87fdfc94-6875-4699-a61e-ee1c7fcc7ab2"></iframe>
+          <StyledIframe
+            allow="microphone;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/87fdfc94-6875-4699-a61e-ee1c7fcc7ab2"
+          ></StyledIframe>
         </ChatWrapper>
       )}
     </div>
@@ -39,15 +42,28 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-const ChatWrapper=styled.div`
+
+const ChatWrapper = styled.div`
   z-index: 10000;
   position: fixed;
   bottom: 9rem;
   right: 10rem;
-  @media(max-width: 780px){
-    margin: 0 auto;
+  width: 100%;
+  @media (max-width: 780px) {
+    right: 0;
+    left: 0;
     bottom: 2rem;
-    right: 3rem;
+    width: 95%; 
   }
-;
-`
+`;
+
+const StyledIframe = styled.iframe`
+  display: block; 
+  max-width: 95%;
+  width: 400px;
+  height: 500px; 
+  margin: 0 auto; 
+  @media (max-width: 780px) {
+    height: 480px;
+  }
+`;
