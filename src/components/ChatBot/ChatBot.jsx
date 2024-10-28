@@ -42,20 +42,22 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-
 const ChatWrapper = styled.div`
   z-index: 10000;
   position: fixed;
-  bottom: 9rem;
-  right: 10rem;
-  width: 100%;
+  bottom: 3rem;
+  right: 9rem;
+  width: auto; 
+  
   @media (max-width: 780px) {
     right: 0;
     left: 0;
+    top: auto;
     bottom: 2rem;
-    width: 95%; 
+    width: 95%;
   }
 `;
+
 
 const StyledIframe = styled.iframe`
   display: block; 
