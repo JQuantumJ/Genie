@@ -9,6 +9,13 @@ export const Container = styled.div`
   max-width: 100%;
   overflow: hidden;
   @media(max-width: 780px){
+    margin: 0 auto;
+  }
+`;
+
+export const NewContainer = styled.div`
+  max-width: 100%;
+  @media(max-width: 780px){
     max-width: 93%;
     margin: 0 auto;
   }

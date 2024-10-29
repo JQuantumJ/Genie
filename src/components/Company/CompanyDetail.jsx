@@ -153,7 +153,7 @@ const CompanyDetail = () => {
         <C.BackgroundImage src={banner} alt="banner image" />
         <C.Title>{company.title}</C.Title>
       </C.Header>
-      
+      <C.NewContainer>
       <C.CharacterContainer>
         <C.CharacterImage 
           src={isSpeaking ? Jenie2 : Jenie1} 
@@ -181,6 +181,7 @@ const CompanyDetail = () => {
       </C.LinkButton>
       </C.Div>
       </div>
+      </C.NewContainer>
     </C.Container>
   );
 };
