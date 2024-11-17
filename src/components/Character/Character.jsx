@@ -12,26 +12,25 @@ import planet from '/src/assets/image/Character/planet.svg';
 import * as C from './CharacterStyle';
 const disappearAnimation = keyframes`
   from {
-    transform: translateY(0);
-    opacity: 1;  
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
   }
   to {
-    transform: translateY(-100px);
+    transform: translateX(-50%) translateY(-100px);
     opacity: 0;
   }
 `;
-
 
 const AnimatedImage = styled.img`
   position: fixed;
   margin: 0 auto;
   max-width: 45%;
-  display: block; 
+  display: block;
   z-index: 10000;
   left: 50%;
   transform: translateX(-50%);
   transition: opacity 0.5s ease-out;
-  animation: ${(props) => props.isdisappearing ? css `${disappearAnimation} 0.5s forwards` : 'none'};
+  animation: ${(props) => props.isdisappearing ? css`${disappearAnimation} 0.5s forwards` : 'none'};
   @media (max-width: 800px) {
     position: fixed;
     max-width: 56%;

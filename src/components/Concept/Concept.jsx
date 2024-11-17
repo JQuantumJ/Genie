@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import * as D from '../Company/CompanyStyle';
 import Ball from '/src/assets/image/Concept/ball.svg';
 import Ball2 from '/src/assets/image/Concept/ball2.svg';
 import Catimg from '/src/assets/image/Concept/cat.svg';
@@ -18,7 +19,7 @@ const ResponsiveDiv = styled.div`
   flex-wrap: wrap;
 
   & > div:first-child {
-    flex: 1 1 40%; /* 첫 번째 하위 요소의 크기를 40%로 설정 */
+    flex: 1 1 40%; 
     text-align: center;
     img{
       max-width: 60%;
@@ -31,7 +32,7 @@ const ResponsiveDiv = styled.div`
   & > div:last-child {
     background-color: #D5E1DD;
     color: #333;
-    flex: 1 1 60%; /* 두 번째 하위 요소의 크기를 60%로 설정 */
+    flex: 1 1 60%; 
     text-align: left;
     padding: 3%;
     border-radius: 12px;
@@ -64,41 +65,7 @@ const Numbering = styled.p`
   white-space: nowrap;
   gap: 2%;
 `;
-const BallBox = styled.div`
-  margin-left: 1%;
-  height: 30vh;
-  margin-top: 2%;
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 10%;
-  height: 50vh;
-  @media (max-width: 700px) {
-    height: 25vh; 
-  }
-  img:nth-child(1) {
-    max-width: 20%;
-    @media (max-width: 700px) {
-      max-width: 30%;
-    }
-  }
 
-  img:nth-child(2) {
-    max-width: 15%;
-    @media (max-width: 700px) {
-      max-width: 25%;
-    }
-  }
-`;
-
-const CenteredDiv = styled.div`
-  text-align: center;
-  height: 48vh;
-  @media (max-width: 700px) {
-    height: 20vh; 
-  }
-`;
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -143,10 +110,8 @@ const Concept = () => {
 
   const toggleAccordion = (index) => {
     if (activeIndexes.includes(index)) {
-      // 이미 열려있다면 배열에서 제거
       setActiveIndexes(activeIndexes.filter(i => i !== index));
     } else {
-      // 새로 열기 위해 배열에 추가
       setActiveIndexes([...activeIndexes, index]);
     }
   };
@@ -318,7 +283,11 @@ const Concept = () => {
             </div>
           )}
         </div>
-
+        <div style={{margin: '5% 0'}}>
+       <D.LinkButton href="/industry" rel="양자산업백서">
+        양자산업백서
+      </D.LinkButton>
+      </div>
 
     </C.ConceptWrapper>
     </C.Wrapper>

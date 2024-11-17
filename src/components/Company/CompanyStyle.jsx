@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 export const Container = styled.div`
   max-width: 100%;
   overflow: hidden;
+  cursor: text;
+  user-select: text;
   @media(max-width: 780px){
     margin: 0 auto;
   }
@@ -64,6 +66,10 @@ export const SearchIcon = styled.div`
 export const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -71,6 +77,10 @@ export const SectionTitle = styled.h2`
   color: #0B212E;
   margin: 20px;
   padding: 0 50px;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
   @media(max-width: 780px){
     margin-top: 5%;
   }
@@ -93,6 +103,10 @@ export const SlideWrapper = styled.div`
   margin-bottom: 6%;
   p{
     font-size: 1.6rem;
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
   }
   .slick-prev, .slick-next {
     z-index: 1;
@@ -171,6 +185,10 @@ export const StoryCardText = styled.div`
     font-weight: bold;
     color: #0B212E;
     margin: 10px 0 5px 0;
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
   }
 
   .subtitle {
@@ -178,6 +196,10 @@ export const StoryCardText = styled.div`
     color: #000;
     max-width: 93%;
     margin: 0 auto;
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
   }
   @media(max-width: 780px){
     line-height: 1.6;
@@ -213,6 +235,10 @@ export const ArticleTitle = styled.h3`
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const ArticleMeta = styled.div`
@@ -227,6 +253,10 @@ export const ArticleDescription = styled.p`
   font-size: 1.1rem;
   line-height: 1.5;
   color: #4a4a4a;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 
@@ -279,15 +309,19 @@ export const SpeechBubble = styled.div`
     &::before {
       top: auto;
       bottom: -20px; 
-      left: 10%; /* 화살표를 말풍선 중앙으로 이동 */
-      margin-left: -10px; /* 화살표의 중앙 정렬을 위한 조정 */
-      border-color: white transparent transparent transparent; /* 화살표의 색상과 방향 조정 */
+      left: 10%; 
+      margin-left: -10px; 
+      border-color: white transparent transparent transparent; 
     }
   }
 `;
 
 export const SpeechText = styled.p`
   line-height: 1.7;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const SpeechContent = styled.p`
@@ -295,6 +329,10 @@ export const SpeechContent = styled.p`
   font-size: 13px;
   line-height: 1.7;
   color: #444;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const Bubble = styled.div`
@@ -316,10 +354,18 @@ export const Bubble = styled.div`
     font-size: 1.7rem;
     line-height: 1.8;
     margin-bottom: 2px;
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
   }
   p{
     color: #666;
-     font-size: 1.3rem;
+    font-size: 1.3rem;
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
   }
   @media(max-width: 780px){
     margin: 0 2%;
@@ -348,7 +394,10 @@ export const LinkButton = styled.a`
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
-
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
   &:hover {
     background-color: #0056b3;
   }
@@ -366,12 +415,20 @@ export const Div = styled.div`
   h1{
     margin: 3% 0;
     font-size: 2rem;
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
   }
   @media(max-width: 780px){
     max-width: 93%;
     margin: 0 auto;
     h1{
       font-size: 1.7rem;
+      &::selection {
+        background-color: #60E6F2;
+        color: #000;
+      }
     }
   }
 `;
@@ -380,22 +437,37 @@ export const Intro = styled.p`
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 15px;
-
   text-align: center;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const Section = styled.div`
   margin-bottom: 20px;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const Subtitle = styled.h3`
   font-size: 20px;
   font-weight: 600;
   color: #333;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 export const Text = styled.p`
   font-size: 16px;
   line-height: 1.6;
   color: #555;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;

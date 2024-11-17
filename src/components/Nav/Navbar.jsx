@@ -3,6 +3,7 @@ import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import * as N from './NavbarStyle';
 import LogoImg from '/src/assets/icon/Genie.svg';
+import Logo from '/src/assets/icon/About/logo.svg';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,7 @@ export default function Navbar() {
             <div 
             style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', 
             alignItems: 'center', fontSize: '1.7rem', gap: '5%'}}>
-            <img src={LogoImg}/>
+            <img src={Logo}/>
             <h1>Menu List</h1>
             </div>
             <N.MenuIcon onClick={toggleMenu} style={{fontSize: '3rem', marginTop: '0.5vw'}}><FaTimes /></N.MenuIcon>
@@ -86,6 +87,11 @@ export default function Navbar() {
               navigate('/company');
               setIsMenuOpen(false);
             }}>주요 기업</N.MenuItem>
+
+            <N.MenuItem onClick={() => {
+              navigate('/about');
+              setIsMenuOpen(false);
+            }}>양자 인턴십 소개</N.MenuItem>
 
             <N.MenuItem onClick={() => {
               navigate('/quizmain');

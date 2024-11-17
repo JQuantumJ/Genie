@@ -97,7 +97,7 @@ export const MenuList = styled.div`
   background: linear-gradient(to top, #D0E7FE 40%, transparent 10%)
   }
   img{
-    width: 27%;
+    width: 25%;
   }
   @media (max-width: 1000px) {
     position: fixed;

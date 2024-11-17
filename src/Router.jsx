@@ -20,6 +20,11 @@ import CompanyDetail from './components/Company/CompanyDetail';
 import BusinessDetail from './components/Company/BusinessDetail';
 import ComputingPage from './pages/Computing';
 import ChatBot from './components/ChatBot/ChatBot';
+import AboutPage from './pages/About';
+import Kqic from './components/About/Kqic';
+import Nia from './components/About/Nia';
+import Industry from './components/Concept/Industry';
+
 export default function Router() {
   return (
     <BrowserRouter>
@@ -41,6 +46,10 @@ export default function Router() {
         <Route path="/recent" element={<RecentPage />} />
         <Route path="/coinentanglement" element={<CoinEntanglementPage />} />
         <Route path="/computing" element={<ComputingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/kqic" element={<Kqic />} />
+        <Route path="/niq" element={<Nia />} />
+        <Route path="/industry" element={<Industry />} />
       </Routes>
       <TopBtn />
       <ChatBot />
