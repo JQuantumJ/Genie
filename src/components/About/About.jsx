@@ -51,6 +51,20 @@ const About = () => {
             </A.ProductCard>
           </A.ProductGrid>
         </A.ProductSection>
+        <A.ProductSection>
+        <A.HeadingH2>지원 자격 & 방법</A.HeadingH2>
+        <A.ProductGrid>
+            <A.ProductCard>
+              <h3>지원 자격</h3>
+              <p>ㅇ</p>
+            </A.ProductCard>
+            <A.ProductCard>
+              <h3>지원 방법</h3>
+              <img src={NIA} alt="Operating Systems" />
+              <p>ㅇ.</p>
+            </A.ProductCard>
+          </A.ProductGrid>
+        </A.ProductSection>
       </A.DocsContainer>
     </A.Feat>
   );

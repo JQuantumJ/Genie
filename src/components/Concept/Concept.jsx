@@ -284,8 +284,8 @@ const Concept = () => {
           )}
         </div>
         <div style={{margin: '5% 0'}}>
-       <D.LinkButton href="/industry" rel="양자산업백서">
-        양자산업백서
+       <D.LinkButton href="/industry" rel="양자정보기술 백서">
+        양자정보기술 백서
       </D.LinkButton>
       </div>
 
