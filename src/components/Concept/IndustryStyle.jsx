@@ -5,11 +5,11 @@ export const Container = styled.div`
   height: 100vh;
   background-color: #1c2329;
   color: #ffffff;
-  min-height: 320vh;
+  min-height: 170vh;
   letter-spacing: 2px;
   cursor: text;
   user-select: text;
-  height: 320vh;
+  height: auto;
   margin-bottom: -30vh;
 `;
 
@@ -19,6 +19,7 @@ export const Sidebar = styled.nav`
   padding: 20px;
   border-right: 1px solid #333;
   overflow-y: auto;
+  margin-bottom: 30vh;
 `;
 
 export const SidebarItem = styled.button`
@@ -44,6 +45,7 @@ export const Content = styled.div`
   flex: 1;
   padding: 50px;
   overflow-y: auto;
+  margin-bottom: 30vh;
 `;
 
 export const Title = styled.h1`
@@ -93,6 +95,7 @@ export const SubsectionContent = styled.p`
   font-size: 16px; 
   line-height: 1.65; 
   margin-right: 20px;
+  white-space: pre-wrap;
   margin-bottom: 25px; 
   padding: 10px 15px; 
   font-family: 'Arial', sans-serif;
