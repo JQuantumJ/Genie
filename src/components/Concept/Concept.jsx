@@ -117,7 +117,7 @@ const Concept = () => {
   };
   return (
     <C.Wrapper>
-      <C.ConceptWrapper>
+      <C.ConceptWrapper style={{marginBottom: '0px'}}>
         <h1>양자 개념</h1>
         <hr />
 
@@ -283,13 +283,14 @@ const Concept = () => {
             </div>
           )}
         </div>
-        <div style={{margin: '5% 0'}}>
+
+
+    </C.ConceptWrapper>
+    <div style={{marginLeft: '13%', marginBottom: '3%'}}>
        <D.LinkButton href="/industry" rel="양자정보기술 백서">
         양자정보기술 백서
       </D.LinkButton>
       </div>
-
-    </C.ConceptWrapper>
     </C.Wrapper>
   );
 };
