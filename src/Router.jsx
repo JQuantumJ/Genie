@@ -24,6 +24,7 @@ import AboutPage from './pages/About';
 import Kqic from './components/About/Kqic';
 import Nia from './components/About/Nia';
 import Industry from './components/Concept/Industry';
+import Event from './pages/Event';
 
 export default function Router() {
   return (
@@ -50,6 +51,7 @@ export default function Router() {
         <Route path="/kqic" element={<Kqic />} />
         <Route path="/niq" element={<Nia />} />
         <Route path="/industry" element={<Industry />} />
+        <Route path="/event" element={<Event />} />
       </Routes>
       <TopBtn />
       <ChatBot />
