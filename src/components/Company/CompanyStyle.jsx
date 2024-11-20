@@ -154,9 +154,10 @@ export const StoryCard = styled.div`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   @media(max-width: 780px){
-    width: 50%;
+    width: 68%;
     padding-top: 80px;
     padding-bottom: 1px;
+    margin-top: 15%;
   }
   &:hover {
     transform: scale(1.06); 
@@ -303,9 +304,8 @@ export const SpeechBubble = styled.div`
     border-color: transparent white transparent transparent;
   }
   @media (max-width: 780px) {
-    margin-left: 0;
-    margin-top: 20px;
-
+    margin: 20px 10px;
+    padding: 5%;
     &::before {
       top: auto;
       bottom: -20px; 
@@ -322,6 +322,10 @@ export const SpeechText = styled.p`
     background-color: #60E6F2;
     color: #000;
   }
+  @media(max-width: 780px){
+    line-height: 1.65;
+    font-size: 1.35rem;
+  }
 `;
 
 export const SpeechContent = styled.p`
@@ -332,6 +336,10 @@ export const SpeechContent = styled.p`
   &::selection {
     background-color: #60E6F2;
     color: #000;
+  }
+  @media(max-width: 780px){
+    line-height: 1.65;
+    font-size: 1.16rem;
   }
 `;
 
@@ -368,9 +376,9 @@ export const Bubble = styled.div`
     }
   }
   @media(max-width: 780px){
-    margin: 0 2%;
+    margin: 2% 3%;
     h1{
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
     p{
       font-size: 1rem;
