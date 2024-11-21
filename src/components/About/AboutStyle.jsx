@@ -50,7 +50,7 @@ export const TitleH1 = styled.h1`
 
 export const DescriptionP = styled.p`
   font-size: 1.2rem;
-  color: #888;
+  color: #ccc;
   line-height: 1.7;
   h3{
     font-size: 1.5rem;
@@ -140,7 +140,7 @@ export const ProductCard = styled.div`
 
   p {
     font-size: 1.2rem;
-    color: #888;
+    color: #ccc;
     line-height: 1.7;
     &::selection {
         background-color: #60E6F2;

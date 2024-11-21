@@ -93,8 +93,15 @@ const ConceptsSection = styled.div`
   cursor: text;
   user-select: text;
   background-color: #292f36;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #fff;
+@media (max-width: 780px) {
+  padding: 20px 12px;
+  background-color: transparent;
+  border-radius: 0px;
+  border-top: 1px solid #aaa; 
+  border-bottom: 1px solid #aaa;
+}
 `;
 
 const ConceptTitle = styled.h2`
@@ -105,6 +112,9 @@ const ConceptTitle = styled.h2`
   &::selection {
     background-color: #60E6F2;
     color: #000;
+  }
+  @media(max-width: 780px){
+    font-size: 1.7rem;
   }
 `;
 
@@ -124,6 +134,9 @@ const ConceptName = styled.h3`
   &::selection {
     background-color: #60E6F2;
     color: #000;
+  }
+  @media(max-width: 780px){
+    font-size: 1.45rem;
   }
 `;
 
@@ -149,10 +162,15 @@ const Wrapper = styled.div`
 
 const PageWrapper = styled.div`
   font-family: Arial, sans-serif;
-  padding: 10% 20px;
+  padding-top: 7%;
   max-width: 70%;
   margin-left: 15%;
   padding-bottom: 33vh;
+  @media(max-width: 780px){
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 20%;
+  }
 `;
 
 const Title = styled.h1`
@@ -165,6 +183,9 @@ const Title = styled.h1`
   &::selection {
     background-color: #60E6F2;
     color: #000;
+  }
+  @media(max-width: 780px){
+    font-size: 2rem;
   }
 `;
 
@@ -223,8 +244,9 @@ const Event = styled.h3`
 `;
 
 const Details = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #ccc;
+  letter-spacing: 1px;
   line-height: 1.6;
   margin-bottom: 20px;
   cursor: text;
@@ -232,6 +254,9 @@ const Details = styled.p`
   &::selection {
     background-color: #60E6F2;
     color: #000;
+  }
+  @media(max-width: 780px){
+    font-size: 1.27rem;
   }
 `;
 

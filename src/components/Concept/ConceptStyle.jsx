@@ -123,12 +123,15 @@ export const ConceptWrapper = styled.div`
     line-height: 1.8;
     border-top: 1px solid #007bff;
     h1{
-      font-size: 2.1rem;
+      font-size: 1.9rem;
        @media (max-width: 900px) {
           font-size: 1.7rem;
        }
     }
     p{
+      font-family: 'Arial', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0px;
        @media (max-width: 900px) {
           font-size: 1.4rem;
           margin-bottom: 1%;
@@ -233,3 +236,12 @@ export const ImageWrap = styled.div`
         margin-top: 4%;
     }
 `;
+
+export const LinkWrapper = styled.div`
+  margin: 0px 13% 3% 13%;
+  display: flex;
+  flex-direction: row;
+  @media(max-width: 780px){
+    margin: 0px 5% 3% 5%;
+  }
+`

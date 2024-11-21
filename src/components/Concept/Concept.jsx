@@ -30,7 +30,7 @@ const ResponsiveDiv = styled.div`
   }
 
   & > div:last-child {
-    background-color: #D5E1DD;
+    background-color:  rgba(223, 245, 255, 0.78);
     color: #333;
     flex: 1 1 60%; 
     text-align: left;
@@ -133,11 +133,11 @@ const Concept = () => {
             <div className="accordion-content">
               <p>
                 양자란, 더 이상 나눌 수 없는 에너지의 최소량의 단위입니다.
-                쉽게 말해, <span style={{ color: '#B0E3FF' }}>우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자</span>라고 부릅니다.
+                쉽게 말해, <span style={{ fontFamily: 'Arial', color: '#B0E3FF' }}>우리가 에너지를 가장 작은 단위로 쪼개면 그 단위를 양자</span>라고 부릅니다.
                 처음으로 양자는 빛에서 발견되었으며, 
                 이 작은 에너지가 어떻게 움직이는지 연구하는 것이 바로 양자 물리학, 양자 역학의 시작입니다.
               </p>
-              <div style={{ textAlign: 'center', height: '40vh' }}>
+              <div style={{ textAlign: 'center', height: 'auto' }}>
               <RotatingImage src={Quantum2} />
               </div>
             </div>
@@ -155,7 +155,7 @@ const Concept = () => {
           {activeIndexes.includes(1) && (
             <div className="accordion-content">
               <p>
-                양자역학은 <span style={{ color: '#B0E3FF' }}>원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론</span>으로, 
+                양자역학은 <span style={{ fontFamily: 'Arial',color: '#B0E3FF' }}>원자와 전자 같은 매우 작은 입자들이 작용하는 방식을 설명하는 이론</span>으로, 
                 양자역학은 양자라는 에너지의 최소 단위를 포함한 아주 작은 입자들(전자, 광자 등)의 행동과 상호작용을 연구하는 
                 물리학의 한 분야입니다. 
                 이는 입자들이 고전 물리학의 법칙을 따르지 않고, 파동과 입자 성질을 동시에 가지며, 
@@ -179,10 +179,10 @@ const Concept = () => {
               <hr style={{ border: 'none', borderTop: '0.5px solid #ddd' }} />
               <p>
                 하이젠베르크라는 물리학자는 실험을 통해, 우리가 아무리 정밀한 장비를 사용하더라도 입자의 위치를 알면 그 입자의 속도를 정확히 알 수 없고,
-                반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다. 이는 마치
-                <span style={{ color: '#B0E3FF' }}>우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
+                반대로 속도를 알면 위치를 정확히 알 수 없다는 것을 발견했습니다. 이는 마치 
+                <span style={{ fontFamily: 'Arial', color: '#B0E3FF' }}> 우리가 축구공을 발로 찬 후에 그 공의 정확한 위치와 속도를 동시에 파악하기 어려운 것</span>과 비슷합니다.
               </p>
-              <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '10%', height: '170px' }}>
+              <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '10%', height: 'auto' }}>
                 <img src={Ball2} style={{ width: '100px', minWidth: '20%' }} alt="Ball" />
                 <img src={Ball} style={{ width: '100px', minWidth: '15%' }} alt="Ball" />
               </div>
@@ -199,11 +199,11 @@ const Concept = () => {
         </div>
         {activeIndexes.includes(3) && (
           <div className="accordion-content">
-            <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 <span style={{color: '#B0E3FF'}}>에르빈 슈뢰딩거</span>가 제안한 사고 실험입니다.
+            <p>슈뢰딩거의 고양이는 양자역학의 개념을 설명하기 위해 1935년 오스트리아의 물리학자 <span style={{ fontFamily: 'Arial', color: '#B0E3FF'}}>에르빈 슈뢰딩거</span>가 제안한 사고 실험입니다.
             이 실험은 양자역학의 중첩 상태와 그로 인한 철학적 문제를 쉽게 설명하기 위한 것입니다.
             특히 양자역학의 코펜하겐 해석을 이해하는 데 중요한 역할을 합니다.</p>
             <div style={{textAlign: 'center'}}>
-              <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/cat')}> More</MoreButton>
+              <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/cat')}> 고양이 보러가기</MoreButton>
               </div>
           </div>
         )}
@@ -220,7 +220,7 @@ const Concept = () => {
               <hr style={{border: 'none', borderTop: '0.5px solid #ddd'}}/>
               <p>
                 양자 물체는 여러 상태가 동시에 존재할 수 있는데, 
-                이 상태를 기술하는 것이 <span style={{ color: '#B0E3FF' }}>파동 함수</span>입니다. 
+                이 상태를 기술하는 것이 <span style={{ fontFamily: 'Arial', color: '#B0E3FF' }}>파동 함수</span>입니다. 
                 여러 상태가 있더라도 외부에서 관측을 하면 파동 함수가 붕괴하면서 입자는 하나의 확정된 상태로 변화합니다.
                 파동 함수 붕괴는 양자 중첩 상태에 있는 입자가 관측되었을 때 하나의 확정된 상태로 변하는 과정입니다. 
                 양자 시스템은 여러 상태(중첩 상태)로 존재할 수 있지만, 누군가 그 시스템을 관측하는 순간, 
@@ -241,7 +241,7 @@ const Concept = () => {
           {activeIndexes.includes(5) && (
             <div className="accordion-content">
             <p>
-                양자역학의 중요한 개념 중 하나는 <span style={{ color: '#B0E3FF' }}>파동-입자 이중성</span>입니다. 이는 빛과 물질이 파동과 입자 두 가지 성질을 동시에 가진다는 것입니다.
+                양자역학의 중요한 개념 중 하나는 <span style={{ fontFamily: 'Arial', color: '#B0E3FF' }}>파동-입자 이중성</span>입니다. 이는 빛과 물질이 파동과 입자 두 가지 성질을 동시에 가진다는 것입니다.
                 예를 들어, 전자는 파동처럼 간섭 패턴을 만들 수 있지만, 입자처럼 공간에서 특정 위치에 있을 수 있습니다.
                 파동-입자 이중성은 물질과 빛이 파동과 입자의 성질을 동시에 가진다는 개념입니다.</p>
                 <ResponsiveDiv>
@@ -271,7 +271,7 @@ const Concept = () => {
           {activeIndexes.includes(6) && (
             <div className="accordion-content">
               <p>
-                양자 얽힘은 <span style={{ color: '#B0E3FF' }}>두 개 이상의 입자가 서로 강하게 연결되어 있는 상태</span>를 말합니다. 
+                양자 얽힘은 <span style={{ fontFamily: 'Arial', color: '#B0E3FF' }}>두 개 이상의 입자가 서로 강하게 연결되어 있는 상태</span>를 말합니다. 
                 얽힌 입자들은 멀리 떨어져 있어도 얽혀 있어, 서로의 상태에 영향을 미칠 수 있습니다.</p>
               <p>
               양자 얽힘에서는 두 입자가 얽힌 상태에 있으면, 
@@ -286,14 +286,14 @@ const Concept = () => {
 
 
     </C.ConceptWrapper>
-    <div style={{marginLeft: '13%', marginBottom: '3%'}}>
-       <D.LinkButton href="/industry" rel="양자정보기술 백서" style={{marginRight: '3%'}}>
+    <C.LinkWrapper>
+       <D.LinkButton href="/industry" rel="양자정보기술 백서" style={{marginRight: '2%'}}>
         양자정보기술 백서
       </D.LinkButton>
       <D.SecondaryLinkButton href="/QuantumTimeline" rel="양자타임라인">
-        양자 타임라인 보러 가기
+        양자 타임라인
       </D.SecondaryLinkButton>
-      </div>
+      </C.LinkWrapper>
     </C.Wrapper>
   );
 };
