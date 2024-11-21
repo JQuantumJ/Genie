@@ -45,7 +45,7 @@ const Description = () => {
               <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
               이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>
               <div style={{textAlign: 'center'}}>
-                <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/computing')}> More</MoreButton>
+                <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/computing')}> 양자 컴퓨팅과 계산 복잡도 이론</MoreButton>
               </div>
               <hr/>
               {/* YouTube video for 양자 컴퓨터 */}
@@ -120,6 +120,67 @@ const Description = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   allowFullScreen
                ></iframe>            
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div 
+            className={`accordion-title ${activeIndex === 3 ? 'active' : ''}`} 
+            onClick={() => toggleAccordion(3)}
+          >
+            <span>산업별 양자 기술 활용 사례</span>
+            <span>{activeIndex === 3 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 3 && (
+            <div className="accordion-content">
+              <p><span style={{color: '#B0E3FF'}}>1) 의료</span><br />
+              신약 개발 : 분자의 복잡한 상호작용을 분석해 신약 개발 시간 단축<br />
+              정밀 진단 : 양자 센서를 활용해 암 조기 진단 및 의료 기기 정밀도 향상.
+              </p><hr />
+              <p><span style={{color: '#B0E3FF'}}>2) 금융</span><br />
+              투자 최적화 : 양자 컴퓨팅으로 금융 시장의 복잡한 데이터를 분석. <br />
+              거래 보안 강화 : 양자 암호화로 실시간 거래 보호.
+              </p>
+              <hr/>
+              <p><span style={{color: '#B0E3FF'}}>3) 기후 및 에너지</span><br />
+              지속 가능한 에너지 솔루션 : 태양광 및 풍력 발전의 효율성 최적화. <br />
+              기후 모델링 : 기후 변화에 대한 정확한 데이터 기반 시뮬레이션.
+              </p>
+              <hr/>
+              <p><span style={{color: '#B0E3FF'}}>4) 물류 및 교통</span><br />
+              최적 경로 계산 : 항공, 선박, 트럭등의 물류 네트워크 최적화를 통한 물류 시스템의 효율성 극대화. <br />
+              </p>
+              <hr/>  
+              <p><span style={{color: '#B0E3FF'}}>5) 항공우주</span><br />
+              양자 GPS : 전통적인 GPS보다 수십 배 더 정밀한 위치 추적 가능. <br />
+              우주 탐사 : 양자 기반의 초정밀 기기와 통신으로 우주선 운행 효율 향상.
+              </p>
+              <hr/>           
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div 
+            className={`accordion-title ${activeIndex === 4 ? 'active' : ''}`} 
+            onClick={() => toggleAccordion(4)}
+          >
+            <span>미래를 이끌 양자 기술 활용 트랜드</span>
+            <span>{activeIndex === 4 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 4 && (
+            <div className="accordion-content">
+              <p><span style={{color: '#B0E3FF'}}>1) 양자 인터넷</span><br />
+              양자 기술 기반의 초보안 네트워크 : 전 세계 데이터를 안전하게 연결하는 차세대 인터넷 개발
+              </p><hr />
+              <p><span style={{color: '#B0E3FF'}}>2) 스마트 시티</span><br />
+              IoT와 양자의 융합 : 양자 암호화로 스마트 시티의 보안 강화 및 자율주행차와 교통 관리 시스템 최적화
+              </p>
+              <hr/>
+              <p><span style={{color: '#B0E3FF'}}>3) 연구 및 개발</span><br />
+              양자 컴퓨팅 교육 확대 : 기업과 학계에서 양자 기술 전문인력 양성. <br />
+              양자 클라우드 서비스 : IBM과 Google의 양자 컴퓨팅 클라우드 서비스.
+              </p>
+              <hr/>          
             </div>
           )}
         </div>
