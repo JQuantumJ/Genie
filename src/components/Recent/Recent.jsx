@@ -29,6 +29,14 @@ const Recent = () => {
     <div>
       <h1>양자 기술 관련 뉴스</h1>
       <Article articles={articles} />
+      <a 
+        href="https://www.kqic.kr/main/q_info_tech_whitepaper_2023.pdf" // Replace with the actual path to your document
+        download="2023 양자정보기술 백서.pdf" // Specify the name for the downloaded file
+      >
+          <R.Button>
+              2023 양자정보기술 백서 다운로드 하기 ↗
+          </R.Button>              
+      </a>
     </div>
     <div>
       <h1>양자 관련 행사 정보</h1>
