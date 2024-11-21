@@ -27,6 +27,7 @@ import Industry from './components/Concept/Industry';
 import Event from './pages/Event';
 import QuantumTimeline from './components/Concept/QuantumTimeline';
 
+
 export default function Router() {
   return (
     <BrowserRouter>

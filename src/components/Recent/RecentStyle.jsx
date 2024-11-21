@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    margin-top: -5%;
+    margin-top: -7%;
     padding-top: 5%;
     background-color: #eee;
 `;
@@ -54,8 +54,9 @@ export const ConceptWrapper = styled.div`
 export const GalleryGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);  /* 4열 그리드 */
-  gap: 20px;  /* 항목 간 간격 */
-  margin-top: 5%;
+  gap: 20px;  
+  margin-top: 3%;
+  margin-bottom: 5%;
   padding: 2%;
 
   @media (max-width: 900px) {
@@ -97,3 +98,4 @@ export const GalleryItem = styled.div`
     color: inherit;
   }
 `;
+
