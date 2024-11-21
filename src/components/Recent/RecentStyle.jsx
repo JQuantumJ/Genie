@@ -56,7 +56,7 @@ export const GalleryGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);  /* 4열 그리드 */
   gap: 20px;  
   margin-top: 3%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
   padding: 2%;
 
   @media (max-width: 900px) {
@@ -98,4 +98,30 @@ export const GalleryItem = styled.div`
     color: inherit;
   }
 `;
+
+export const Button = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 8%;
+  margin-left: 2%;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
+  &:hover {
+    background-color: #0056b3;
+  }
+
+`;
+
 
