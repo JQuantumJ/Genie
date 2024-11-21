@@ -42,10 +42,7 @@ const Recent = () => {
       <h1>양자 관련 행사 정보</h1>
       <Article articles={event} />
     </div>
-    <div>
-      <h1>양자 관련 행사 정보</h1>
-      <Article articles={event} />
-    </div>
+    
     </R.ConceptWrapper> 
     </R.Wrapper>
   );
