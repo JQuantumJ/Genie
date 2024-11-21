@@ -20,6 +20,7 @@ const MoreButton = styled.button`
 `;
 
 const Description = () => {
+
     const [activeIndex, setActiveIndex] = useState(null);
   
     const toggleAccordion = (index) => {
@@ -44,8 +45,8 @@ const Description = () => {
               <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 <span style={{color: '#B0E3FF'}}>큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</span></p>
               <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
               이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>
-              <div style={{textAlign: 'center'}}>
-                <MoreButton style={{cursor: 'pointer'}} onClick={e=>navigate('/computing')}> 양자 컴퓨팅과 계산 복잡도 이론</MoreButton>
+              <div style={{textAlign: 'center', marginTop: '3%'}}>
+                <D.Button onClick={e=>navigate('/computing')}> 양자 컴퓨팅과 계산 복잡도 이론</D.Button>
               </div>
               <hr/>
               {/* YouTube video for 양자 컴퓨터 */}
@@ -155,7 +156,12 @@ const Description = () => {
               양자 GPS : 전통적인 GPS보다 수십 배 더 정밀한 위치 추적 가능. <br />
               우주 탐사 : 양자 기반의 초정밀 기기와 통신으로 우주선 운행 효율 향상.
               </p>
-              <hr/>           
+              <hr/> 
+              <div style={{textAlign: 'center'}}>
+                <D.Button href="/example" rel="산업활용사례 더보기">
+                  산업활용사례 더보기
+                </D.Button> 
+              </div>         
             </div>
           )}
         </div>
