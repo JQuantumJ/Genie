@@ -287,9 +287,12 @@ const Concept = () => {
 
     </C.ConceptWrapper>
     <div style={{marginLeft: '13%', marginBottom: '3%'}}>
-       <D.LinkButton href="/industry" rel="양자정보기술 백서">
+       <D.LinkButton href="/industry" rel="양자정보기술 백서" style={{marginRight: '3%'}}>
         양자정보기술 백서
       </D.LinkButton>
+      <D.SecondaryLinkButton href="/QuantumTimeline" rel="양자타임라인">
+        양자 타임라인 보러 가기
+      </D.SecondaryLinkButton>
       </div>
     </C.Wrapper>
   );

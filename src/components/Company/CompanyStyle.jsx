@@ -416,6 +416,34 @@ export const LinkButton = styled.a`
   }
 `;
 
+export const SecondaryLinkButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745; 
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  &::selection {
+    background-color: #90ee90;
+    color: #000;
+  }
+  &:hover {
+    background-color: #218838; 
+  }
+
+  &::before {
+    content: '↗'; 
+    margin-right: 8px;
+  }
+`;
+
+
 
 export const Div = styled.div`
   max-width: 700px;

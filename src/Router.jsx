@@ -25,6 +25,7 @@ import Kqic from './components/About/Kqic';
 import Nia from './components/About/Nia';
 import Industry from './components/Concept/Industry';
 import Event from './pages/Event';
+import QuantumTimeline from './components/Concept/QuantumTimeline';
 
 export default function Router() {
   return (
@@ -52,6 +53,7 @@ export default function Router() {
         <Route path="/niq" element={<Nia />} />
         <Route path="/industry" element={<Industry />} />
         <Route path="/event" element={<Event />} />
+        <Route path="/quantumTimeline" element={<QuantumTimeline />} />
       </Routes>
       <TopBtn />
       <ChatBot />
