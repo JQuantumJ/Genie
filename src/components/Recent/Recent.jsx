@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 import Article from './Article';
-import * as R from './RecentStyle';
+import * as R from "./RecentStyle";
 
 const Recent = () => {
     const articles = [
-        { title: "부산시, 포스코와 양자컴퓨팅 기반 미래 혁신소재 협력", thumbnail: "https://img8.yna.co.kr/photo/cms/2023/07/12/81/PCM20230712000081990_P4.jpg", url: "https://www.yna.co.kr/view/AKR20241028017000051?input=1195m" },
-        { title: "LGU+, 다계층 양자내성암호 장비 개발", thumbnail: "https://image.newsis.com/2024/10/25/NISI20241025_0001685555_web.jpg?rnd=20241025083746", url: "https://www.newsis.com/view/NISX20241025_0002933627" }, 
-        { title: "네덜란드, 12월부터 양자기술 관련 제품 수출통제", thumbnail: "https://img8.yna.co.kr/photo/etc/af/2024/10/12/PAF20241012110701009_P4.jpg", url: "https://www.yna.co.kr/view/AKR20241020055700098?input=1195m" },
-        { title: "GIST-IBS, '강력장 양자전기역학 현상' 세계 최초 입증", thumbnail: "https://image.newsis.com/2024/10/21/NISI20241021_0001681737_web.jpg?rnd=20241021141711", url: "https://www.newsis.com/view/NISX20241021_0002927863" },
-        { title: "정부, 노벨상 수상자 알랭 아스페 교수와 양자기술 협업 나서", thumbnail: "https://image.newsis.com/2024/10/22/NISI20241022_0001683269_web.jpg?rnd=20241022214821", url: "https://www.newsis.com/view/NISX20241022_0002930122" },
-        { title: "SKT, 양자암호 양대 기술 QKD PQC 하나로 묶었다", thumbnail: "https://cdn.digitaltoday.co.kr/news/photo/202410/537045_501813_1137.jpg", url: "https://www.digitaltoday.co.kr/news/articleView.html?idxno=537045" },
-        { title: "노르마 “양자 SW-HW 기술 연동해 풀스택 기업 도약”", thumbnail: "https://cdn.enewstoday.co.kr/news/photo/202410/2186172_993108_5327.jpg", url: "https://www.enewstoday.co.kr/news/articleView.html?idxno=2186172" },
-        { title: "한국 양자기술 수준 주요국 중 최하위…양자컴은 100점 기준 2.3점", thumbnail: "https://image.dongascience.com/Photo/2024/06/5889cdb1752d35425c5c96fb03f9acb0.jpg", url: "https://m.dongascience.com/news.php?idx=66161" },
+        { title: "127큐비트 IBM 양자컴퓨터, 연세대서 국내 첫 가동", thumbnail: "https://img.etnews.com/news/article/2024/11/20/news-p.v1.20241120.e311d51dfa2f4a3e9ec7e3abd4487c24_P1.jpg", url: "https://www.etnews.com/20241120000271" },
+        { title: "한국 양자기술 기업 SDT, 초전도 양자컴 생산 나서", thumbnail: "https://image.dongascience.com/Photo/2024/11/125a2f11fb9b5e7e689c3553f15a289e.jpg", url: "https://www.dongascience.com/news.php?idx=68541" }, 
+        { title: "국가기술표준원, 양자기술 국제표준 선점 전략 청사진 마련", thumbnail: "https://www.boannews.com/media/upFiles2/2024/11/825356645_385.jpg", url: "https://m.boannews.com/html/detail.html?mtype=3&tab_type=6&idx=134347" },
+        { title: "키사이트, 구글 퀀텀 AI와 협력해 양자 회로 시뮬레이션 출시", thumbnail: "https://www.hellot.net/data/photos/20241147/art_17321490211573_6be184.jpg", url: "https://www.hellot.net/news/article.html?no=95575" },
+        { title: "KT, '하이브리드 양자보안 VPN' 기술 실증…이중보안 구현", thumbnail: "https://image.newsis.com/2024/11/19/NISI20241119_0001706762_web.jpg?rnd=20241119090950", url: "https://www.newsis.com/view/NISX20241119_0002964011" },
+        { title: "큐비트 대신 '큐디트'로 구현한 양자컴, 16차원 계산 성공", thumbnail: "https://image.dongascience.com/Photo/2024/11/450054b59fc6e3b494019d3e5272e60f.jpg", url: "https://m.dongascience.com/news.php?idx=68315" },
+        { title: "표준硏, 양자 과학기술 연구 'K-퀀텀 국제협력본부' 운영", thumbnail: "https://img2.yna.co.kr/etc/inner/KR/2024/11/18/AKR20241118035500063_01_i_P4.jpg", url: "https://www.yna.co.kr/view/AKR20241118035500063?input=1195m" },
+        { title: "서울대, 하이브리드 양자컴퓨팅 센터 (IRC) 개소식 개최", thumbnail: "https://cdn.news.unn.net/news/photo/202411/571300_385789_341.jpg", url: "https://news.unn.net/news/articleView.html?idxno=571300" },
     ];
+
+    const event = [
+      { title: "2025년 KAIST-MIT Quantum Winter Camp", thumbnail: "https://quantumschool.kaist.ac.kr/_files/board/20241104//bdbb84d4aaddc3ab3580bb4b3b01b6a0.jpg", url: "https://quantumschool.kaist.ac.kr/notice/view/id/30#u" },
+      { title: "2024 DIPS GLOBAL TECH CON(양자기술) 행사", thumbnail: "https://eventusstorage.blob.core.windows.net/evs/Image/2024dips/94529/ProjectInfo/Cover/889059be4f7f43cb83a3c445b4a7b2a4.jpg", url: "https://event-us.kr/2024dips/event/94529" },
+      { title: "2024 제6회 양자정보세미나", thumbnail: "https://qcenter.kr/uploaded/summernote/202411/0836bb7fd39848b9d214e91ae04439bc.png", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=89&sk=&sw=&offset=&category=" },
+      { title: "2024 퀀텀 영상 콘텐츠 공모전", thumbnail: "https://qcenter.kr/uploaded/summernote/202411/e893e963d4cc47d701e1be2f513c4f11.jpg", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=84&sk=&sw=&offset=&category=" },
+    ];
+
+
 
   return (
     <R.Wrapper>
@@ -21,9 +30,14 @@ const Recent = () => {
       <h1>양자 기술 관련 뉴스</h1>
       <Article articles={articles} />
     </div>
+    <div>
+      <h1>양자 관련 행사 정보</h1>
+      <Article articles={event} />
+    </div>
     </R.ConceptWrapper> 
     </R.Wrapper>
   );
+  
 };
 
 export default Recent;
