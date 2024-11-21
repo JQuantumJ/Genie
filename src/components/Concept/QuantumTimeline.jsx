@@ -75,6 +75,12 @@ const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
   color: #60e6f2;
+  cursor: text;
+  user-select: text;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 const Timeline = styled.div`
@@ -105,23 +111,41 @@ const TimelineItem = styled.div`
   }
 `;
 
-const Year = styled.div`
-  font-size: 1.5rem;
+const Year = styled.h2`
+  font-size: 1.6rem;
   font-weight: bold;
   color: #60e6f2;
+  cursor: text;
+  user-select: text;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
-const Event = styled.div`
-  font-size: 1.2rem;
+const Event = styled.h3`
+  font-size: 1.4rem;
   color: #ccc;
   margin-bottom: 10px;
+  cursor: text;
+  user-select: text;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
-const Details = styled.div`
-  font-size: 1rem;
+const Details = styled.p`
+  font-size: 1.2rem;
   color: #bbb;
   line-height: 1.6;
   margin-bottom: 20px;
+  cursor: text;
+  user-select: text;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
 `;
 
 const Image = styled.img`
