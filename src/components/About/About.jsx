@@ -29,7 +29,7 @@ const About = () => {
         </A.MobileMedia>
 
         <A.GettingStarted>
-          <A.HeadingH2>KQIC 양자기술 인력양성 프로그램</A.HeadingH2>
+          <A.HeadingH2>🌟 KQIC 양자기술 인력양성 프로그램</A.HeadingH2>
           <A.DescriptionP>
             미래 양자인재 양성을 위한 인턴십<br/>
             ICT 전공 대학(원)생 대상으로 국내 기업 연계 인턴십 프로그램 운영
@@ -60,7 +60,6 @@ const About = () => {
             </A.ProductCard>
             <A.ProductCard>
               <h3>지원 방법</h3>
-              <img src={NIA} alt="Operating Systems" />
               <p>ㅇ.</p>
             </A.ProductCard>
           </A.ProductGrid>
