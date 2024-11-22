@@ -19,6 +19,7 @@ export const ConceptWrapper = styled.div`
    }
 
   h1 {
+    margin-top:5%;
     text-align: left;
     color: #000;
     font-size: 2.8rem;
@@ -29,6 +30,64 @@ export const ConceptWrapper = styled.div`
     margin-top: 2%;
     margin-bottom: 3%;
   }
+    .accordion-item {
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .accordion-title {
+    padding-top: 2%;
+    padding-bottom: 1.5%;
+    letter-spacing: 2px;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #007bff;
+  }
+
+  .accordion-title.active {
+    background-color: #004085;
+  }
+
+  .accordion-title span:last-child {
+    font-size: 1rem;
+  }
+
+  .accordion-content {
+    padding: 3%;
+    background-color: #444;
+    letter-spacing: 1.4px;
+    font-size: 1.9rem;
+    color: #eee;
+    line-height: 1.8;
+    border-top: 1px solid #007bff;
+    max-height: 330px;  /* Fixed height for content */
+    overflow-y: auto;  /* Scroll if content exceeds height */
+      p{
+       @media (max-width: 900px) {
+          font-size: 1.67rem;
+          margin-bottom: 1%;
+       }
+    }
+       h2{
+        margin-top:10px;
+        font-size:2rem;
+        }
+      h1{
+        color:#eee;
+        }
+    
+    }
 
   
   @media (max-width: 900px) {
@@ -108,7 +167,6 @@ export const Button = styled.a`
   font-size: 14px;
   font-weight: bold;
   padding: 10px 20px;
-  margin-bottom: 8%;
   margin-left: 2%;
   border-radius: 25px;
   text-decoration: none;

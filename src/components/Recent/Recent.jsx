@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Article from './Article';
 import * as R from "./RecentStyle";
+
 
 const Recent = () => {
     const articles = [
@@ -21,27 +23,100 @@ const Recent = () => {
       { title: "2024 퀀텀 영상 콘텐츠 공모전", thumbnail: "https://qcenter.kr/uploaded/summernote/202411/e893e963d4cc47d701e1be2f513c4f11.jpg", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=84&sk=&sw=&offset=&category=" },
     ];
 
-
+    const [activeIndex, setActiveIndex] = useState(null);
+  
+    const toggleAccordion = (index) => {
+      setActiveIndex(activeIndex === index ? null : index);
+    };
+    const navigate = useNavigate();
 
   return (
     <R.Wrapper>
     <R.ConceptWrapper>
-    <div>
-      <h1>양자 기술 관련 뉴스</h1>
-      <Article articles={articles} />
-      <a 
-        href="https://www.kqic.kr/main/q_info_tech_whitepaper_2023.pdf" // Replace with the actual path to your document
-        download="2023 양자정보기술 백서.pdf" // Specify the name for the downloaded file
-      >
+    <h1>양자 기술 동향</h1>
+        <hr/>
+        <div className="accordion-item">
+          <div 
+            className={`accordion-title ${activeIndex === 0 ? 'active' : ''}`} 
+            onClick={() => toggleAccordion(0)}
+          >
+            <span>글로벌 시장 동향</span>
+            <span>{activeIndex === 0 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 0 && (
+            <div className="accordion-content">
+              <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 <span style={{color: '#B0E3FF'}}>큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</span></p>
+              <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
+              이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>         
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div 
+            className={`accordion-title ${activeIndex === 1 ? 'active' : ''}`} 
+            onClick={() => toggleAccordion(1)}
+          >
+            <span>국내외 정책 동향</span>
+            <span>{activeIndex === 1 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 1 && (
+            <div className="accordion-content">
+              <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 <span style={{color: '#B0E3FF'}}>큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</span></p>
+              <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
+              이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>        
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div 
+            className={`accordion-title ${activeIndex === 2 ? 'active' : ''}`} 
+            onClick={() => toggleAccordion(2)}
+          >
+            <span>양자 기술 R&D 동향</span>
+            <span>{activeIndex === 2 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 2 && (
+            <div className="accordion-content">
+              <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 <span style={{color: '#B0E3FF'}}>큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</span></p>
+              <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
+              이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>      
+            </div>
+          )}
+        </div>
+        <div className="accordion-item">
+          <div 
+            className={`accordion-title ${activeIndex === 3 ? 'active' : ''}`} 
+            onClick={() => toggleAccordion(3)}
+          >
+            <span>양자 기술 산업 생태계</span>
+            <span>{activeIndex === 3 ? '▲' : '▼'}</span>
+          </div>
+          {activeIndex === 3 && (
+            <div className="accordion-content">
+              <p>기존 디지털컴퓨터와는 달리 양자역학의 중첩 상태를 활용한 <span style={{color: '#B0E3FF'}}>큐비트(Quantum bit)를 기본 단위로  0과 1 두 상태를 동시에 처리할 수 있다.</span></p>
+              <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
+              이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>      
+            </div>
+          )}
+        </div>
+      <div>
+        <h1>양자 기술 관련 뉴스</h1>
+        <hr/>
+        <Article articles={articles} />
+        <a 
+          href="https://www.kqic.kr/main/q_info_tech_whitepaper_2023.pdf" // Replace with the actual path to your document
+          download="2023 양자정보기술 백서.pdf" // Specify the name for the downloaded file
+        >
           <R.Button>
               2023 양자정보기술 백서 다운로드 하기 ↗
           </R.Button>              
-      </a>
-    </div>
-    <div>
-      <h1>양자 관련 행사 정보</h1>
-      <Article articles={event} />
-    </div>
+        </a>
+      </div>
+      <div>
+        <h1>양자 관련 행사 정보</h1>
+        <hr/>
+        <Article articles={event} />
+      </div>
     </R.ConceptWrapper> 
     </R.Wrapper>
   );

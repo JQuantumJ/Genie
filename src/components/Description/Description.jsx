@@ -2,22 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as D from './DescriptionStyle';
-import styled from 'styled-components';
 
-const MoreButton = styled.button`
-  background-color: #007bff;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 20px;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
 
 const Description = () => {
 
