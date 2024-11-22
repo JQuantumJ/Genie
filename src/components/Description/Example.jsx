@@ -51,7 +51,7 @@ const MenuToggle = styled.div`
   height: 50px;
   background-color: #141a1f;
   border-radius: 10px;
-  margin-bottom: 20px; /* Title 위에 적절한 간격 */
+  margin-bottom: 20px; 
   cursor: pointer;
 
   .menu-icon {
@@ -66,28 +66,78 @@ const MenuToggle = styled.div`
 
 const sections = [
   {
-    id: "quantum-technology",
-    title: "양자 기술 동향",
-    content: "양자 기술 동향의 개요입니다.",
+    id: "sum",
+    title: "양자 산업 활용",
+    content: "국내외 양자 산업 활용의 개요입니다.",
     subsections: [
       {
-        id: "global-market",
-        title: "글로벌 시장 동향",
-        content: "글로벌 양자 기술 시장은 연평균 25% 이상의 성장률을 기록 중입니다.",
-        content2: "2023년 기준, 시장 규모는 약 30조 원으로 추산됩니다.",
+        id: "sum1",
+        title: "정보통신 분야",
+        content: "양자 암호 기술은 데이터 전송의 보안성을 획기적으로 높입니다. 기존 암호화 방식은 시간이 지남에 따라 해킹 위험이 증가하지만, 양자암호 기술은 도청이나 데이터 변조 시도를 원천적으로 방어할 수 있습니다.",
       },
       {
-        id: "policies",
-        title: "국내외 정책 동향",
+        id: "sum2",
+        title: "금융 서비스 분야",
         content: "미국, 유럽, 중국 등 주요 국가들은 양자 기술 연구개발에 대규모 투자를 진행 중입니다.",
-        content2: "한국 정부는 2030년까지 3조 원 규모의 양자 기술 투자를 계획하고 있습니다.",
-        content3: "정책 로드맵의 주요 내용은 양자 통신 인프라 확충과 전문 인력 양성입니다.",
+      },
+      {
+        id: "sum3",
+        title: "의료 분야",
+        content: "미국, 유럽, 중국 등 주요 국가들은 양자 기술 연구개발에 대규모 투자를 진행 중입니다.",
+      },
+      {
+        id: "sum4",
+        title: "국가 안보와 군사 통신 분야",
+        content: "미국, 유럽, 중국 등 주요 국가들은 양자 기술 연구개발에 대규모 투자를 진행 중입니다.",
+      },
+      {
+        id: "sum5",
+        title: "사물인터넷 분야",
+        content: "미국, 유럽, 중국 등 주요 국가들은 양자 기술 연구개발에 대규모 투자를 진행 중입니다.",
       },
     ],
   },
   {
-    id: "quantum-rnd",
-    title: "양자 기술 R&D 동향",
+    id: "it",
+    title: "정보통신 분야",
+    content: "정보통신 분야 활용 사례",
+    subsections: [
+      {
+        id: "components",
+        title: "양자 컴퓨팅 주요 구성 요소",
+        content: "큐비트는 양자 컴퓨팅의 기본 연산 단위로, 초전도체와 이온 트랩 방식으로 구현됩니다.",
+        content2: "양자컴퓨터는 클라우드 서비스를 통해 상용화를 앞두고 있습니다.",
+      },
+      {
+        id: "applications",
+        title: "양자 기술 응용 사례",
+        content: "금융, 의료, 국방 등 다양한 산업 분야에서 양자 기술이 사용되고 있습니다.",
+        content2: "특히, 금융 리스크 관리와 약물 개발에서 두드러진 성과를 보이고 있습니다.",
+      },
+    ],
+  },
+  {
+    id: "eco",
+    title: "금융서비스 분야",
+    content: "정보통신 분야 활용 사례",
+    subsections: [
+      {
+        id: "components",
+        title: "양자 컴퓨팅 주요 구성 요소",
+        content: "큐비트는 양자 컴퓨팅의 기본 연산 단위로, 초전도체와 이온 트랩 방식으로 구현됩니다.",
+        content2: "양자컴퓨터는 클라우드 서비스를 통해 상용화를 앞두고 있습니다.",
+      },
+      {
+        id: "applications",
+        title: "양자 기술 응용 사례",
+        content: "금융, 의료, 국방 등 다양한 산업 분야에서 양자 기술이 사용되고 있습니다.",
+        content2: "특히, 금융 리스크 관리와 약물 개발에서 두드러진 성과를 보이고 있습니다.",
+      },
+    ],
+  },
+  {
+    id: "med",
+    title: "의료",
     content: "양자 기술 R&D의 개요입니다.",
     subsections: [
       {
@@ -105,9 +155,9 @@ const sections = [
     ],
   },
   {
-    id: "quantum-ecosystem",
-    title: "양자 기술 산업 생태계",
-    content: "양자 기술 생태계의 개요입니다.",
+    id: "gov",
+    title: "국가 안보와 군사 통신",
+    content: "국가 안보와 군사 통신 양자 활용 사례",
     subsections: [
       {
         id: "components",
@@ -121,6 +171,25 @@ const sections = [
         content: "금융, 의료, 국방 등 다양한 산업 분야에서 양자 기술이 사용되고 있습니다.",
         content2: "특히, 금융 리스크 관리와 약물 개발에서 두드러진 성과를 보이고 있습니다.",
       },
+    ],
+  },
+  {
+  id: "iot",
+  title: "사물인터넷(IoT)",
+  content: "사물 인터넷 활용 사례",
+  subsections: [
+    {
+      id: "components",
+      title: "양자 컴퓨팅 주요 구성 요소",
+      content: "큐비트는 양자 컴퓨팅의 기본 연산 단위로, 초전도체와 이온 트랩 방식으로 구현됩니다.",
+      content2: "양자컴퓨터는 클라우드 서비스를 통해 상용화를 앞두고 있습니다.",
+    },
+    {
+      id: "applications",
+      title: "양자 기술 응용 사례",
+      content: "금융, 의료, 국방 등 다양한 산업 분야에서 양자 기술이 사용되고 있습니다.",
+      content2: "특히, 금융 리스크 관리와 약물 개발에서 두드러진 성과를 보이고 있습니다.",
+    },
     ],
   },
 ];
