@@ -170,6 +170,14 @@ export const ComputeWrapper = styled.div`
     margin-bottom: 3%;
     max-width: 97%;
   }
+  span{
+    background: linear-gradient(to top, #D0E7FE 40%, transparent 10%);
+  }
+  h3{
+    margin-left: 2%;
+    margin-top:5%;
+    font-size: 2rem;
+  }
 `
 export const ImageWrap = styled.div`
     display: flex;

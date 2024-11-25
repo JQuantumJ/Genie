@@ -26,6 +26,8 @@ import Nia from './components/About/Nia';
 import Industry from './components/Concept/Industry';
 import QuantumTimeline from './components/Concept/QuantumTimeline';
 import Example from './components/Description/Example';
+import Qimage from './components/Description/Qimage';
+
 
 
 export default function Router() {
@@ -55,6 +57,7 @@ export default function Router() {
         <Route path="/industry" element={<Industry />} />
         <Route path="/quantumTimeline" element={<QuantumTimeline />} />
         <Route path="/example" element={<Example />} />
+        <Route path="/qimage" element={<Qimage />} />
       </Routes>
       <TopBtn />
       <ChatBot />

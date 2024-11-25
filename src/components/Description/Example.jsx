@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as I from "../Concept/IndustryStyle";
 import styled from "styled-components";
+import { Link } from "react-router-dom"; 
 
 
 const TopBar = styled.nav`
@@ -139,7 +140,9 @@ const sections = [
       {
         id: "view",
         title: "의료 영상",
-        content: <>양자 이미징 기술은 포톤의 얽힘 상태를 활용하여 기존보다 선명하고 정확한 의료 영상을 제공합니다.<br/>이를 통해 진단의 정확성을 높이고, 조기 발견이 어려운 질병의 진단에 기여합니다.</>,
+        content: <><Link to="/qimage" style={{ textDecoration: 'underline' }}>
+        양자 이미징 기술
+      </Link>은 포톤의 얽힘 상태를 활용하여 기존보다 선명하고 정확한 의료 영상을 제공합니다.<br/>이를 통해 진단의 정확성을 높이고, 조기 발견이 어려운 질병의 진단에 기여합니다.</>,
       },
       {
         id: "pill",
