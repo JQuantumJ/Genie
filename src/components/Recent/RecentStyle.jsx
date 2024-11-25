@@ -162,7 +162,7 @@ export const Button = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #007bff;
+  background-color: #5caafe;
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -177,7 +177,7 @@ export const Button = styled.a`
     color: #000;
   }
   &:hover {
-    background-color: #0056b3;
+    background-color: #2b89ec;
   }
 
 `;
