@@ -1,4 +1,3 @@
-// QuizStyle.jsx
 import styled from 'styled-components';
 
 export const QuizContainer = styled.div`
@@ -7,10 +6,12 @@ export const QuizContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 160vh;
-  max-height: 160vh;
-  margin-top: -5%;
-  margin-bottom: -10%;
+  margin-top: -20%;
+  margin-bottom: -20%;
   background-color: #eee;
+    @media (max-width: 700px) {
+    margin-top:-50%;
+    }
 `
   
 
