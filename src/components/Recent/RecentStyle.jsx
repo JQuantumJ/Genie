@@ -86,27 +86,26 @@ export const ConceptWrapper = styled.div`
       h1{
         color:#eee;
         }
-    
     }
 
   
-  @media (max-width: 900px) {
+    @media (max-width: 900px) {
     margin-top: 12%;
-    padding: 2%;
+    padding: 3%;
     font-size: 1.2rem;
     line-height: 1.7;
-  }
-
-  @media (max-width: 700px) {
-    margin-top: 16%;
-    padding: 4%;
-  
-    
-     a{
-      color: #007bff;
-      font-size: 1.7rem;
-      padding-left: 40%;
-  }
+      a{
+        color: #007bff;
+        font-size: 1.6rem;
+        padding-left: 40%;
+      }
+    }
+    @media (max-width: 700px) {
+      margin-top: 16%;
+      padding: 4%;
+     font-size: 1rem;
+    }
+}
 `;
 
 // 갤러리 관련 스타일
@@ -179,6 +178,9 @@ export const Button = styled.button`
   &:hover {
     background-color: #2b89ec;
   }
+    @media (max-width: 700px) {
+        display: flex;
+      } 
 
 `;
 
