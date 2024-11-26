@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-
     margin-top: -5%;
-
     padding-top: 5%;
     background-color: #eee;
 `;
@@ -55,6 +53,12 @@ export const ConceptWrapper = styled.div`
     font-size: 2rem;
     transition: background-color 0.3s ease;
     border-bottom: 1px solid #007bff;
+      @media (max-width: 900px) {
+      padding-top: 3.5%;
+      padding-bottom: 2.3%;
+      padding-left: 4.5%;
+      padding-right: 4.5%;
+    }
   }
 
   .accordion-title.active {
@@ -73,8 +77,8 @@ export const ConceptWrapper = styled.div`
     color: #eee;
     line-height: 1.8;
     border-top: 1px solid #007bff;
-    max-height: 330px;  /* Fixed height for content */
-    overflow-y: auto;  /* Scroll if content exceeds height */
+    max-height: 330px; 
+    overflow-y: auto;  
       p{
        @media (max-width: 900px) {
           font-size: 1.67rem;
@@ -89,6 +93,22 @@ export const ConceptWrapper = styled.div`
         color:#eee;
         }
     
+    }
+    @media (max-width: 900px) {
+    margin-top: 12%;
+    padding: 3%;
+    font-size: 1.2rem;
+    line-height: 1.7;
+      a{
+        color: #007bff;
+        font-size: 1.6rem;
+        padding-left: 40%;
+      }
+    }
+    @media (max-width: 700px) {
+      margin-top: 16%;
+      padding: 4%;
+     font-size: 1rem;
     }
 
   
@@ -200,7 +220,7 @@ export const ImageWrap = styled.div`
     }
 `;
 
-export const Button = styled.a`
+export const Button = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -221,5 +241,4 @@ export const Button = styled.a`
   &:hover {
     background-color: #0056b3;
   }
-
 `;
