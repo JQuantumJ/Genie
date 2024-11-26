@@ -118,11 +118,8 @@ export const GalleryGrid = styled.div`
   margin-bottom: 1%;
   padding: 2%;
 
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);  /* 모바일 화면에서 2열로 줄이기 */
-  }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;  /* 작은 화면에서는 1열로 표시 */
   }
 `;
@@ -143,6 +140,9 @@ export const GalleryItem = styled.div`
     height: 200px;
     object-fit: cover;  /* 썸네일 이미지를 프레임에 맞춰 자르기 */
     border-bottom: 2px solid #007bff;
+    @media (max-width: 700px) {
+        display: flex;
+      } 
   }
 
   h3 {
@@ -158,7 +158,7 @@ export const GalleryItem = styled.div`
   }
 `;
 
-export const Button = styled.a`
+export const Button = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;

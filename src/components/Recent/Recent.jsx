@@ -23,13 +23,13 @@ const Recent = () => {
       { title: "2024 퀀텀 영상 콘텐츠 공모전", thumbnail: "https://qcenter.kr/uploaded/summernote/202411/e893e963d4cc47d701e1be2f513c4f11.jpg", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=84&sk=&sw=&offset=&category=" },
     ];
 
-    const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
   
-    const toggleAccordion = (index) => {
-      setActiveIndex(activeIndex === index ? null : index);
-    };
-    const navigate = useNavigate();
-
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+    
+  const navigate = useNavigate();
   return (
     <R.Wrapper>
     <R.ConceptWrapper>
