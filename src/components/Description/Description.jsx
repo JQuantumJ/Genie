@@ -30,7 +30,7 @@ const Description = () => {
               <br></br> <p>이 같은 특성 때문에 양자컴퓨터는 기존 컴퓨터보다 월등한 계산 속도와 연산 처리 능력을 갖는데,
               이는 슈퍼컴퓨터보다 1000배 이상 빠른 연산이 가능해 인공지능(AI), 의료·제약, 암호통신 등 다양한 분야에 활용될 수 있다.</p>
               <div style={{textAlign: 'center', marginTop: '3%'}}>
-                <D.Button href="/computing"> 양자 컴퓨팅과 계산 복잡도 이론</D.Button>
+                <D.Button onClick={e=>navigate('/computing')}> 양자 컴퓨팅과 계산 복잡도 이론</D.Button>
               </div>
               <hr/>
               {/* YouTube video for 양자 컴퓨터 */}
@@ -142,7 +142,7 @@ const Description = () => {
               </p>
               <hr/> 
               <div style={{textAlign: 'center'}}>
-                <D.Button href="/example" rel="산업활용사례 더보기">
+                <D.Button onClick={e=>navigate('/example')} rel="산업활용사례 더보기">
                   산업활용사례 더보기
                 </D.Button> 
               </div>         
