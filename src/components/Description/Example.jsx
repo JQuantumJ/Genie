@@ -42,6 +42,13 @@ const TopBarItem = styled.button`
     background-color: #333;
     color: #fff;
   }
+    @media (max-width: 400px) {
+      font-size: 12px; /* 글씨 크기 조정 */
+      overflow: hidden; /* 텍스트가 화면 밖으로 넘지 않도록 설정 */
+      white-space: normal; /* 줄바꿈 허용 */
+      word-wrap: break-word; /* 단어가 화면 너비를 넘을 경우 줄바꿈 */
+    }
+
 `;
 
 const MenuToggle = styled.div`
