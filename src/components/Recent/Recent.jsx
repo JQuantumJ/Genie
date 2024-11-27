@@ -109,8 +109,8 @@ const Recent = () => {
         <hr/>
         <Article articles={articles} />
         <a 
-          href="https://www.kqic.kr/main/q_info_tech_whitepaper_2023.pdf" // Replace with the actual path to your document
-          download="2023 양자정보기술 백서.pdf" // Specify the name for the downloaded file
+          href="https://www.kqic.kr/main/q_info_tech_whitepaper_2023.pdf" 
+          download="2023 양자정보기술 백서.pdf" 
         >
           <R.Button>
               2023 양자정보기술 백서 다운로드 하기 📥
