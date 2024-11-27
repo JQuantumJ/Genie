@@ -124,11 +124,17 @@ export const ProductCard = styled.div`
   img{
     max-width: 40px;
     width: 40px;
-  };
+  }
   &:hover {
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   }
-
+  hr{
+    border: none; 
+    margin: 10px 0;
+    color: #bbb;
+    height: 0px;
+    box-shadow: inset 0 0.5px 0 0 #bbb;
+  }
   h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -137,10 +143,15 @@ export const ProductCard = styled.div`
         color: #000;
     }
   }
-
+  a{
+    font-size: 1.3rem;
+    margin: 5px 0;
+    color: #60E6F2;
+    line-height: 1.8;
+  }
   p {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #aaa;
     line-height: 1.7;
     &::selection {
         background-color: #60E6F2;
@@ -173,5 +184,61 @@ export const MobileMedia = styled(MediaSection)`
     ${ProductGrid} {
       grid-template-columns: repeat(1, 1fr);
     }
+  }
+`;
+
+
+export const LinkButton = styled.a`
+  display: inline-flex;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
+  }
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &::before {
+    content: '↗';
+    margin-right: 8px;
+  }
+`;
+
+export const SecondaryLinkButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745; 
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  &::selection {
+    background-color: #90ee90;
+    color: #000;
+  }
+  &:hover {
+    background-color: #218838; 
+  }
+
+  &::before {
+    content: '↗'; 
+    margin-right: 8px;
   }
 `;
