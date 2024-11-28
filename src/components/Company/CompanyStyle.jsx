@@ -127,7 +127,7 @@ export const scroll = keyframes`
 `;
 
 export const SlideImage = styled.img`
-  height: 25vh;
+  height: 35vh;
   cursor: pointer;
   width: 97%;
   object-fit: cover;
@@ -160,7 +160,7 @@ export const StoryCard = styled.div`
     margin-top: 15%;
   }
   &:hover {
-    transform: scale(1.06); 
+    transform: scale(1.04); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
 `;
@@ -258,6 +258,12 @@ export const ArticleDescription = styled.p`
     background-color: #60E6F2;
     color: #000;
   }
+  p{
+    &::selection {
+      background-color: #60E6F2;
+      color: #000;
+    }
+  }
 `;
 
 
@@ -277,8 +283,8 @@ export const CharacterImage = styled.img`
   width: 250px;
   height: auto;
   @media (max-width: 780px) {
-    margin-right:40%;
-    width: 200px;
+    margin-right:43%;
+    width: 170px;
     margin-top: 5%;
   }
 `;
@@ -355,7 +361,7 @@ export const Bubble = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
    transition: transform 0.3s ease-in-out;
   &:hover{
-    transform: scale(1.04);
+    transform: scale(1.03);
   }
   h1{
     color: #170F49;

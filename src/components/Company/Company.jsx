@@ -17,6 +17,9 @@ import microsoft from '/src/assets/image/Company/microsoft.svg';
 import jininfra from '/src/assets/image/Company/jininfra.svg';
 import intel from '/src/assets/image/Company/intel.svg';
 import alibaba from '/src/assets/image/Company/alibaba.svg';
+import banner1 from '/src/assets/image/Company/banner1.svg';
+import banner2 from '/src/assets/image/Company/banner2.svg';
+import banner3 from '/src/assets/image/Company/banner3.svg';
 
 const Company = () => {
   const navigate=useNavigate();
@@ -103,30 +106,27 @@ const Company = () => {
         <C.ArticleCard>
           <C.ArticleImage src={banner} alt="Nusantara Image" />
           <C.ArticleContent>
-            <C.ArticleTitle>About Jininfra</C.ArticleTitle>
-            <C.ArticleMeta>
-              <span>by Sudarmo</span>
-              <span>28 January</span>
-            </C.ArticleMeta>
+            <C.ArticleTitle>Jininfra</C.ArticleTitle>
             <C.ArticleDescription>
-              설명 설명
+            <p>진인프라는 ICT 및 클라우드 기술을 중심으로 다양한 서비스를 제공하는 기업으로,</p>
+            <p>주요 사업 분야로는 네트워크 구축, 클라우드 솔루션, 정보보안, 유지보수 서비스, e-커머스, 그리고 공사 관련 솔루션이 있습니다. </p>
             </C.ArticleDescription>
           </C.ArticleContent>
         </C.ArticleCard>
       </div>
-      <C.SectionTitle>사업 소개</C.SectionTitle>
+      <C.SectionTitle>양자 사업 소개</C.SectionTitle>
       <C.SlideWrapper>
       <Slider ref={sliderRef} {...settings}>
         <div onClick={() => handleSlideClick('Finance')}>
-          <C.SlideImage src={bg} alt="Finance" />
+          <C.SlideImage src={banner1} alt="Finance" />
           <p>금융</p>
         </div>
         <div onClick={() => handleSlideClick('Chemistry')}>
-          <C.SlideImage src={bg} alt="Chemistry" />
+          <C.SlideImage src={banner2} alt="Chemistry" />
           <p>화학 및 기타 과학</p>
         </div>
         <div onClick={() => handleSlideClick('Logistics')}>
-          <C.SlideImage src={bg} alt="Logistics" />
+          <C.SlideImage src={banner3} alt="Logistics" />
           <p>물류 및 최적화</p>
         </div>
       </Slider>
