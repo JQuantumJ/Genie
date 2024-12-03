@@ -21,7 +21,7 @@ export const Question = styled.h2`
   color: #333;
     @media (max-width: 700px) {
     margin-left:3%;
-    font-size:20px;
+    font-size:18px;
     padding:10px;
     }
 `;
