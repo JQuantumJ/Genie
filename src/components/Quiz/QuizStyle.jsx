@@ -22,7 +22,6 @@ export const Question = styled.h2`
     @media (max-width: 700px) {
     margin-left:3%;
     font-size:20px;
-    margin-top:-100%;
     padding:10px;
     }
 `;
@@ -114,7 +113,12 @@ export const FinalScoreContainer = styled.div`
     color: #666;
   }
      @media (max-width: 700px) {
-      margin-top:-100%;
+      margin-top:10%;
+
+      img
+      {
+        height:300px;
+      }
     }
 `;
 export const Button = styled.button`
