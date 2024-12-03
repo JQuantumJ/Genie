@@ -6,8 +6,9 @@ export const QuizContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 160vh;
-  margin-top: -20%;
-  margin-bottom: -20%;
+  max-height: 160vh;
+  margin-top: -15%;
+  margin-bottom: -10%;
   background-color: #eee;
     @media (max-width: 700px) {
     margin-top:-50%;
