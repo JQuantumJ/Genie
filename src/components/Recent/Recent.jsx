@@ -6,14 +6,14 @@ import * as R from "./RecentStyle";
 
 const Recent = () => {
     const articles = [
+        { title: "노르마, 사우디 IT 기업과 1800만 달러 규모 양자 컴퓨터 공급 계약", thumbnail: "https://cdn.itdaily.kr/news/photo/202412/229403_233998_4838.jpg", url: "http://www.itdaily.kr/news/articleView.html?idxno=229403" },
+        { title: "한컴위드, 양자보안 기술 적용 '한컴 엑스디비 5.0' 출시", thumbnail: "https://cdn.ngetnews.com/news/photo/202412/515870_80059_848.jpg", url: "https://www.ngetnews.com/news/articleView.html?idxno=515870" },
+        { title: "양자 스핀 네마틱 상 존재 최초 관찰···김범준 교수 12월 과기인상", thumbnail: "https://cdn.hellodd.com/news/photo/202412/106255_326904_5924.jpg", url: "https://www.hellodd.com/news/articleView.html?idxno=106255" }, 
+        { title: "GIST, IBS ‘양자변환연구단’ 킥오프 심포지엄 개최", thumbnail: "https://wimg.heraldcorp.com/news/cms/2024/12/04/news-p.v1.20241204.eee3eba012264377839e53f0b07ff946_P1.jpg", url: "https://biz.heraldcorp.com/article/10008681" },
         { title: "[인터뷰] 서울시·KIST가 손 잡은 퀀텀캠퍼스 “양자기술 시대, 산업 전문가 키워 대비해야”", thumbnail: "https://biz.chosun.com/resizer/v2/GPZUU3TQZFDT5CTT4QH4LVDY5I.jpg?auth=1af057be87845ccca9647d735171c32d9bdd17c2841e3fa25d793b5d7efee034&width=616", url: "https://biz.chosun.com/science-chosun/technology/2024/12/02/TQFQC34M2FB3HHLPZRAIFKHHJA/" },
         { title: "\"신약 개발 효율 높인다\"…산업부 양자컴퓨팅 활용사업 본격화", thumbnail: "https://img9.yna.co.kr/photo/yna/YH/2024/11/20/PYH2024112011890006500_P4.jpg", url: "https://www.yna.co.kr/view/AKR20241129022900003" },
         { title: "정부, 내년 양자 신규사업 7건에 491억원 풀어", thumbnail: "https://image.zdnet.co.kr/2024/11/28/d85ee2a05716b0d09d9a6182aea743ea-watermark.jpg", url: "https://zdnet.co.kr/view/?no=20241128085823" },
         { title: "말레이시아 정부와 손잡은 SDT, 양자 기술 새시대 연다", thumbnail: "https://cdn.datanet.co.kr/news/photo/202411/198043_121496_852.jpg", url: "https://www.datanet.co.kr/news/articleView.html?idxno=198043" },
-        { title: "NIA, 양자 시험망 등 어떻게 구축하나", thumbnail: "https://image.zdnet.co.kr/2024/12/01/0bfd4a40c6fd81136ef700b1684eab7e-watermark.jpg", url: "https://zdnet.co.kr/view/?no=20241201124559" },
-        { title: "127큐비트 IBM 양자컴퓨터, 연세대서 국내 첫 가동", thumbnail: "https://img.etnews.com/news/article/2024/11/20/news-p.v1.20241120.e311d51dfa2f4a3e9ec7e3abd4487c24_P1.jpg", url: "https://www.etnews.com/20241120000271" },
-        { title: "한국 양자기술 기업 SDT, 초전도 양자컴 생산 나서", thumbnail: "https://image.dongascience.com/Photo/2024/11/125a2f11fb9b5e7e689c3553f15a289e.jpg", url: "https://www.dongascience.com/news.php?idx=68541" }, 
-        { title: "국가기술표준원, 양자기술 국제표준 선점 전략 청사진 마련", thumbnail: "https://www.boannews.com/media/upFiles2/2024/11/825356645_385.jpg", url: "https://m.boannews.com/html/detail.html?mtype=3&tab_type=6&idx=134347" },
         ];
 
     const event = [
