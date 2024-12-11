@@ -19,8 +19,8 @@ const Recent = () => {
     const event = [
       { title: "제 4회 양자정보과학 겨울학교", thumbnail: "https://qschool.info/wp-content/uploads/2024/12/img_02-2048x1365.png", url: "https://qschool.info/" },
       { title: "2024 제7회 양자정보학술대회", thumbnail: "https://www.osk.or.kr/upload/conference/banner/1733360509_96798600_206878809.png", url: "https://www.osk.or.kr/conference/event/index.php?cfrid=119" },
-      { title: "2024 서울퀀텀캠퍼스(SQC) 양자기술 산업전문과정 교육생 모집 공고", thumbnail: "https://news.seoul.go.kr/economy/files/2024/11/6747b845ea8e58.04268077-768x1365.jpg", url: "https://news.seoul.go.kr/economy/archives/564212" },
-      { title: "[세미나] 양자정보연구지원센터 2024 제6회 양자정보세미나 개최 안내", thumbnail: "https://qcenter.kr/uploaded/summernote/202411/0836bb7fd39848b9d214e91ae04439bc.png", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=89&sk=&sw=&offset=&category=" },
+      { title: "2024년 초격차 스타트업 1000+ 프로그램의 글로벌 브릿지 프로그램 & KIST-참여기업 상생 MOU 행사", thumbnail: "https://qcenter.kr/uploaded/board/seminar/b13d1da865cb99ed7fa1533f58503e7a0.png", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=94&sk=&sw=&offset=&category=" },
+      { title: "[QisK] 2025 한국양자정보학회 정기학술대회 및 정기총회", thumbnail: "https://qisk.inforang.com/upload/tmp/1732250083_53275900_215561998.jpg", url: "https://www.qisk.or.kr/content/conferences/pre_reg_guide.php?id=40" },
     ];
 
   const [activeIndex, setActiveIndex] = useState(null);
