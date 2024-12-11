@@ -17,10 +17,10 @@ const Recent = () => {
         ];
 
     const event = [
+      { title: "제 4회 양자정보과학 겨울학교", thumbnail: "https://qschool.info/wp-content/uploads/2024/12/img_02-2048x1365.png", url: "https://qschool.info/" },
+      { title: "2024 제7회 양자정보학술대회", thumbnail: "https://www.osk.or.kr/upload/conference/banner/1733360509_96798600_206878809.png", url: "https://www.osk.or.kr/conference/event/index.php?cfrid=119" },
       { title: "2024 서울퀀텀캠퍼스(SQC) 양자기술 산업전문과정 교육생 모집 공고", thumbnail: "https://news.seoul.go.kr/economy/files/2024/11/6747b845ea8e58.04268077-768x1365.jpg", url: "https://news.seoul.go.kr/economy/archives/564212" },
       { title: "[세미나] 양자정보연구지원센터 2024 제6회 양자정보세미나 개최 안내", thumbnail: "https://qcenter.kr/uploaded/summernote/202411/0836bb7fd39848b9d214e91ae04439bc.png", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=89&sk=&sw=&offset=&category=" },
-      { title: "2025년 KAIST-MIT Quantum Winter Camp 신청 안내", thumbnail: "https://quantumschool.kaist.ac.kr/_files/board/20241104//bdbb84d4aaddc3ab3580bb4b3b01b6a0.jpg", url: "https://quantumschool.kaist.ac.kr/notice/view/id/30#u" },
-      { title: "2024 DIPS GLOBAL TECH CON", thumbnail: "https://eventusstorage.blob.core.windows.net/evs/Image/2024dips/94529/ProjectInfo/Cover/889059be4f7f43cb83a3c445b4a7b2a4.jpg", url: "https://event-us.kr/2024dips/event/94529" },
     ];
 
   const [activeIndex, setActiveIndex] = useState(null);
