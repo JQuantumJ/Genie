@@ -6,20 +6,20 @@ import * as R from "./RecentStyle";
 
 const Recent = () => {
     const articles = [
+        { title: "NIA·IITP, 산·학·연 모아 양자정보 생태계 활성화 모색", thumbnail: "https://image.zdnet.co.kr/2024/12/17/b9decdf81ca08201c6366b2660937a64.jpg", url: "https://zdnet.co.kr/view/?no=20241217104208" },
+        { title: "대전시-노르마-나노종합기술원, 양자컴퓨팅 산업화 맞손", thumbnail: "https://cdn.straightnews.co.kr/news/photo/202412/259942_165071_1349.jpg", url: "https://www.straightnews.co.kr/news/articleView.html?idxno=259942" },
+        { title: "LG유플러스, 양자내성암호 우수표준으로 양자기술 생태계 확장", thumbnail: "https://www.koreaittimes.com/news/photo/202412/137016_85748_3358.jpg", url: "https://www.koreaittimes.com/news/articleView.html?idxno=137016" },
+        { title: "\"연구·인증기관 시너지로 양자기술 상용화\"…KIST·TTA 맞손", thumbnail: "https://www.news1.kr/_next/image?url=https%3A%2F%2Fi3n.news1.kr%2Fsystem%2Fphotos%2F2024%2F12%2F11%2F7033060%2Fhigh.jpg&w=1920&q=75", url: "https://www.news1.kr/it-science/general-it/5628710" },
         { title: "노르마, 사우디 IT 기업과 1800만 달러 규모 양자 컴퓨터 공급 계약", thumbnail: "https://cdn.itdaily.kr/news/photo/202412/229403_233998_4838.jpg", url: "http://www.itdaily.kr/news/articleView.html?idxno=229403" },
         { title: "한컴위드, 양자보안 기술 적용 '한컴 엑스디비 5.0' 출시", thumbnail: "https://cdn.ngetnews.com/news/photo/202412/515870_80059_848.jpg", url: "https://www.ngetnews.com/news/articleView.html?idxno=515870" },
         { title: "양자 스핀 네마틱 상 존재 최초 관찰···김범준 교수 12월 과기인상", thumbnail: "https://cdn.hellodd.com/news/photo/202412/106255_326904_5924.jpg", url: "https://www.hellodd.com/news/articleView.html?idxno=106255" }, 
-        { title: "GIST, IBS ‘양자변환연구단’ 킥오프 심포지엄 개최", thumbnail: "https://wimg.heraldcorp.com/news/cms/2024/12/04/news-p.v1.20241204.eee3eba012264377839e53f0b07ff946_P1.jpg", url: "https://biz.heraldcorp.com/article/10008681" },
-        { title: "[인터뷰] 서울시·KIST가 손 잡은 퀀텀캠퍼스 “양자기술 시대, 산업 전문가 키워 대비해야”", thumbnail: "https://biz.chosun.com/resizer/v2/GPZUU3TQZFDT5CTT4QH4LVDY5I.jpg?auth=1af057be87845ccca9647d735171c32d9bdd17c2841e3fa25d793b5d7efee034&width=616", url: "https://biz.chosun.com/science-chosun/technology/2024/12/02/TQFQC34M2FB3HHLPZRAIFKHHJA/" },
-        { title: "\"신약 개발 효율 높인다\"…산업부 양자컴퓨팅 활용사업 본격화", thumbnail: "https://img9.yna.co.kr/photo/yna/YH/2024/11/20/PYH2024112011890006500_P4.jpg", url: "https://www.yna.co.kr/view/AKR20241129022900003" },
-        { title: "정부, 내년 양자 신규사업 7건에 491억원 풀어", thumbnail: "https://image.zdnet.co.kr/2024/11/28/d85ee2a05716b0d09d9a6182aea743ea-watermark.jpg", url: "https://zdnet.co.kr/view/?no=20241128085823" },
-        { title: "말레이시아 정부와 손잡은 SDT, 양자 기술 새시대 연다", thumbnail: "https://cdn.datanet.co.kr/news/photo/202411/198043_121496_852.jpg", url: "https://www.datanet.co.kr/news/articleView.html?idxno=198043" },
-        ];
+        { title: "GIST, IBS ‘양자변환연구단’ 킥오프 심포지엄 개최", thumbnail: "https://wimg.heraldcorp.com/news/cms/2024/12/04/news-p.v1.20241204.eee3eba012264377839e53f0b07ff946_P1.jpg", url: "https://biz.heraldcorp.com/article/10008681" },  
+      ];
 
     const event = [
+      { title: "제27회 한국양자정보학회 정기워크샵: 양자정보과학기술 대학생 · 대학원생 간담회", thumbnail: "https://askcorp.co.kr/uploaded/summernote/202402/3e9663fb10ed932de5e8167b0164393b.png", url: "https://www.qisk.or.kr/content/conferences/pre_reg_main.php?id=43" },
+      { title: "The Blaise Pascal Quantumn Challenge", thumbnail: "https://qcenter.kr/uploaded/summernote/202412/2e2b8d580d352c16a2f336a9de8c5389.png", url: "https://www.agorize.com/en/challenges/blaisepascalquantumchallenge2025?lang=en" },
       { title: "제 4회 양자정보과학 겨울학교", thumbnail: "https://qschool.info/wp-content/uploads/2024/12/img_02-2048x1365.png", url: "https://qschool.info/" },
-      { title: "2024 제7회 양자정보학술대회", thumbnail: "https://www.osk.or.kr/upload/conference/banner/1733360509_96798600_206878809.png", url: "https://www.osk.or.kr/conference/event/index.php?cfrid=119" },
-      { title: "2024년 초격차 스타트업 1000+ 프로그램의 글로벌 브릿지 프로그램 & KIST-참여기업 상생 MOU 행사", thumbnail: "https://qcenter.kr/uploaded/board/seminar/b13d1da865cb99ed7fa1533f58503e7a0.png", url: "https://qcenter.kr/sub/sub06_03.php?boardid=seminar&mode=view&idx=94&sk=&sw=&offset=&category=" },
       { title: "[QisK] 2025 한국양자정보학회 정기학술대회 및 정기총회", thumbnail: "https://qisk.inforang.com/upload/tmp/1732250083_53275900_215561998.jpg", url: "https://www.qisk.or.kr/content/conferences/pre_reg_guide.php?id=40" },
     ];
 
