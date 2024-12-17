@@ -80,17 +80,23 @@ export const ConceptWrapper = styled.div`
     max-height: 330px; 
     overflow-y: auto;  
       p{
+      font-family: 'Arial', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0px;
        @media (max-width: 900px) {
-          font-size: 1.67rem;
+          font-size: 1.4rem;
           margin-bottom: 1%;
        }
     }
        h2{
         margin-top:10px;
-        font-size:2rem;
+        font-size:1.7rem;
         }
       h1{
+        font-size:1.9rem;
         color:#eee;
+        @media (max-width:900px){
+          font-size:1.7rem;}
         }
     
     }
