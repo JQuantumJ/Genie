@@ -25,6 +25,10 @@ const TopBarContainer = styled.div`
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+    @media (max-width: 780px) {
+    justify-content: space-between;
+    flex-wrap:wrap; /*넘치면 줄바꿈*/
+  }
 `;
 
 
@@ -57,18 +61,20 @@ const MenuToggle = styled.div`
   align-items: center;
   width: 50px;
   height: 50px;
-  background-color: #141a1f;
   border-radius: 10px;
   margin-bottom: 20px; 
-  cursor: pointer;
-
-  .menu-icon {
-    width: 30px;
-    height: auto;
+`;
+export const Title = styled.h1`
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  &::selection {
+    background-color: #60E6F2;
+    color: #000;
   }
-
-  &:hover {
-    background-color: #333;
+  @media(max-width: 780px){
+    font-size: 18px; /* 작은 화면에서 글씨 크기 조정 */
   }
 `;
 
