@@ -1,9 +1,8 @@
-// Quiz.jsx
 import React, { useState } from 'react';
 import * as Q from './QuizStyle'; 
 import { useNavigate } from 'react-router-dom'; 
-import Genie1 from '/src/assets/image/Character/sad.svg'; // Genie1 이미지 import
-import Genie2 from '/src/assets/image/main/Genie2.svg'; // Genie2 이미지 import
+import Genie1 from '/src/assets/image/Character/sad.svg'; 
+import Genie2 from '/src/assets/image/main/Genie2.svg'; 
 
 const Quiz = () => {
   const questions = [
@@ -54,7 +53,7 @@ const Quiz = () => {
         <Q.FinalScoreContainer>
           <h2>퀴즈 완료!</h2>
           <p>총 <span style={{color: '#0015ff'}}>{questions.length}문제</span> 중 <span style={{color: '#0015ff'}}>{score}문제</span> 맞추셨습니다.</p>
-          {/* 점수에 따라 이미지를 조건부로 렌더링 */}
+          
           {score < 4 ? (
             <img src={Genie1} alt="Genie1" />
           ) : (

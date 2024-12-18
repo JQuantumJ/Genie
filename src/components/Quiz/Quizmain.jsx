@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import * as Q from './QuizStyle'; // Import the styled components
+import { useNavigate } from 'react-router-dom'; 
+import * as Q from './QuizStyle'; 
 
 const Quizmain = () => {
-  const navigate = useNavigate(); // Define navigate function
+  const navigate = useNavigate(); 
   return (
     <Q.QuizContainer>
       <Q.Button onClick={() => navigate('/quiz')}> 기초 퀴즈</Q.Button>
