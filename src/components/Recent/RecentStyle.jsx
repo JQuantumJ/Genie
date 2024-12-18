@@ -119,10 +119,10 @@ export const ConceptWrapper = styled.div`
 }
 `;
 
-// 갤러리 관련 스타일
+
 export const GalleryGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* 4열 그리드 */
+  grid-template-columns: repeat(4, 1fr);  
   gap: 20px;  
   margin-top: 3%;
   margin-bottom: 1%;
@@ -130,7 +130,7 @@ export const GalleryGrid = styled.div`
 
 
   @media (max-width: 700px) {
-    grid-template-columns: 1fr;  /* 작은 화면에서는 1열로 표시 */
+    grid-template-columns: 1fr; 
   }
 `;
 
@@ -142,13 +142,13 @@ export const GalleryItem = styled.div`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: translateY(-10px);  /* 호버 시 위로 살짝 올라가는 효과 */
+    transform: translateY(-10px);  
   }
 
   img {
     width: 100%;
     height: 200px;
-    object-fit: cover;  /* 썸네일 이미지를 프레임에 맞춰 자르기 */
+    object-fit: cover;  
     border-bottom: 2px solid #007bff;
     @media (max-width: 700px) {
         display: flex;
