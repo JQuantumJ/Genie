@@ -221,7 +221,7 @@ export const ImageWrap = styled.div`
     justify-content: space-between;
     position: fixed;
     left: 2%;
-    top: 1%;
+    top: 2%;
     width: 100%;
     padding: 20px;
 

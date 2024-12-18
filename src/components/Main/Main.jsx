@@ -55,11 +55,10 @@ const Main = () => {
     }
   };
   useEffect(() => {
-    // 모바일에서는 클릭 후 일정 시간 후에 클릭 상태를 초기화
     if (clickedIndex !== null) {
       const resetClick = setTimeout(() => {
         setClickedIndex(null);
-      }, 4000);  // 4초 후에 클릭 상태 초기화
+      }, 4000);  
 
       return () => clearTimeout(resetClick);
     }

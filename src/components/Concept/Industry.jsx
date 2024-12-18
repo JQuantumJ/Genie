@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import * as I from "./IndustryStyle";
-import context from "react-bootstrap/esm/AccordionContext";
 import Open from '/src/assets/image/Concept/open.svg';
 import Close from '/src/assets/image/Concept/close.svg';
 const sections = [

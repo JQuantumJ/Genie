@@ -126,17 +126,17 @@ const CloseIcon = styled(FaTimes)`
 `;
 
 const CoinEntanglement = () => {
-  const [showCoinModal, setShowCoinModal] = useState(false);  // 동전 상태 모달
-  const [coinA, setCoinA] = useState(null); // 동전 A의 상태
-  const [coinB, setCoinB] = useState(null); // 동전 B의 상태
+  const [showCoinModal, setShowCoinModal] = useState(false); 
+  const [coinA, setCoinA] = useState(null);
+  const [coinB, setCoinB] = useState(null);
   const [boxOpened, setBoxOpened] = useState(false); 
 
 
   const checkCoinState = () => {
     const resultA = Math.random() > 0.5 ? '앞면' : '뒷면';
     setCoinA(resultA);
-    setCoinB(resultA === '앞면' ? '뒷면' : '앞면');  // 얽힘: A가 앞면이면 B는 뒷면
-    setBoxOpened(true); // 박스 열림 상태로 설정
+    setCoinB(resultA === '앞면' ? '뒷면' : '앞면');
+    setBoxOpened(true);
   };
 
   return (
@@ -167,7 +167,6 @@ const CoinEntanglement = () => {
           </div>
         </AnimatedCoinContainer>
       )}
-        {/* 닫힌 박스 또는 열린 박스 */}
         <BoxImage 
           src={boxOpened ? Box2 : Box1} 
           alt="박스"
@@ -181,8 +180,6 @@ const CoinEntanglement = () => {
       </CoinBox>
 
 
-
-      {/* 얽힘 상태에 대한 설명 모달 */}
       {showCoinModal && (
         <ModalOverlay>
           <ModalContent>
