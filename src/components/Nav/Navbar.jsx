@@ -87,12 +87,7 @@ export default function Navbar() {
               navigate('/company');
               setIsMenuOpen(false);
             }}>주요 기업</N.MenuItem>
-
-            <N.MenuItem onClick={() => {
-              navigate('/about');
-              setIsMenuOpen(false);
-            }}>양자 인턴십 소개</N.MenuItem>
-
+            
             <N.MenuItem onClick={() => {
               navigate('/quizmain');
               setIsMenuOpen(false);

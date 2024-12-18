@@ -20,7 +20,6 @@ import CompanyDetail from './components/Company/CompanyDetail';
 import BusinessDetail from './components/Company/BusinessDetail';
 import ComputingPage from './pages/Computing';
 import ChatBot from './components/ChatBot/ChatBot';
-import AboutPage from './pages/About';
 import Industry from './components/Concept/Industry';
 import QuantumTimeline from './components/Concept/QuantumTimeline';
 import Example from './components/Description/Example';
@@ -49,7 +48,6 @@ export default function Router() {
         <Route path="/recent" element={<RecentPage />} />
         <Route path="/coinentanglement" element={<CoinEntanglementPage />} />
         <Route path="/computing" element={<ComputingPage />} />
-        <Route path="/about" element={<AboutPage />} />
         <Route path="/industry" element={<Industry />} />
         <Route path="/quantumTimeline" element={<QuantumTimeline />} />
         <Route path="/example" element={<Example />} />
