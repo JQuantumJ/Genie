@@ -1,4 +1,3 @@
-// Description.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as D from './DescriptionStyle';
@@ -33,7 +32,7 @@ const Description = () => {
                 <D.Button onClick={e=>navigate('/computing')}> 양자 컴퓨팅과 계산 복잡도 이론</D.Button>
               </div>
               <hr/>
-              {/* YouTube video for 양자 컴퓨터 */}
+
               <iframe 
                   width="560" 
                   height="315" 
@@ -70,7 +69,7 @@ const Description = () => {
               <p>양자내성암호(Post Quantum Cryptography; PQC)는 양자컴퓨터로도 풀어내는 데 수십억 년이 걸리는 <span style={{color: '#B0E3FF'}}>복잡한 수학 알고리즘을 사용하는 암호화 방식이다.</span></p>
               <br />
               <hr/>
-              {/* YouTube video for 양자 암호통신 */}
+  
               <iframe
                   width="560" 
                   height="315"  
@@ -96,7 +95,7 @@ const Description = () => {
               이때 중첩, 이중성, 얽힘과 같은 미시 세계의 양자역학적 특성들이 측정 기술로 활용된다.</p><br></br> 
               <p>양자 센싱은 측정 대상과 센서의 종류에 따라 다양하게 분류되며, 일반적으로 큐비트와 같은 양자 시스템을 사용해 시간, 자기장 등의 물리량을 정밀하게 측정한다.</p>
               <hr/>
-            {/* YouTube video for 양자 센서 */}
+        
             <iframe 
                   width="560" 
                   height="315" 

@@ -27,7 +27,7 @@ const TopBarContainer = styled.div`
   margin-bottom: 20px;
     @media (max-width: 780px) {
     justify-content: space-between;
-    flex-wrap:wrap; /*넘치면 줄바꿈*/
+    flex-wrap:wrap; 
   }
 `;
 
@@ -47,10 +47,10 @@ const TopBarItem = styled.button`
     color: #fff;
   }
     @media (max-width: 400px) {
-      font-size: 12px; /* 글씨 크기 조정 */
-      overflow: hidden; /* 텍스트가 화면 밖으로 넘지 않도록 설정 */
-      white-space: normal; /* 줄바꿈 허용 */
-      word-wrap: break-word; /* 단어가 화면 너비를 넘을 경우 줄바꿈 */
+      font-size: 12px;
+      overflow: hidden; 
+      white-space: normal; 
+      word-wrap: break-word; 
     }
 
 `;
@@ -74,7 +74,7 @@ export const Title = styled.h1`
     color: #000;
   }
   @media(max-width: 780px){
-    font-size: 18px; /* 작은 화면에서 글씨 크기 조정 */
+    font-size: 18px; 
   }
 `;
 
@@ -224,7 +224,6 @@ const Example = () => {
             <I.Content>
               <MenuToggle onClick={toggleMenu}></MenuToggle>
       
-              {/* TopBar 메뉴 */}
               {isMenuOpen && (
                 <TopBarContainer>
                   {sections.map((section) => (

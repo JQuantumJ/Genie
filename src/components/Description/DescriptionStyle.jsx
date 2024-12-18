@@ -87,17 +87,18 @@ export const ConceptWrapper = styled.div`
           font-size: 1.4rem;
           margin-bottom: 1%;
        }
-    }
+      }
        h2{
         margin-top:10px;
         font-size:1.7rem;
-        }
+      }
       h1{
         font-size:1.9rem;
         color:#eee;
         @media (max-width:900px){
-          font-size:1.7rem;}
-        }
+          font-size:1.7rem;
+          }
+      }
     
     }
     @media (max-width: 900px) {
@@ -118,8 +119,6 @@ export const ConceptWrapper = styled.div`
     }
 
   
-
-  /* Flexbox to center the video */
   iframe {
     display: block;
     margin-left: 25%;
